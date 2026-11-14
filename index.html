@@ -3,124 +3,680 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Edil Calc - L'app definitiva per calcoli, stime e preventivi edili">
-    
-    <!-- OpenGraph & Meta Tags per condivisione -->
-    <meta property="og:title" content="Edil Calc | L'App per l'Edilizia">
-    <meta property="og:description" content="Calcola i materiali, taglia gli sprechi e invia preventivi in PDF direttamente dal cantiere. Completamente gratis.">
+    <meta name="description" content="Edil Calc - L'app professionale gratuita per calcoli edili, stima materiali con sfrido, gestione cantieri e preventivi in PDF ed Excel.">
+
+    <!-- OpenGraph & Meta Tags -->
+    <meta property="og:title" content="Edil Calc | Calcoli Edili e Preventivi PDF in Cantiere">
+    <meta property="og:description" content="20 calcolatori edili specializzati, gestione cantieri multi-stanza ed esportazione preventivi in PDF ed Excel col tuo logo. 100% gratis e offline.">
     <meta property="og:image" content="assets/logo.png">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <link rel="icon" href="assets/logo.png" type="image/png">
-    
-    <title>Edil Calc | L'App per l'Edilizia</title>
-    <!-- Google Fonts -->
+    <title>Edil Calc | Calcoli Edili, Cantieri e Preventivi PDF</title>
+
+    <!-- Google Fonts: Outfit, Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <a href="#"><img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo"></a>
-            </div>
+            <a href="index.html" class="brand-link">
+                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <div class="brand-text">
+                    <span class="brand-name">EDIL CALC</span>
+                    <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                </div>
+            </a>
+
             <ul class="nav-links">
-                <li><a href="#features">Funzionalità</a></li>
+                <li><a href="#features">Vantaggi</a></li>
+                <li><a href="#calcolatori">I 20 Calcolatori</a></li>
                 <li><a href="#how-it-works">Come Funziona</a></li>
-                <li><a href="#azienda">Il tuo Brand</a></li>
+                <li><a href="#azienda">Preventivi PDF</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
-            <a href="#download" class="btn btn-primary">Scarica l'App</a>
+
+            <div class="nav-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i data-feather="download"></i>
+                    <span>Scarica Gratis</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <header class="hero">
         <div class="container hero-container">
-            <div class="hero-content">
-                <div class="badge">🔥 Gratis per sempre</div>
-                <h1 class="hero-title">Porta il Cantiere<br>sul tuo <span class="text-primary">Smartphone</span></h1>
-                <p class="hero-subtitle">Scordati carta e penna. Inserisci le misure, ottieni i materiali esatti, taglia gli sprechi e invia subito il preventivo in PDF. Niente abbonamenti, 100% gratis.</p>
+            <div class="hero-content reveal">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    <span>100% Gratis &bull; Funziona anche Offline in Cantiere</span>
+                </div>
+                <h1 class="hero-title">
+                    Porta il Cantiere<br>sul tuo <span class="text-gradient">Smartphone.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Dimentica carta, penna e fogli sparsi sul furgone. Inserisci le misure, calcola i materiali esatti comprensivi di sfrido, aggiungi la manodopera e invia subito al cliente un preventivo in <strong>PDF o Excel</strong> firmato col tuo logo aziendale.
+                </p>
+
                 <div class="hero-cta">
-                    <a href="#download" class="btn btn-primary btn-large">Scarica l'App</a>
-                    <a href="#features" class="btn btn-outline btn-large">Come funziona</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                        <i data-feather="smartphone"></i>
+                        <span>Scarica su Google Play</span>
+                    </a>
+                    <a href="#calcolatori" class="btn btn-outline btn-large">
+                        <i data-feather="grid"></i>
+                        <span>Esplora i 20 Calcolatori</span>
+                    </a>
+                </div>
+
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <div class="metric-value">20<span>+</span></div>
+                        <div class="metric-label">Calcolatori tecnici edili</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">PDF<span>/XLSX</span></div>
+                        <div class="metric-label">Esportazione preventivi</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">100<span>%</span></div>
+                        <div class="metric-label">Offline &amp; Zero abbonamenti</div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="phone-mockup">
-                    <img src="assets/home.png" alt="Schermata Home Edil Calc" class="mockup-img">
+
+            <div class="hero-visual reveal">
+                <div class="hero-glow"></div>
+                <div class="phone-stage">
+                    <div class="floating-chip chip-top-left">
+                        <div class="chip-icon">
+                            <i data-feather="sliders"></i>
+                        </div>
+                        <div class="chip-text">
+                            <span class="chip-title">Calcolo Sfrido Inclusivo</span>
+                            <span class="chip-sub">+5% / +10% / +15% personalizzabile</span>
+                        </div>
+                    </div>
+
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <img src="assets/home.png" alt="Schermata Home di Edil Calc con categorie calcolatori" class="mockup-img">
+                        </div>
+                    </div>
+
+                    <div class="floating-chip chip-bottom-right">
+                        <div class="chip-icon cyan">
+                            <i data-feather="file-text"></i>
+                        </div>
+                        <div class="chip-text">
+                            <span class="chip-title">Preventivo A4 Pronto</span>
+                            <span class="chip-sub">Logo, P.IVA, IBAN e Manodopera</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="features" class="features">
+    <!-- BENTO GRID: CORE FEATURES -->
+    <section id="features" class="bento-section">
         <div class="container">
-            <h2 class="section-title">Nessuna chiacchiera, <span class="text-primary">solo numeri</span></h2>
-            <p class="section-subtitle">Strumenti concreti per chi lavora sul campo. Zero configurazioni complicate.</p>
-            
-            <div class="features-grid">
-                <div class="feature-card glass-card">
-                    <div class="feature-icon"><i data-feather="calculator"></i></div>
-                    <h3>Calcolatori Intelligenti</h3>
-                    <p>Pittura, pavimenti, muratura, impianti elettrici e idraulici. Inserisci i dati e ottieni risultati immediati.</p>
-                    <img src="assets/calcolo.png" alt="Calcolo Immagine" class="feature-img">
+            <div class="section-header reveal">
+                <span class="eyebrow"><i data-feather="cpu"></i> Progettata per chi lavora sul campo</span>
+                <h2 class="section-title">Zero chiacchiere, <span class="text-primary">solo numeri precisi</span></h2>
+                <p class="section-subtitle">Un'unica suite tecnica tascabile per imprese edili, artigiani, geometri, impiantisti e ristrutturatori.</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card bento-span-7 reveal">
+                    <div>
+                        <div class="bento-icon"><i data-feather="layers"></i></div>
+                        <h3>Fabbisogno Materiali con Sfrido e Vuoti</h3>
+                        <p>Che tu parta dall'area totale in m² o dalle dimensioni dei lati col metro alla mano, Edil Calc sottrae porte e finestre ("vuoti per pieni") e applica la percentuale di sfrido reale per non lasciarti mai a metà lavoro.</p>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="tech-tag highlight">Da Area (m²) o Lati (m)</span>
+                        <span class="tech-tag">Sottrazione Porte/Finestre</span>
+                        <span class="tech-tag">Scarto Personalizzabile</span>
+                    </div>
                 </div>
-                
-                <div class="feature-card glass-card">
-                    <div class="feature-icon"><i data-feather="file-text"></i></div>
-                    <h3>Preventivi in PDF</h3>
-                    <p>Genera e condividi preventivi professionali formattati in PDF in pochi secondi direttamente dal cantiere.</p>
-                    <img src="assets/preventivo.png" alt="Preventivo Immagine" class="feature-img">
+
+                <div class="bento-card bento-span-5 reveal">
+                    <div>
+                        <div class="bento-icon cyan"><i data-feather="wifi-off"></i></div>
+                        <h3>100% Offline &amp; Privacy Totale</h3>
+                        <p>In cantiere, in cantina o fuori città spesso non c'è campo. L'app salva cantieri, listini e clienti direttamente nella memoria del tuo telefono e genera PDF ed Excel anche senza internet.</p>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="tech-tag">Nessun Account Richiesto</span>
+                        <span class="tech-tag">Backup &amp; Ripristino JSON</span>
+                    </div>
                 </div>
-                
-                <div class="feature-card glass-card">
-                    <div class="feature-icon"><i data-feather="folder"></i></div>
-                    <h3>Gestione Cantieri</h3>
-                    <p>Tieni traccia di tutti i tuoi progetti, calcoli salvati e materiali per ogni cantiere attivo.</p>
-                    <img src="assets/cantiere.png" alt="Cantiere Immagine" class="feature-img">
+
+                <div class="bento-card bento-span-5 reveal">
+                    <div>
+                        <div class="bento-icon"><i data-feather="folder-plus"></i></div>
+                        <h3>Cantieri Divisi per Stanze</h3>
+                        <p>Organizza ogni commessa in singole stanze (es. <em>Bagno</em>, <em>Cucina</em>, <em>Facciata Esterna</em>) oppure in un'unica lista, con anagrafica cliente, note di cantiere e controllo automatico dei prezzi mancanti.</p>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="tech-tag">Multi-Stanza</span>
+                        <span class="tech-tag">Avviso Costi Incompleti</span>
+                    </div>
+                </div>
+
+                <div class="bento-card bento-span-7 reveal">
+                    <div>
+                        <div class="bento-icon cyan"><i data-feather="dollar-sign"></i></div>
+                        <h3>Prezzario Unificato, Voci Extra e Manodopera</h3>
+                        <p>Salva i tuoi prezzi d'acquisto una sola volta nel Database Materiali: i calcolatori li useranno automaticamente. In ogni calcolo puoi aggiungere materiali extra (es. teli, nastri, trasporti) e valorizzare la manodopera sia a tariffa oraria che a corpo (forfait).</p>
+                    </div>
+                    <div class="bento-tags">
+                        <span class="tech-tag highlight">Tariffa Oraria (€/h) o A Corpo</span>
+                        <span class="tech-tag">Listino Personalizzabile</span>
+                        <span class="tech-tag">Valute: € / $ / £ / CHF</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="how-it-works" class="how-it-works">
+    <!-- INTERACTIVE 20 CALCULATORS SHOWCASE -->
+    <section id="calcolatori" class="calculators-section">
         <div class="container">
-            <div class="hiw-grid">
-                <div class="hiw-image">
-                    <div class="phone-mockup dark-mockup">
-                        <img src="assets/risultato.png" alt="Schermata Risultati" class="mockup-img">
+            <div class="section-header reveal">
+                <span class="eyebrow"><i data-feather="compass"></i> Suite Tecnica Completa</span>
+                <h2 class="section-title">Tutti i <span class="text-primary">20 Calcolatori</span> inclusi nell'App</h2>
+                <p class="section-subtitle">Filtra per categoria e scopri tutti i moduli di calcolo integrati gratuitamente in Edil Calc.</p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="calc-Category-tabs reveal">
+                <button class="calc-tab-btn active" data-category="all">
+                    <i data-feather="grid"></i>
+                    <span>Tutti</span>
+                    <span class="calc-count-pill">20</span>
+                </button>
+                <button class="calc-tab-btn" data-category="pareti">
+                    <i data-feather="layout"></i>
+                    <span>Pareti &amp; Soffitti</span>
+                    <span class="calc-count-pill">3</span>
+                </button>
+                <button class="calc-tab-btn" data-category="pavimenti">
+                    <i data-feather="maximize"></i>
+                    <span>Pavimenti</span>
+                    <span class="calc-count-pill">2</span>
+                </button>
+                <button class="calc-tab-btn" data-category="muratura">
+                    <i data-feather="box"></i>
+                    <span>Muratura &amp; Scale</span>
+                    <span class="calc-count-pill">4</span>
+                </button>
+                <button class="calc-tab-btn" data-category="esterni">
+                    <i data-feather="home"></i>
+                    <span>Esterni &amp; Tetti</span>
+                    <span class="calc-count-pill">2</span>
+                </button>
+                <button class="calc-tab-btn" data-category="scavi">
+                    <i data-feather="truck"></i>
+                    <span>Scavi &amp; Giardini</span>
+                    <span class="calc-count-pill">5</span>
+                </button>
+                <button class="calc-tab-btn" data-category="impianti">
+                    <i data-feather="zap"></i>
+                    <span>Elettrico &amp; Termo-Idraulico</span>
+                    <span class="calc-count-pill">3</span>
+                </button>
+                <button class="calc-tab-btn" data-category="ponteggi">
+                    <i data-feather="tool"></i>
+                    <span>Ponteggi &amp; Noleggi</span>
+                    <span class="calc-count-pill">2</span>
+                </button>
+            </div>
+
+            <!-- 20 Calculators Grid -->
+            <div class="calc-showcase-grid reveal">
+                <!-- PARETI & SOFFITTI (3) -->
+                <div class="calc-item-card" data-category="pareti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="droplet"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Pareti &amp; Soffitti</div>
+                                <h4 class="calc-item-title">Pittura Interni / Esterni</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola i litri esatti di vernice in base a superficie, resa (mq/L), numero di mani e metodo (rullo, pennello o spruzzo).</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Litri Vernice</span>
+                        <span class="output-badge">Scarto % Metodo</span>
+                        <span class="output-badge">Sottrazione Vuoti</span>
                     </div>
                 </div>
-                <div class="hiw-content">
-                    <h2 class="section-title text-left">Vai subito al sodo</h2>
-                    <p class="section-subtitle text-left">Pochi tap e hai il risultato. Il tempo è denaro, soprattutto in cantiere.</p>
-                    
-                    <div class="step">
-                        <div class="step-number">1</div>
+
+                <div class="calc-item-card" data-category="pareti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="columns"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Pareti &amp; Soffitti</div>
+                                <h4 class="calc-item-title">Struttura Cartongesso</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Per pareti divisorie (2 lati) o contropareti (1 lato): calcola lastre, montanti, guide, scatole da 1000 viti, nastro e stucco.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Lastre &amp; Profili</span>
+                        <span class="output-badge">Scatole 1000 Viti</span>
+                        <span class="output-badge">Stucco &amp; Nastro</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="pareti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="book-open"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Pareti &amp; Soffitti</div>
+                                <h4 class="calc-item-title">Carta da Parati</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Determina il numero di rotoli necessari e il quantitativo di colla tenendo conto di larghezza, altezza e rifilature.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">N° Rotoli</span>
+                        <span class="output-badge">Kg Colla</span>
+                    </div>
+                </div>
+
+                <!-- PAVIMENTI (2) -->
+                <div class="calc-item-card" data-category="pavimenti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="grid"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Pavimenti</div>
+                                <h4 class="calc-item-title">Posa Piastrelle &amp; Gres</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola numero di piastrelle, scatole intere da ordinare, kg di colla e stucco per fughe in base al formato e alla larghezza fuga.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Scatole &amp; Pezzi</span>
+                        <span class="output-badge">Kg Colla</span>
+                        <span class="output-badge">Kg Stucco Fughe</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="pavimenti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="minus"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Pavimenti</div>
+                                <h4 class="calc-item-title">Metri Lineari Battiscopa</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola i metri lineari e il numero di aste/pezzi di battiscopa sottraendo automaticamente la larghezza delle porte.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Metri Lineari</span>
+                        <span class="output-badge">N° Aste</span>
+                        <span class="output-badge">- Larghezza Porte</span>
+                    </div>
+                </div>
+
+                <!-- MURATURA & SCALE (4) -->
+                <div class="calc-item-card" data-category="muratura">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="database"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Muratura &amp; Strutture</div>
+                                <h4 class="calc-item-title">Cemento, Massetti e Gettate</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Supporta sia sacchi di premiscelato pronto sia impasto tradizionale (solo cemento + sabbia sfusa) calcolando volume in m³ e sacchi da 25 kg.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Volume m³</span>
+                        <span class="output-badge">Sacchi 25 kg</span>
+                        <span class="output-badge">Premiscelato / Sfuso</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="muratura">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="box"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Muratura &amp; Strutture</div>
+                                <h4 class="calc-item-title">Muri in Mattoni e Blocchi</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola il numero di forati, mattoni pieni o blocchi e i sacchi di malta d'allettamento, deducendo aperture e considerando lo spessore fuga.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">N° Mattoni/Blocchi</span>
+                        <span class="output-badge">Malta (kg/sacchi)</span>
+                        <span class="output-badge">Sfrido Blocchi</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="muratura">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="align-justify"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Muratura &amp; Strutture</div>
+                                <h4 class="calc-item-title">Intonaci, Rasature e Stucchi</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Determina i sacchi di intonaco di fondo o rasante in base ai metri quadri, allo spessore in millimetri e alla resa del prodotto.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">N° Sacchi</span>
+                        <span class="output-badge">Spessore (mm)</span>
+                        <span class="output-badge">Resa kg/m²</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="muratura">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="trending-up"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Muratura &amp; Strutture</div>
+                                <h4 class="calc-item-title">Progettazione e Sviluppo Scale</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola numero di gradini, alzata, pedata, angolo d'inclinazione (Formula di Blondel 2A+P) e volume di calcestruzzo della rampa.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Legge di Blondel</span>
+                        <span class="output-badge">Alzata &amp; Pedata (cm)</span>
+                        <span class="output-badge">Calcestruzzo m³</span>
+                    </div>
+                </div>
+
+                <!-- ESTERNI & TETTI (2) -->
+                <div class="calc-item-card" data-category="esterni">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="shield"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Esterni &amp; Coperture</div>
+                                <h4 class="calc-item-title">Impermeabilizzazioni e Guaine</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola i rotoli di guaina bituminosa (con percentuale di sormonto e sfrido) e i secchi di primer bituminoso necessari.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Rotoli Guaina</span>
+                        <span class="output-badge">Sormonto %</span>
+                        <span class="output-badge">Secchi Primer</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="esterni">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="triangle"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Esterni &amp; Coperture</div>
+                                <h4 class="calc-item-title">Riempimento Ghiaia e Inerti</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Per vialetti carrabili, piazzali e drenaggi: calcola il volume e il peso in tonnellate o numero di sacchi in base alla densità.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Tonnellate</span>
+                        <span class="output-badge">Sacchi</span>
+                        <span class="output-badge">Volume m³</span>
+                    </div>
+                </div>
+
+                <!-- SCAVI & GIARDINI (5) -->
+                <div class="calc-item-card" data-category="scavi">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="truck"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Scavi &amp; Movimento Terra</div>
+                                <h4 class="calc-item-title">Movimenti Terra e Scavi</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola il volume compatto di scavo, il volume smosso (coefficiente di rigonfiamento per terreno agricolo, argilla o roccia) e i viaggi camion.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Volume Smosso m³</span>
+                        <span class="output-badge">N° Viaggi Camion</span>
+                        <span class="output-badge">Costo Smaltimento</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="scavi">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="hash"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Scavi &amp; Giardini</div>
+                                <h4 class="calc-item-title">Recinzioni (Pali, Rete e Plinti)</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola il numero di pali in base all'interasse, i metri o pannelli di rete e i sacchi di cemento per il fissaggio dei plinti.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">N° Pali</span>
+                        <span class="output-badge">Pannelli / Rete</span>
+                        <span class="output-badge">Cemento Plinti</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="scavi">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="sun"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Scavi &amp; Giardini</div>
+                                <h4 class="calc-item-title">Prato (Sementi e Rotoli)</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola i kg di sementi (con tolleranza +10%) oppure i metri quadri di prato pronto a rotoli (con sfrido +5%).</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Kg Sementi</span>
+                        <span class="output-badge">m² Prato a Rotoli</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="scavi">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="layers"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Scavi &amp; Giardini</div>
+                                <h4 class="calc-item-title">Terriccio e Pacciamatura</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Stima i litri totali e il numero di sacchi di terriccio o corteccia per aiuole e livellamenti superficiali.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Litri Totali</span>
+                        <span class="output-badge">N° Sacchi</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="scavi">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="inbox"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Scavi &amp; Giardini</div>
+                                <h4 class="calc-item-title">Substrati per Fioriere e Vasi</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola il volume esatto in litri e i sacchi di substrato per fioriere rettangolari o vasi cilindrici.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Vasi Tondi / Rettangolari</span>
+                        <span class="output-badge">Litri &amp; Sacchi</span>
+                    </div>
+                </div>
+
+                <!-- IMPIANTI ELETTRICI & TERMO-IDRAULICI (3) -->
+                <div class="calc-item-card" data-category="impianti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="zap"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Impiantistica Elettrica</div>
+                                <h4 class="calc-item-title">Dimensionamento Cavi e Linee</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola corrente d'impiego (Ib), sezione minima in mm² per caduta di tensione e taglia del magnetotermico (Monofase 230V / Trifase 400V).</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Sezione mm²</span>
+                        <span class="output-badge">Corrente Ib (A)</span>
+                        <span class="output-badge">Magnetotermico (A)</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="impianti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="droplet"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Termo-Idraulica</div>
+                                <h4 class="calc-item-title">Dimensionamento Tubazioni</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola diametro interno consigliato, perdita di carico (Bar) e velocità dell'acqua (m/s) per tubi in Rame, Multistrato, PEX o Acciaio.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Diametro mm</span>
+                        <span class="output-badge">Perdita Carico (Bar)</span>
+                        <span class="output-badge">Velocità m/s</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="impianti">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="thermometer"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Termo-Tecnica / HVAC</div>
+                                <h4 class="calc-item-title">Bilancio Termico (BTU/h e kW)</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola la potenza termica necessaria per climatizzazione o riscaldamento in base a volume, classe d'isolamento, esposizione e finestre.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Fabbisogno BTU/h</span>
+                        <span class="output-badge">Potenza kW</span>
+                    </div>
+                </div>
+
+                <!-- PONTEGGI & NOLEGGI (2) -->
+                <div class="calc-item-card" data-category="ponteggi">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="sliders"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Opere Provvisionali</div>
+                                <h4 class="calc-item-title">Ponteggi e Costi Occupazione</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Calcola i m² di facciata (con margini di sicurezza), costi fissi (montaggio, Pi.M.U.S., trasporto) e variabili (noleggio mensile e suolo pubblico).</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Superficie m²</span>
+                        <span class="output-badge">Montaggio &amp; Pi.M.U.S.</span>
+                        <span class="output-badge">Suolo Pubblico</span>
+                    </div>
+                </div>
+
+                <div class="calc-item-card" data-category="ponteggi">
+                    <div>
+                        <div class="calc-item-header">
+                            <div class="calc-item-icon"><i data-feather="settings"></i></div>
+                            <div>
+                                <div class="calc-item-cat">Macchinari &amp; Mezzi</div>
+                                <h4 class="calc-item-title">Noleggio Flotta e Attrezzature</h4>
+                            </div>
+                        </div>
+                        <p class="calc-item-desc" style="margin-top: 12px;">Traccia e preventiva i costi di noleggio per gru, mini-escavatori, piattaforme aeree (PLE) e generatori, inclusi trasporto A/R e operatore.</p>
+                    </div>
+                    <div class="calc-item-outputs">
+                        <span class="output-badge">Tariffa Giornaliera</span>
+                        <span class="output-badge">Trasporto A/R</span>
+                        <span class="output-badge">Carburante / Operatore</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE WORKFLOW: COME FUNZIONA -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow cyan"><i data-feather="zap"></i> Flusso Rapido da Cantiere</span>
+                <h2 class="section-title">Dal metro al preventivo in <span class="text-primary">3 passaggi</span></h2>
+                <p class="section-subtitle">Clicca sui passaggi per vedere come si comporta l'app dal vivo durante un sopralluogo.</p>
+            </div>
+
+            <div class="workflow-grid">
+                <div class="workflow-steps reveal">
+                    <div class="workflow-step-card active" data-img="assets/calcolo.png" data-alt="Schermata Calcolo Pittura e Manodopera">
+                        <div class="step-number">01</div>
                         <div class="step-text">
-                            <h4>Scegli cosa fare</h4>
-                            <p>Pittura? Cartongesso? Cemento? Abbiamo un modulo pronto per ogni tipo di lavoro.</p>
+                            <h4>Inserisci Misure, Voci Extra e Manodopera</h4>
+                            <p>Scegli il calcolatore, inserisci l'area o i lati della parete, aggiungi eventuali materiali accessori (es. nastro e teli protettivi) e imposta le ore di manodopera o il prezzo a corpo.</p>
                         </div>
                     </div>
-                    
-                    <div class="step">
-                        <div class="step-number">2</div>
+
+                    <div class="workflow-step-card" data-img="assets/risultato.png" data-alt="Schermata Risultato Istantaneo">
+                        <div class="step-number">02</div>
                         <div class="step-text">
-                            <h4>Inserisci due misure</h4>
-                            <p>Butta dentro i metri quadri o lineari. Se vuoi, metti anche il tuo prezzo unitario per calcolare i costi.</p>
+                            <h4>Ottieni il Fabbisogno Esatto con Sfrido</h4>
+                            <p>Un tap su "Calcola" e visualizzi immediatamente le quantità di materiale comprensive di scarto percentuale, il riepilogo delle voci extra e l'incidenza della manodopera.</p>
                         </div>
                     </div>
-                    
-                    <div class="step">
-                        <div class="step-number">3</div>
+
+                    <div class="workflow-step-card" data-img="assets/cantiere.png" data-alt="Schermata Gestione Cantiere e Cliente">
+                        <div class="step-number">03</div>
                         <div class="step-text">
-                            <h4>Preventivo Pronto</h4>
-                            <p>Ti calcoliamo il materiale esatto (con tanto di sfrido/scarto) e ti sputiamo fuori un PDF da girare subito al cliente.</p>
+                            <h4>Salva nel Cantiere e Aggiorna i Prezzi al Volo</h4>
+                            <p>Salva il calcolo nella stanza o nel cantiere del cliente. Se un fornitore cambia un prezzo, ti basta toccare la singola voce nel cantiere per ricalcolare l'intero preventivo all'istante.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow-preview-stage reveal">
+                    <div class="screen-switcher-pills" role="tablist">
+                        <button class="screen-pill active" type="button">1. Calcolo</button>
+                        <button class="screen-pill" type="button">2. Risultato</button>
+                        <button class="screen-pill" type="button">3. Cantiere</button>
+                    </div>
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <img id="workflow-screen-img" src="assets/calcolo.png" alt="Schermata operativa Edil Calc" class="mockup-img" style="transition: opacity 0.18s ease;">
                         </div>
                     </div>
                 </div>
@@ -128,60 +684,185 @@
         </div>
     </section>
 
-    <section id="azienda" class="azienda-section">
-        <div class="container text-center">
-            <h2 class="section-title">Firma i preventivi col tuo <span class="text-primary">Logo</span></h2>
-            <p class="section-subtitle">Tramite la sezione "Azienda" dell'app puoi inserire i tuoi dati, la partita IVA e il logo. Ogni PDF generato uscirà con un'intestazione super professionale, pronto da mandare al cliente.</p>
-            <div style="max-width: 400px; margin: 0 auto; margin-top: 32px; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12);">
-                <img src="assets/azienda.png" alt="Schermata Profilo Azienda" style="width: 100%; display: block;">
+    <!-- BRANDING & PDF EXPORT SECTION -->
+    <section id="azienda" class="branding-section">
+        <div class="container">
+            <div class="branding-showcase">
+                <div class="reveal">
+                    <span class="eyebrow"><i data-feather="award"></i> Immagine Professionale</span>
+                    <h2 class="section-title text-left">Firma i preventivi col tuo <span class="text-primary">Logo Aziendale</span></h2>
+                    <p class="section-subtitle text-left" style="margin-inline: 0; margin-bottom: 24px;">
+                        Presentati ai clienti con un documento impeccabile. Configura una sola volta i tuoi dati nella scheda <strong>Azienda</strong> e genera preventivi in formato <strong>PDF A4</strong> o fogli di calcolo <strong>Excel (.xlsx)</strong> pronti da inviare su WhatsApp o via Email.
+                    </p>
+
+                    <ul class="feature-checklist">
+                        <li>
+                            <span class="check-badge"><i data-feather="check"></i></span>
+                            <span><strong>Intestazione Completa:</strong> Logo aziendale, Ragione Sociale, Partita IVA / C.F., Indirizzo Sede e codice IBAN per i bonifici.</span>
+                        </li>
+                        <li>
+                            <span class="check-badge"><i data-feather="check"></i></span>
+                            <span><strong>Riquadro Cliente &amp; Stanze:</strong> Dati del committente e suddivisione chiara di ogni lavorazione con subtotali e Gran Totale.</span>
+                        </li>
+                        <li>
+                            <span class="check-badge"><i data-feather="check"></i></span>
+                            <span><strong>Export Doppio Formato:</strong> PDF formattato per il cliente finale ed Excel strutturato per la tua contabilità su PC.</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                        <i data-feather="file-text"></i>
+                        <span>Prova Gratis l'Export PDF</span>
+                    </a>
+                </div>
+
+                <div class="branding-visuals reveal">
+                    <div style="display: flex; justify-content: center;">
+                        <div class="phone-mockup" style="width: 240px;">
+                            <div class="phone-screen">
+                                <img src="assets/azienda.png" alt="Configurazione Profilo Aziendale in Edil Calc" class="mockup-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pdf-document-frame">
+                        <div class="pdf-frame-bar">
+                            <div class="pdf-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span>EdilCalc-Preventivo.pdf</span>
+                            <span style="color: var(--color-primary);">A4</span>
+                        </div>
+                        <div class="pdf-scroll-window">
+                            <img src="assets/preventivo.png" alt="Anteprima Preventivo PDF generato da Edil Calc" style="width: 100%; border-radius: 8px;">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- QUICK FAQ PREVIEW -->
     <section id="faq" class="faq-section">
-        <div class="container text-center">
-            <h2 class="section-title">Hai ancora dei dubbi?</h2>
-            <p class="section-subtitle">Abbiamo preparato una pagina dedicata con decine di risposte per aiutarti a sfruttare l'app al 100%.</p>
-            <a href="faq.html" class="btn btn-outline btn-large" style="border-color: var(--color-primary); color: var(--color-primary);">Vai a tutte le FAQ</a>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow"><i data-feather="help-circle"></i> Domande Frequenti</span>
+                <h2 class="section-title">Risposte chiare, <span class="text-primary">senza sorprese</span></h2>
+                <p class="section-subtitle">Le domande più comuni di chi utilizza Edil Calc ogni giorno in cantiere.</p>
+            </div>
+
+            <div class="faq-list reveal">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <h4>L'app è davvero gratuita o ci sono abbonamenti nascosti?</h4>
+                        <i data-feather="chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Edil Calc è 100% gratuita: tutti i 20 calcolatori, la gestione illimitata dei cantieri e l'esportazione dei preventivi in PDF ed Excel sono inclusi gratuitamente, senza abbonamenti né blocchi.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Posso generare i preventivi PDF anche in un cantiere senza internet?</h4>
+                        <i data-feather="chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Assolutamente sì. L'app è progettata con architettura "Offline-First": i tuoi progetti, il listino prezzi, il logo aziendale e i font dei documenti sono salvati sul tuo smartphone, così puoi calcolare ed esportare PDF perfetti anche in assenza totale di rete.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Come trasferisco i miei cantieri e il listino se cambio telefono?</h4>
+                        <i data-feather="chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dalla schermata Impostazioni puoi esportare in un secondo un file di backup completo (<code>.json</code>) con tutti i tuoi cantieri e il listino materiali, per poi reimportarlo sul nuovo smartphone o tablet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: 36px;">
+                <a href="faq.html" class="btn btn-outline btn-large">
+                    <i data-feather="list"></i>
+                    <span>Leggi tutte le 25+ FAQ</span>
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- FINAL CTA BANNER -->
     <section id="download" class="cta-section">
-        <div class="container text-center">
-            <h2 class="cta-title">Lavora meglio, fatica di meno.</h2>
-            <p class="cta-subtitle">Nessun costo nascosto. Nessun limite. Solo un tool nato da professionisti, per professionisti.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary btn-massive">Scarica Ora su Google Play (Gratis)</a>
-            <p class="cta-note">Per smartphone e tablet Android</p>
+        <div class="container">
+            <div class="cta-box reveal">
+                <span class="eyebrow"><i data-feather="check-circle"></i> Disponibile su Google Play</span>
+                <h2 class="cta-title">Lavora meglio, fatica di meno.</h2>
+                <p class="cta-subtitle">Scarica ora Edil Calc sul tuo smartphone o tablet Android. Nessuna registrazione richiesta: apri l'app e sei subito operativo.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary btn-massive">
+                    <i data-feather="download"></i>
+                    <span>Scarica Ora su Google Play (Gratis)</span>
+                </a>
+                <p class="cta-note">Compatibile con smartphone e tablet Android &bull; Lingue: IT / EN / ES</p>
+            </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container footer-container">
             <div class="footer-brand">
-                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
-                <p>L'app definitiva per l'edilizia e i preventivi veloci.</p>
+                <a href="index.html" class="brand-link">
+                    <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                    <div class="brand-text">
+                        <span class="brand-name">EDIL CALC</span>
+                        <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                    </div>
+                </a>
+                <p>La suite gratuita per calcoli edili, gestione cantieri multi-stanza e preventivi professionali in PDF ed Excel.</p>
             </div>
+
             <div class="footer-links">
-                <h4>Link Utili</h4>
+                <h4>Navigazione</h4>
                 <ul>
-                    <li><a href="#features">Funzionalità</a></li>
-                    <li><a href="#azienda">Il tuo Brand</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Termini di Servizio</a></li>
+                    <li><a href="#features">Vantaggi Principali</a></li>
+                    <li><a href="#calcolatori">I 20 Calcolatori</a></li>
+                    <li><a href="#how-it-works">Come Funziona</a></li>
+                    <li><a href="#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <h4>Contattaci</h4>
-                <div class="social-icons">
-                    <a href="#"><i data-feather="facebook"></i></a>
-                    <a href="#"><i data-feather="instagram"></i></a>
-                    <a href="#"><i data-feather="mail"></i></a>
+
+            <div class="footer-contact">
+                <h4>Informazioni Legali &amp; Store</h4>
+                <div class="contact-list">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="contact-link">
+                        <i data-feather="shopping-bag"></i>
+                        <span>Scheda Ufficiale Google Play</span>
+                    </a>
+                    <a href="privacy.html" class="contact-link">
+                        <i data-feather="shield"></i>
+                        <span>Privacy Policy (GDPR)</span>
+                    </a>
+                    <a href="terms.html" class="contact-link">
+                        <i data-feather="file-text"></i>
+                        <span>Termini di Servizio</span>
+                    </a>
+                    <a href="mailto:support@edilcalc.com" class="contact-link">
+                        <i data-feather="life-buoy"></i>
+                        <span>support@edilcalc.com</span>
+                    </a>
+                    <a href="mailto:info@edilcalc.com" class="contact-link">
+                        <i data-feather="mail"></i>
+                        <span>info@edilcalc.com</span>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+
+        <div class="container footer-bottom">
             <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
+            <p>ID Pacchetto Android: <code>com.daniele.edilcalc</code></p>
         </div>
     </footer>
 

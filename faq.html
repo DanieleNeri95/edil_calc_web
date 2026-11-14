@@ -3,68 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Domande frequenti su Edil Calc - Scopri come funziona l'app per i preventivi edili">
-    
+    <meta name="description" content="Domande frequenti (FAQ) su Edil Calc - Scopri come funziona l'app per calcoli edili, cantieri e preventivi in PDF ed Excel.">
+
     <meta property="og:title" content="FAQ | Edil Calc">
-    <meta property="og:description" content="Trova tutte le risposte sull'app definitiva per l'edilizia.">
+    <meta property="og:description" content="Tutte le risposte sull'app gratuita per calcoli edili e preventivi in cantiere.">
     <meta property="og:image" content="assets/logo.png">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <link rel="icon" href="assets/logo.png" type="image/png">
-    
-    <title>FAQ | Edil Calc</title>
+    <title>Domande Frequenti (FAQ) | Edil Calc</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html"><img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo"></a>
-            </div>
+            <a href="index.html" class="brand-link">
+                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <div class="brand-text">
+                    <span class="brand-name">EDIL CALC</span>
+                    <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                </div>
+            </a>
+
             <ul class="nav-links">
-                <li><a href="index.html#features">Funzionalità</a></li>
-                <li><a href="index.html#azienda">Azienda</a></li>
-                <li><a href="faq.html" style="color: var(--color-primary);">FAQ</a></li>
+                <li><a href="index.html#features">Vantaggi</a></li>
+                <li><a href="index.html#calcolatori">I 20 Calcolatori</a></li>
+                <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                <li><a href="index.html#azienda">Preventivi PDF</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
             </ul>
-            <a href="index.html#download" class="btn btn-primary">Scarica l'App</a>
+
+            <div class="nav-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i data-feather="download"></i>
+                    <span>Scarica Gratis</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <header class="hero" style="min-height: 40vh; padding-top: 150px; align-items: flex-start; background: var(--color-bg-dark);">
-        <div class="container text-center">
-            <h1 class="hero-title" style="font-size: 4rem;">Domande <span class="text-primary">Frequenti</span></h1>
-            <p class="hero-subtitle">Tutto quello che devi sapere prima di portare il tuo cantiere su Edil Calc.</p>
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+        <div class="container">
+            <span class="eyebrow"><i data-feather="help-circle"></i> Centro Assistenza</span>
+            <h1 class="page-hero-title">Domande <span class="text-primary">Frequenti</span></h1>
+            <p class="section-subtitle">Tutto quello che devi sapere per sfruttare Edil Calc al 100% nei tuoi cantieri.</p>
         </div>
     </header>
 
-    <section class="faq-section" style="padding-top: 0; padding-bottom: 100px;">
+    <!-- FAQ LIST SECTION -->
+    <section class="faq-section" style="padding-top: 56px; padding-bottom: 96px;">
         <div class="container">
+
+            <!-- Instant Search Bar -->
+            <div class="faq-search-bar">
+                <i data-feather="search" class="faq-search-icon"></i>
+                <input type="text" id="faq-search-input" class="faq-search-input" placeholder="Cerca una domanda (es. PDF, offline, backup, sfrido, logo)...">
+            </div>
+
             <div class="faq-list">
-                
-                <div class="faq-item">
+
+                <div class="faq-item active">
                     <div class="faq-question">
                         <h4>Ma l'app è davvero gratis al 100%?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Sì! Edil Calc è completamente gratuita. Niente abbonamenti nascosti, niente limiti di utilizzo sui progetti creati o sui calcoli effettuati. La scarichi e la usi quanto vuoi.</p>
+                        <p>Sì! Edil Calc è completamente gratuita. Niente abbonamenti nascosti, niente limiti sul numero di cantieri creati, sui calcoli effettuati o sui preventivi esportati in PDF ed Excel.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Funziona anche senza connessione internet?</h4>
+                        <h4>Funziona anche senza connessione internet in cantiere?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Assolutamente sì. Sappiamo che spesso nei cantieri, nelle cantine o fuori città il segnale è scarso o assente. L'app salva tutti i tuoi progetti e calcoli localmente, in modo da poter lavorare completamente offline.</p>
+                        <p>Assolutamente sì. Sappiamo che nei cantieri, nei seminterrati o fuori città il segnale è spesso assente. L'app salva tutti i tuoi progetti, i prezzi e i font di stampa localmente sul telefono, permettendoti di calcolare e generare preventivi PDF ed Excel 100% offline.</p>
                     </div>
                 </div>
 
@@ -74,17 +102,17 @@
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>No, i materiali base non hanno un prezzo di default impostato. I prezzi variano troppo in base alla zona e al fornitore: sarai tu a inserire i tuoi costi unitari reali per ottenere un preventivo perfetto al centesimo.</p>
+                        <p>I prezzi edili variano molto in base alla zona, al fornitore e alla scontistica riservata. Nella sezione "Azienda &rarr; Database Materiali" puoi impostare i tuoi prezzi reali una sola volta: tutti i calcolatori li useranno automaticamente per stimare i costi al centesimo.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Posso creare un PDF del preventivo da inviare al cliente?</h4>
+                        <h4>Posso creare un PDF del preventivo col mio Logo da inviare al cliente?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Certamente. Una volta eseguiti i calcoli e inseriti i costi (sia del materiale che della manodopera), basta un click per generare un documento PDF professionale che puoi inviare direttamente al cliente via WhatsApp, Email o stamparlo.</p>
+                        <p>Certamente. Caricando il tuo logo aziendale e inserendo Ragione Sociale, P.IVA, indirizzo e IBAN nella scheda "Azienda", ogni preventivo esportato in PDF uscirà con un'intestazione professionale pronta da inviare via WhatsApp o Email.</p>
                     </div>
                 </div>
 
@@ -94,88 +122,47 @@
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Copriamo praticamente tutte le principali categorie edili: muratura (cemento, intonaco, mattoni), pitture per interni ed esterni, pavimentazioni e piastrellamento, impiantistica elettrica e termo-idraulica, cartongesso e noleggio macchinari.</p>
+                        <p>Include 20 calcolatori divisi in 8 aree: Pareti e Soffitti (pittura, cartongesso, carta da parati), Pavimenti (piastrelle, battiscopa), Muratura e Strutture (cemento, mattoni, intonaci, scale con formula di Blondel), Esterni e Coperture (guaine/primer, ghiaia), Giardini e Scavi (movimento terra, recinzioni, prato, terriccio, vasi), Impianti Elettrici, Termo-Idraulica/HVAC e Ponteggi/Noleggi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>L'app calcola anche lo sfrido (scarto)?</h4>
+                        <h4>L'app calcola anche lo sfrido (scarto di lavorazione)?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Sì! Sappiamo bene che nella realtà non usi mai solo la metratura esatta. In moduli come pavimenti e pitture c'è sempre un calcolo percentuale (personalizzabile) di sfrido, per evitare che a fine lavoro ti manchi il materiale.</p>
+                        <p>Sì! Nei calcolatori di posa e finitura (come piastrelle, pitture, battiscopa, muratura e guaine) viene applicata una percentuale di sfrido personalizzabile, così non rischi mai di restare senza materiale per gli ultimi tagli.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>È disponibile anche per iPhone (iOS)?</h4>
+                        <h4>Come posso fare un backup o spostare i miei dati su un nuovo telefono?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Al momento Edil Calc è ottimizzata e sviluppata esclusivamente per dispositivi Android (smartphone e tablet). Stiamo valutando lo sviluppo della versione iOS per il futuro.</p>
-                    </div>
-                </div>
-
-                <!-- Nuove FAQ Aggiunte -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Come posso fare un backup o spostare i miei dati?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>I dati vengono salvati localmente. Non faremo mai una sincronizzazione in cloud per scelta di privacy, ma puoi facilmente scaricare tutti i dati della tua app e caricarli su un altro dispositivo in qualsiasi momento.</p>
+                        <p>Vai in Impostazioni &rarr; Backup e Ripristino &rarr; Esporta Dati. L'app salverà un file <code>.json</code> con tutti i tuoi cantieri, il listino prezzi e le preferenze. Sul nuovo telefono ti basterà cliccare su "Importa Dati" e selezionare quel file.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Posso usare l'app su più dispositivi?</h4>
+                        <h4>Posso esportare i preventivi anche in formato Excel (.xlsx)?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Puoi installarla su tutti i dispositivi che vuoi, ma non c'è sincronizzazione automatica. Per trasferire il lavoro, usa la funzione di esportazione e importa il file sull'altro telefono o tablet.</p>
+                        <p>Sì, oltre al PDF per il cliente, puoi esportare qualsiasi cantiere in formato Excel (<code>.xlsx</code>) con colonne ordinate per stanza, lavorazione, parametri geometrici, materiali, manodopera e Gran Totale.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Quanto spazio occupa l'app sul telefono?</h4>
+                        <h4>Come viene calcolata la manodopera nei preventivi?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Il peso dell'app dipende da quanto è stata usata, dai dati salvati e dai cantieri creati. In generale può arrivare a pesare intorno ai 60 MB, mantenendosi comunque leggera per gli standard attuali.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Posso aggiungere il mio logo aziendale sui preventivi?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Assolutamente sì! Puoi personalizzare i tuoi preventivi PDF inserendo direttamente il logo della tua azienda per presentarti in modo ancora più professionale ai clienti.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Posso esportare i dati in formato Excel?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sì, oltre all'esportazione in PDF, la nostra app include già il comodissimo export in formato Excel, perfetto per importare i tuoi dati su PC o gestirli a fini contabili.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>È possibile richiedere l'aggiunta di calcolatori specifici?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Assolutamente sì. Se hai esigenze particolari per la tua nicchia, contattaci tramite email. Il nostro team analizza costantemente le richieste per decidere quali nuovi moduli sviluppare.</p>
+                        <p>In ogni calcolatore hai due modalità a scelta: puoi inserire le ore stimate moltiplicate per la tua tariffa oraria (€/h), oppure attivare l'opzione "Prezzo a corpo (Lump Sum)" per inserire un importo fisso forfettario.</p>
                     </div>
                 </div>
 
@@ -185,137 +172,77 @@
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Al 100%. Edil Calc salva tutto nella memoria interna (sandbox) del tuo smartphone. I dati non transitano e non vengono archiviati su server di terze parti: sono tuoi e restano solo nelle tue mani.</p>
+                        <p>Al 100%. Edil Calc salva tutti i dati lavorativi nella memoria interna (sandbox) del tuo smartphone. Non vengono mai caricati su server esterni: i tuoi preventivi e i tuoi prezzi restano esclusivamente nelle tue mani.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Posso gestire più cantieri per lo stesso cliente?</h4>
+                        <h4>Posso dividere un cantiere in più stanze o ambienti?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Sì, la sezione "Cantieri" è pensata proprio per darti massima flessibilità. Puoi creare infiniti cantieri e rinominarli liberamente (es. "Villa Rossi - Tetto" e "Villa Rossi - Interni").</p>
+                        <p>Sì! Quando crei un nuovo cantiere puoi scegliere se gestirlo come lista singola o suddividerlo in più stanze (es. "Bagno Padronale", "Cucina", "Soggiorno"), vedendo sia il subtotale di ogni stanza sia il totale generale della commessa.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>L'app rimarrà davvero gratis o in futuro sarà a pagamento?</h4>
+                        <h4>Cosa succede se salvo un calcolo senza aver inserito il prezzo di un materiale?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>L'app è e resterà sempre gratuita. È uno strumento creato dai professionisti per i professionisti di tutti i giorni, e non abbiamo intenzione di sviluppare costosi servizi per le grandi imprese.</p>
+                        <p>L'app ti permette comunque di salvare le quantità di materiale nel cantiere e ti mostra un chiaro avviso giallo ("Costi incompleti") indicando esattamente quali voci non hanno ancora un prezzo, così non rischi di inviare un preventivo incompleto per errore.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>In quali lingue è tradotta l'app?</h4>
+                        <h4>Che differenza c'è tra "Calcola da Area" e "Calcola da Dimensioni"?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Edil Calc riconosce automaticamente la lingua del tuo smartphone ed è attualmente tradotta interamente in Italiano, Inglese e Spagnolo.</p>
+                        <p>"Calcola da Area" è pensato per chi ha già i metri quadri totali da computo o planimetria. "Calcola da Dimensioni" è per chi misura col metro o laser in stanza: inserisci larghezza e altezza (o lunghezza) e l'app calcola la superficie automaticamente.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Serve registrarsi o creare un account per accedere?</h4>
+                        <h4>Posso aggiungere imprevisti, trasporti o voci extra al calcolo?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Nessuna seccatura. Scarichi l'app, la apri e sei subito operativo, senza dover inserire email, password o confermare account.</p>
+                        <p>Sì, in ogni calcolatore trovi la sezione "Voci Extra" dove puoi pescare materiali accessori dal tuo database o crearne di nuovi al volo (es. "Telo protettivo", "Nastro carta", "Trasporto a piano", "Smaltimento macerie").</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>C'è un modulo per calcolare le pendenze per i tetti?</h4>
+                        <h4>In quali lingue e valute è disponibile l'app?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Al momento i calcolatori geometrici avanzati non sono attivi, ma la sezione carpenteria/tetti è la prima in lista nella nostra roadmap pubblica di sviluppo.</p>
+                        <p>Edil Calc è tradotta integralmente in Italiano, Inglese e Spagnolo, e supporta le valute Euro (€), Dollaro ($), Sterlina (£) e Franco Svizzero (CHF).</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Come viene gestito lo sfrido/scarto dei materiali?</h4>
+                        <h4>Serve registrarsi o creare un account con email e password?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>In base al tipo di materiale, l'app applica automaticamente una percentuale di scarto "di sicurezza". Se lo preferisci, puoi sempre modificare questa percentuale manualmente prima di chiudere il calcolo.</p>
+                        <p>Nessuna registrazione richiesta. Scarichi l'app da Google Play, la apri e sei immediatamente operativo.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h4>Cosa succede se il mio fornitore cambia i prezzi?</h4>
+                        <h4>Chi è il cane col caschetto giallo nell'angolo dello schermo?</h4>
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Puoi aprire in qualsiasi momento un preventivo salvato, fare tap sul costo unitario del materiale specifico e aggiornare il prezzo. Il totale verrà ricalcolato istantaneamente.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Come contatto l'assistenza in caso di bug?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Al momento non è possibile segnalare un bug direttamente dall'app. Se riscontri dei problemi, ti invitiamo a contattarci usando l'icona della mail che trovi nel footer di questo sito web.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>C'è un calcolatore per le gettate di cemento armato?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sì, nella categoria "Muratura e Cemento" trovi moduli dedicati non solo per quantificare sacchi, ma anche per calcolare i metri cubi esatti in base al volume della cassaforma.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>È un'app adatta anche per lavori "Fai-da-te"?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Assolutamente! Nonostante sia studiata per professionisti, l'interfaccia è talmente intuitiva che chiunque voglia ristrutturare casa da solo può stimare esattamente i materiali che andrà a comprare.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Che differenza c'è tra "Calcolo da Area" e "da Dimensioni"?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>La funzione "Da Area" è pensata per chi ha già i metri quadri totali sottomano. "Da Dimensioni" è per chi ha appena misurato col metro: inserisci altezza e larghezza e l'app calcola l'area da sola.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Posso aggiungere imprevisti e spese extra?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sì, in ogni schermata di riepilogo puoi aggiungere liberamente spese manuali personalizzate: ad esempio "Nolo muletto", "Trasporto macerie" o "Extra fuori preventivo".</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>L'app consuma molta batteria in cantiere?</h4>
-                        <i data-feather="chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Non preoccuparti: essendo un'applicazione gestionale locale (priva di tracker invasivi, geolocalizzazione o sync continui), l'impatto sulla batteria del tuo telefono è praticamente nullo anche dopo ore d'uso.</p>
+                        <p>È <strong>Boomer</strong>, il capocantiere mascotte di Edil Calc! Toccandolo in qualsiasi schermata ti darà consigli tecnici contestuali sul calcolo che stai eseguendo. Se preferisci non visualizzare i suoi fumetti automatici, puoi disattivarli in qualsiasi momento dalle Impostazioni.</p>
                     </div>
                 </div>
 
@@ -323,41 +250,75 @@
         </div>
     </section>
 
+    <!-- CTA BANNER -->
     <section id="download" class="cta-section">
-        <div class="container text-center">
-            <h2 class="cta-title">Tutto chiaro? Inizia subito.</h2>
-            <p class="cta-subtitle">Scarica l'app e porta il tuo cantiere al livello successivo.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary btn-massive">Scarica Ora su Google Play (Gratis)</a>
+        <div class="container">
+            <div class="cta-box">
+                <h2 class="cta-title">Tutto chiaro? Inizia subito.</h2>
+                <p class="cta-subtitle">Scarica gratuitamente Edil Calc su Google Play e porta i tuoi preventivi al livello successivo.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary btn-massive">
+                    <i data-feather="download"></i>
+                    <span>Scarica Ora su Google Play (Gratis)</span>
+                </a>
+            </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container footer-container">
             <div class="footer-brand">
-                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
-                <p>L'app definitiva per l'edilizia e i preventivi veloci.</p>
+                <a href="index.html" class="brand-link">
+                    <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                    <div class="brand-text">
+                        <span class="brand-name">EDIL CALC</span>
+                        <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                    </div>
+                </a>
+                <p>La suite gratuita per calcoli edili, gestione cantieri multi-stanza e preventivi professionali in PDF ed Excel.</p>
             </div>
+
             <div class="footer-links">
-                <h4>Link Utili</h4>
+                <h4>Navigazione</h4>
                 <ul>
-                    <li><a href="index.html#features">Funzionalità</a></li>
-                    <li><a href="index.html#azienda">Il tuo Brand</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Termini di Servizio</a></li>
+                    <li><a href="index.html#features">Vantaggi Principali</a></li>
+                    <li><a href="index.html#calcolatori">I 20 Calcolatori</a></li>
+                    <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                    <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <h4>Contattaci</h4>
-                <div class="social-icons">
-                    <a href="#"><i data-feather="facebook"></i></a>
-                    <a href="#"><i data-feather="instagram"></i></a>
-                    <a href="#"><i data-feather="mail"></i></a>
+
+            <div class="footer-contact">
+                <h4>Informazioni Legali &amp; Store</h4>
+                <div class="contact-list">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="contact-link">
+                        <i data-feather="shopping-bag"></i>
+                        <span>Scheda Ufficiale Google Play</span>
+                    </a>
+                    <a href="privacy.html" class="contact-link">
+                        <i data-feather="shield"></i>
+                        <span>Privacy Policy (GDPR)</span>
+                    </a>
+                    <a href="terms.html" class="contact-link">
+                        <i data-feather="file-text"></i>
+                        <span>Termini di Servizio</span>
+                    </a>
+                    <a href="mailto:support@edilcalc.com" class="contact-link">
+                        <i data-feather="life-buoy"></i>
+                        <span>support@edilcalc.com</span>
+                    </a>
+                    <a href="mailto:info@edilcalc.com" class="contact-link">
+                        <i data-feather="mail"></i>
+                        <span>info@edilcalc.com</span>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+
+        <div class="container footer-bottom">
             <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
+            <p>ID Pacchetto Android: <code>com.daniele.edilcalc</code></p>
         </div>
     </footer>
 

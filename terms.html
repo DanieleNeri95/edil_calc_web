@@ -8,65 +8,53 @@
     <title>Termini di Servizio | Edil Calc</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        .legal-content {
-            max-width: 860px;
-            margin: 0 auto;
-            background: rgba(20, 20, 22, 0.8);
-            border: 1px solid var(--color-border-dark);
-            border-radius: var(--radius-lg);
-            padding: 48px;
-        }
-        .legal-content h2 {
-            font-size: 1.75rem;
-            margin-top: 36px;
-            margin-bottom: 16px;
-            color: var(--color-primary);
-        }
-        .legal-content p, .legal-content li {
-            color: var(--color-text-white-dim);
-            margin-bottom: 14px;
-            font-size: 1rem;
-        }
-        .legal-content ul {
-            padding-left: 24px;
-            margin-bottom: 20px;
-        }
-        @media (max-width: 768px) {
-            .legal-content {
-                padding: 24px;
-            }
-        }
-    </style>
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html"><img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo"></a>
-            </div>
+            <a href="index.html" class="brand-link">
+                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <div class="brand-text">
+                    <span class="brand-name">EDIL CALC</span>
+                    <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                </div>
+            </a>
+
             <ul class="nav-links">
-                <li><a href="index.html#features">Funzionalità</a></li>
-                <li><a href="index.html#azienda">Il tuo Brand</a></li>
+                <li><a href="index.html#features">Vantaggi</a></li>
+                <li><a href="index.html#calcolatori">I 20 Calcolatori</a></li>
+                <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                <li><a href="index.html#azienda">Preventivi PDF</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
             </ul>
-            <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary">Scarica l'App</a>
+
+            <div class="nav-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i data-feather="download"></i>
+                    <span>Scarica Gratis</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <header class="hero" style="min-height: 35vh; padding-top: 150px; padding-bottom: 40px; align-items: flex-start; background: var(--color-bg-dark);">
-        <div class="container text-center">
-            <h1 class="hero-title" style="font-size: 3.5rem;">Termini di <span class="text-primary">Servizio</span></h1>
-            <p class="hero-subtitle">Condizioni di utilizzo e limitazione di responsabilità per l'app <strong>Edil Calc</strong>.<br>Ultimo aggiornamento: Novembre 2026</p>
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+        <div class="container">
+            <span class="eyebrow"><i data-feather="file-text"></i> Condizioni d'Uso</span>
+            <h1 class="page-hero-title">Termini di <span class="text-primary">Servizio</span></h1>
+            <p class="section-subtitle">Condizioni di utilizzo e limitazione di responsabilità tecnica per l'app <strong>Edil Calc</strong>.<br>Ultimo aggiornamento: Novembre 2026</p>
         </div>
     </header>
 
-    <section style="padding-top: 20px; padding-bottom: 100px;">
+    <section style="padding-top: 48px; padding-bottom: 96px;">
         <div class="container">
             <div class="legal-content">
                 <p>Scaricando o utilizzando l'applicazione mobile <strong>Edil Calc</strong> ("l'Applicazione"), l'utente accetta integralmente i presenti Termini di Servizio.</p>
@@ -84,33 +72,72 @@
 
                 <h2>4. Proprietà Intellettuale</h2>
                 <p>Il marchio, il codice sorgente, il design dell'interfaccia e la mascotte "Boomer" presenti in Edil Calc sono di proprietà esclusiva dello sviluppatore. I documenti PDF ed Excel generati dall'utente con i propri dati aziendali restano di piena proprietà dell'utente.</p>
+
+                <h2>5. Contatti e Assistenza</h2>
+                <p>Per qualsiasi segnalazione tecnica, richiesta di supporto o informazione generale, puoi contattarci ai seguenti indirizzi ufficiali:</p>
+                <ul>
+                    <li><strong>Assistenza e Supporto Tecnico:</strong> <a href="mailto:support@edilcalc.com">support@edilcalc.com</a></li>
+                    <li><strong>Informazioni Generali:</strong> <a href="mailto:info@edilcalc.com">info@edilcalc.com</a></li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container footer-container">
             <div class="footer-brand">
-                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
-                <p>L'app definitiva per l'edilizia e i preventivi veloci.</p>
+                <a href="index.html" class="brand-link">
+                    <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                    <div class="brand-text">
+                        <span class="brand-name">EDIL CALC</span>
+                        <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                    </div>
+                </a>
+                <p>La suite gratuita per calcoli edili, gestione cantieri multi-stanza e preventivi professionali in PDF ed Excel.</p>
             </div>
+
             <div class="footer-links">
-                <h4>Link Utili</h4>
+                <h4>Navigazione</h4>
                 <ul>
-                    <li><a href="index.html#features">Funzionalità</a></li>
-                    <li><a href="index.html#azienda">Il tuo Brand</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Termini di Servizio</a></li>
+                    <li><a href="index.html#features">Vantaggi Principali</a></li>
+                    <li><a href="index.html#calcolatori">I 20 Calcolatori</a></li>
+                    <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                    <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <h4>Store Ufficiale</h4>
-                <p style="color: var(--color-text-white-dim); font-size: 0.9rem;">Disponibile gratuitamente su Google Play per dispositivi Android.</p>
+
+            <div class="footer-contact">
+                <h4>Informazioni Legali &amp; Store</h4>
+                <div class="contact-list">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="contact-link">
+                        <i data-feather="shopping-bag"></i>
+                        <span>Scheda Ufficiale Google Play</span>
+                    </a>
+                    <a href="privacy.html" class="contact-link">
+                        <i data-feather="shield"></i>
+                        <span>Privacy Policy (GDPR)</span>
+                    </a>
+                    <a href="terms.html" class="contact-link">
+                        <i data-feather="file-text"></i>
+                        <span>Termini di Servizio</span>
+                    </a>
+                    <a href="mailto:support@edilcalc.com" class="contact-link">
+                        <i data-feather="life-buoy"></i>
+                        <span>support@edilcalc.com</span>
+                    </a>
+                    <a href="mailto:info@edilcalc.com" class="contact-link">
+                        <i data-feather="mail"></i>
+                        <span>info@edilcalc.com</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
+
+        <div class="container footer-bottom">
             <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
+            <p>ID Pacchetto Android: <code>com.daniele.edilcalc</code></p>
         </div>
     </footer>
 
