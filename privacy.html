@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informativa sulla Privacy (Privacy Policy) dell'applicazione mobile Edil Calc per Android.">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Privacy Policy | Edil Calc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .legal-content {
+            max-width: 860px;
+            margin: 0 auto;
+            background: rgba(20, 20, 22, 0.8);
+            border: 1px solid var(--color-border-dark);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+        }
+        .legal-content h2 {
+            font-size: 1.75rem;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            color: var(--color-primary);
+        }
+        .legal-content h3 {
+            font-size: 1.25rem;
+            margin-top: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .legal-content p, .legal-content li {
+            color: var(--color-text-white-dim);
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+        .legal-content ul {
+            padding-left: 24px;
+            margin-bottom: 20px;
+        }
+        .legal-content a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Funzionalità</a></li>
+                <li><a href="index.html#azienda">Il tuo Brand</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="privacy.html" style="color: var(--color-primary);">Privacy</a></li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary">Scarica l'App</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 35vh; padding-top: 150px; padding-bottom: 40px; align-items: flex-start; background: var(--color-bg-dark);">
+        <div class="container text-center">
+            <h1 class="hero-title" style="font-size: 3.5rem;">Privacy <span class="text-primary">Policy</span></h1>
+            <p class="hero-subtitle">Informativa sul trattamento dei dati per l'app <strong>Edil Calc</strong> (ID pacchetto: <code>com.daniele.edilcalc</code>).<br>Ultimo aggiornamento: Novembre 2026</p>
+        </div>
+    </header>
+
+    <section style="padding-top: 20px; padding-bottom: 100px;">
+        <div class="container">
+            <div class="legal-content">
+                <p>La presente Informativa sulla Privacy descrive come l'applicazione mobile <strong>Edil Calc</strong> ("l'Applicazione" o "l'App") gestisce le informazioni degli utenti. La tutela della tua privacy e la sicurezza dei tuoi dati aziendali e di cantiere sono la nostra priorità assoluta.</p>
+
+                <h2>1. Archiviazione Locale dei Dati ("Offline-First")</h2>
+                <p><strong>Edil Calc non richiede la creazione di alcun account utente e non possiede server proprietari per l'archiviazione dei tuoi dati lavorativi.</strong></p>
+                <p>Tutti i dati inseriti dall'utente all'interno dell'Applicazione vengono salvati esclusivamente nella memoria locale interna del dispositivo (tramite database locale <em>Hive</em> e <em>SharedPreferences</em>), inclusi:</p>
+                <ul>
+                    <li>Cantieri, stanze, misurazioni e calcoli dei materiali;</li>
+                    <li>Listini prezzi personalizzati e costi della manodopera;</li>
+                    <li>Dati anagrafici dei clienti inseriti nei progetti (nome, indirizzo lavori, telefono, note);</li>
+                    <li>Dati del profilo aziendale (ragione sociale, Partita IVA/C.F., indirizzo sede, IBAN e immagine del logo aziendale).</li>
+                </ul>
+                <p>Nessuno di questi dati viene mai trasmesso, sincronizzato o condiviso con lo sviluppatore o con terze parti, salvo quando l'utente decide volontariamente di esportare e condividere un preventivo (in formato PDF o Excel) o un file di backup (<code>.json</code>) tramite le funzioni di sistema del proprio smartphone.</p>
+
+                <h2>2. Permessi del Dispositivo e Selettore File/Immagini</h2>
+                <ul>
+                    <li><strong>Immagine del Logo Aziendale:</strong> Per consentire la selezione del logo aziendale, l'App utilizza il selettore di sistema nativo di Android (<em>Android Photo Picker</em>). L'App non richiede né conserva il permesso di lettura dell'intera galleria fotografica (<code>READ_MEDIA_IMAGES</code>), ma accede unicamente alla singola immagine selezionata dall'utente, copiandola nella cartella privata dell'Applicazione.</li>
+                    <li><strong>Esportazione e Backup:</strong> Il salvataggio e il ripristino dei backup JSON e l'esportazione dei preventivi in PDF/Excel avvengono tramite il <em>Storage Access Framework (SAF)</em> e il menu di condivisione nativo di Android, senza accedere ad altri file presenti sul dispositivo.</li>
+                    <li><strong>Accesso a Internet (<code>INTERNET</code>) e ID Pubblicità (<code>AD_ID</code>):</strong> Utilizzati esclusivamente per l'erogazione di annunci pubblicitari tramite Google AdMob e la gestione del consenso privacy (GDPR).</li>
+                </ul>
+
+                <h2>3. Servizi di Terze Parti e Pubblicità (Google AdMob)</h2>
+                <p>Per mantenere Edil Calc completamente gratuita, l'Applicazione mostra annunci pubblicitari forniti da <strong>Google AdMob (Google Mobile Ads SDK)</strong>, un servizio gestito da Google Ireland Limited / Google LLC.</p>
+                <p>L'SDK di Google Mobile Ads può raccogliere e condividere automaticamente alcune informazioni tecniche del dispositivo per finalità di erogazione degli annunci, analisi delle prestazioni e prevenzione delle frodi, tra cui:</p>
+                <ul>
+                    <li><strong>ID dispositivo o altri identificatori:</strong> come l'ID pubblicità di Android (<em>Google Advertising ID</em>);</li>
+                    <li><strong>Posizione approssimativa:</strong> dedotta in modo non preciso dall'indirizzo IP di connessione;</li>
+                    <li><strong>Attività dell'app:</strong> interazioni con gli annunci pubblicitari visualizzati (impressioni e clic);</li>
+                    <li><strong>Informazioni e prestazioni dell'app:</strong> log di arresti anomali (crash logs) e dati diagnostici tecnici relativi all'SDK pubblicitario.</li>
+                </ul>
+                <p>Tutti i dati trasmessi dall'SDK di Google Mobile Ads vengono crittografati in transito tramite protocollo HTTPS. Per maggiori informazioni su come Google utilizza i dati raccolti, consulta:</p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Norme sulla Privacy di Google</a></li>
+                    <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Modalità di utilizzo dei dati da parte di Google quando si utilizzano siti o app dei partner</a></li>
+                </ul>
+
+                <h2>4. Consenso GDPR (Utenti nello Spazio Economico Europeo e Regno Unito)</h2>
+                <p>In conformità al Regolamento Generale sulla Protezione dei Dati (GDPR - Regolamento UE 2016/679) e alla <em>EU User Consent Policy</em> di Google, al primo avvio dell'Applicazione agli utenti situati nello Spazio Economico Europeo (SEE) e nel Regno Unito viene presentato il modulo certificato <strong>Google UMP (User Messaging Platform)</strong> per scegliere se acconsentire o meno agli annunci personalizzati.</p>
+                <p>Puoi modificare o revocare il tuo consenso in qualsiasi momento direttamente dall'interno dell'Applicazione, recandoti nella sezione <strong>Impostazioni &rarr; Privacy e Consenso Annunci &rarr; Gestisci preferenze privacy</strong>. Inoltre, puoi reimpostare o eliminare il tuo ID pubblicità dalle impostazioni di sistema del tuo dispositivo Android (<em>Impostazioni &rarr; Google &rarr; Tutti i servizi &rarr; Annunci</em>).</p>
+
+                <h2>5. Conservazione ed Eliminazione dei Dati</h2>
+                <p>Poiché tutti i dati di progetti, clienti e azienda sono archiviati esclusivamente in locale sul tuo dispositivo e non sono associati ad alcun account esterno:</p>
+                <ul>
+                    <li>Puoi eliminare singoli progetti, stanze o materiali in qualsiasi momento direttamente dall'interfaccia dell'App;</li>
+                    <li>Puoi cancellare integralmente tutti i dati salvati svuotando i dati dell'App dalle impostazioni di Android (<em>Impostazioni &rarr; App &rarr; Edil Calc &rarr; Spazio di archiviazione &rarr; Cancella dati</em>) oppure disinstallando l'Applicazione.</li>
+                </ul>
+
+                <h2>6. Privacy dei Minori</h2>
+                <p>Edil Calc è uno strumento professionale pensato per operatori del settore edile e adulti. L'Applicazione non è destinata a minori di 13 anni (o dell'età minima prevista dalla legislazione locale) e non raccoglie consapevolmente dati personali relativi a minori.</p>
+
+                <h2>7. English Summary (For International Users & Store Reviewers)</h2>
+                <p><strong>Edil Calc</strong> (package <code>com.daniele.edilcalc</code>) is an offline-first construction calculator and quoting app. All user-entered data (projects, rooms, calculations, client details, material prices, and company profile/logo) is stored <strong>100% locally</strong> on the user's device using local storage (Hive and SharedPreferences) and is never uploaded to any developer server. The app uses the native Android Photo Picker to select a company logo without requiring broad media permissions. To keep the app free, Edil Calc integrates <strong>Google AdMob (Google Mobile Ads SDK)</strong>, which may collect device identifiers (Advertising ID), coarse IP-based location, ad interaction metrics, and crash/diagnostic logs over encrypted HTTPS connections. Users in the EEA/UK can manage or withdraw their GDPR consent at any time via <em>Settings &rarr; Privacy &amp; Ad Consent</em>.</p>
+
+                <h2>8. Modifiche e Contatti</h2>
+                <p>Eventuali aggiornamenti alla presente Privacy Policy saranno pubblicati su questa pagina con indicazione della data di revisione. Per qualsiasi domanda o richiesta relativa alla privacy, puoi contattare lo sviluppatore tramite i riferimenti indicati nella scheda ufficiale dell'app sul <strong>Google Play Store</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <p>L'app definitiva per l'edilizia e i preventivi veloci.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="index.html#features">Funzionalità</a></li>
+                    <li><a href="index.html#azienda">Il tuo Brand</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Termini di Servizio</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Store Ufficiale</h4>
+                <p style="color: var(--color-text-white-dim); font-size: 0.9rem;">Disponibile gratuitamente su Google Play per dispositivi Android.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
