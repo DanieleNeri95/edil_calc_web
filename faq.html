@@ -14,13 +14,9 @@
     <link rel="icon" href="assets/logo.png" type="image/png">
     <title>Domande Frequenti (FAQ) | Edil Calc</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/consent.js" defer></script>
 </head>
 <body>
 
@@ -28,7 +24,11 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
-                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38">
+                </picture>
                 <div class="brand-text">
                     <span class="brand-name">EDIL CALC</span>
                     <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -82,7 +82,7 @@
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Sì! Edil Calc è completamente gratuita. Niente abbonamenti nascosti, niente limiti sul numero di cantieri creati, sui calcoli effettuati o sui preventivi esportati in PDF ed Excel.</p>
+                        <p>Sì! Edil Calc è completamente gratuita per sempre: niente abbonamenti nascosti, niente piani a pagamento e nessun limite sul numero di cantieri creati, sui calcoli effettuati o sui preventivi esportati in PDF ed Excel. L'app si sostiene unicamente grazie alla presenza di annunci pubblicitari (Google AdMob).</p>
                     </div>
                 </div>
 
@@ -269,7 +269,11 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="index.html" class="brand-link">
-                    <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                    <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44" loading="lazy">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38" loading="lazy">
+                    </picture>
                     <div class="brand-text">
                         <span class="brand-name">EDIL CALC</span>
                         <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -285,6 +289,7 @@
                     <li><a href="index.html#calcolatori">I 20 Calcolatori</a></li>
                     <li><a href="index.html#how-it-works">Come Funziona</a></li>
                     <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="index.html#boomer">Boomer, il Capocantiere</a></li>
                     <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
                 </ul>
             </div>
@@ -304,6 +309,10 @@
                         <i data-feather="file-text"></i>
                         <span>Termini di Servizio</span>
                     </a>
+                    <a href="#gestisci-cookie" data-open-cookie-settings class="contact-link">
+                        <i data-feather="sliders"></i>
+                        <span>Gestisci cookie</span>
+                    </a>
                     <a href="mailto:support@edilcalc.com" class="contact-link">
                         <i data-feather="life-buoy"></i>
                         <span>support@edilcalc.com</span>
@@ -318,7 +327,11 @@
 
         <div class="container footer-bottom">
             <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
-            <p>ID Pacchetto Android: <code>com.daniele.edilcalc</code></p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <button type="button" class="footer-cookie-btn" data-open-cookie-settings>Gestisci cookie</button>
+            </div>
         </div>
     </footer>
 

@@ -15,13 +15,9 @@
     <link rel="icon" href="assets/logo.png" type="image/png">
     <title>Edil Calc | Calcoli Edili, Cantieri e Preventivi PDF</title>
 
-    <!-- Google Fonts: Outfit, Inter & JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/consent.js" defer></script>
 </head>
 <body>
 
@@ -29,7 +25,11 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
-                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38">
+                </picture>
                 <div class="brand-text">
                     <span class="brand-name">EDIL CALC</span>
                     <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -41,6 +41,7 @@
                 <li><a href="#calcolatori">I 20 Calcolatori</a></li>
                 <li><a href="#how-it-works">Come Funziona</a></li>
                 <li><a href="#azienda">Preventivi PDF</a></li>
+                <li><a href="#boomer">Boomer</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
 
@@ -70,6 +71,19 @@
                 <p class="hero-subtitle">
                     Dimentica carta, penna e fogli sparsi sul furgone. Inserisci le misure, calcola i materiali esatti comprensivi di sfrido, aggiungi la manodopera e invia subito al cliente un preventivo in <strong>PDF o Excel</strong> firmato col tuo logo aziendale.
                 </p>
+
+                <div class="hero-boomer-callout">
+                    <div class="hero-boomer-avatar-wrap">
+                        <picture>
+                            <source srcset="assets/boomer.webp" type="image/webp">
+                            <img src="assets/boomer.jpg" alt="Boomer, il cane capocantiere col caschetto giallo" class="hero-boomer-avatar" width="72" height="72">
+                        </picture>
+                    </div>
+                    <div class="boomer-speech-bubble">
+                        <span class="boomer-speaker-tag">Boomer &bull; Il Capocantiere</span>
+                        <p class="boomer-speech-text">&laquo;Ai miei tempi il preventivo si faceva a mente. Tu usa l'app, che se sbagli le misure o ti scordi lo sfrido i materiali li paghi di tasca tua!&raquo;</p>
+                    </div>
+                </div>
 
                 <div class="hero-cta">
                     <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary btn-large">
@@ -113,7 +127,7 @@
 
                     <div class="phone-mockup">
                         <div class="phone-screen">
-                            <img src="assets/home.png" alt="Schermata Home di Edil Calc con categorie calcolatori" class="mockup-img">
+                            <img src="assets/home.png" alt="Schermata Home di Edil Calc con categorie calcolatori" class="mockup-img" width="256" height="598">
                         </div>
                     </div>
 
@@ -676,7 +690,7 @@
                     </div>
                     <div class="phone-mockup">
                         <div class="phone-screen">
-                            <img id="workflow-screen-img" src="assets/calcolo.png" alt="Schermata operativa Edil Calc" class="mockup-img" style="transition: opacity 0.18s ease;">
+                            <img id="workflow-screen-img" src="assets/calcolo.png" alt="Schermata operativa Edil Calc" class="mockup-img" width="254" height="593" loading="lazy" style="transition: opacity 0.18s ease;">
                         </div>
                     </div>
                 </div>
@@ -720,7 +734,7 @@
                     <div style="display: flex; justify-content: center;">
                         <div class="phone-mockup" style="width: 240px;">
                             <div class="phone-screen">
-                                <img src="assets/azienda.png" alt="Configurazione Profilo Aziendale in Edil Calc" class="mockup-img">
+                                <img src="assets/azienda.png" alt="Configurazione Profilo Aziendale in Edil Calc" class="mockup-img" width="256" height="599" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -734,9 +748,72 @@
                             <span style="color: var(--color-primary);">A4</span>
                         </div>
                         <div class="pdf-scroll-window">
-                            <img src="assets/preventivo.png" alt="Anteprima Preventivo PDF generato da Edil Calc" style="width: 100%; border-radius: 8px;">
+                            <img src="assets/preventivo.png" alt="Anteprima Preventivo PDF generato da Edil Calc" width="342" height="866" loading="lazy" style="width: 100%; border-radius: 8px;">
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOMER MASCOT SECTION -->
+    <section id="boomer" class="boomer-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow"><i data-feather="hard-drive"></i> La Mascotte Ufficiale</span>
+                <h2 class="section-title">Boomer, <span class="text-primary">il capocantiere</span></h2>
+                <p class="section-subtitle">Burbero, diretto e con quarant'anni di polvere sul caschetto: nell'app ti tiene d'occhio a ogni calcolo per non farti buttare via tempo e materiali.</p>
+            </div>
+
+            <div class="boomer-showcase-grid">
+                <div class="boomer-mascot-card reveal">
+                    <div class="boomer-mascot-img-wrap">
+                        <picture>
+                            <source srcset="assets/boomer.webp" type="image/webp">
+                            <img src="assets/boomer.jpg" alt="Boomer, il cane capocantiere mascotte di Edil Calc con caschetto giallo, matita sull'orecchio e cinturone porta-attrezzi" class="boomer-mascot-img" width="220" height="220" loading="lazy">
+                        </picture>
+                    </div>
+                    <span class="boomer-role-badge">Capocantiere Senior &bull; Vecchia Scuola</span>
+                    <h3>&laquo;Misura due volte, taglia una sola!&raquo;</h3>
+                    <p>Toccando Boomer in qualsiasi schermata dell'app ricevi dritte pratiche sul lavoro che stai calcolando: dallo spessore dell'intonaco al coefficiente di rigonfiamento della terra.</p>
+                </div>
+
+                <div class="boomer-quotes-grid reveal">
+                    <article class="boomer-quote-card">
+                        <div class="boomer-quote-topic">
+                            <i data-feather="file-minus"></i>
+                            <span>Fogli sul furgone</span>
+                        </div>
+                        <p class="boomer-quote-text">&laquo;Ancora coi pizzini di carta macchiati di caffè sul cruscotto del furgone? Alla prima rotonda volano dal finestrino e ti tocca rifare tutte le misure da capo. Salva il cantiere nell'app!&raquo;</p>
+                        <span class="boomer-quote-Sign">&mdash; Boomer sui sopralluoghi</span>
+                    </article>
+
+                    <article class="boomer-quote-card">
+                        <div class="boomer-quote-topic">
+                            <i data-feather="percent"></i>
+                            <span>Sfrido dimenticato</span>
+                        </div>
+                        <p class="boomer-quote-text">&laquo;Hai contato le piastrelle giuste al millimetro senza aggiungere il 10% di sfrido? Bravo fenomeno, così quando ti si spezza l'ultima lastra nell'angolo ci incolli il cartone!&raquo;</p>
+                        <span class="boomer-quote-Sign">&mdash; Boomer sulle pose a pavimento</span>
+                    </article>
+
+                    <article class="boomer-quote-card">
+                        <div class="boomer-quote-topic">
+                            <i data-feather="maximize-2"></i>
+                            <span>Vuoti per pieni</span>
+                        </div>
+                        <p class="boomer-quote-text">&laquo;Ti sei ricordato di togliere porte e finestre dai metri quadri della parete? Se compri l'idropittura anche per verniciare l'aria, poi i secchi avanzati te li bevi a colazione.&raquo;</p>
+                        <span class="boomer-quote-Sign">&mdash; Boomer sulle finiture murali</span>
+                    </article>
+
+                    <article class="boomer-quote-card">
+                        <div class="boomer-quote-topic">
+                            <i data-feather="tool"></i>
+                            <span>Preventivi a occhio</span>
+                        </div>
+                        <p class="boomer-quote-text">&laquo;Ai miei tempi l'acqua nella betoniera si metteva a occhio, ma se fai i preventivi a occhio oggi finisci per lavorare per la gloria. Inserisci listino e manodopera prima di sporcare la cazzuola!&raquo;</p>
+                        <span class="boomer-quote-Sign">&mdash; Boomer sui costi di cantiere</span>
+                    </article>
                 </div>
             </div>
         </div>
@@ -758,7 +835,7 @@
                         <i data-feather="chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Edil Calc è 100% gratuita: tutti i 20 calcolatori, la gestione illimitata dei cantieri e l'esportazione dei preventivi in PDF ed Excel sono inclusi gratuitamente, senza abbonamenti né blocchi.</p>
+                        <p>Edil Calc è 100% gratuita per sempre: tutti i 20 calcolatori, la gestione illimitata dei cantieri e l'esportazione dei preventivi in PDF ed Excel sono inclusi senza abbonamenti, acquisti in-app né blocchi. Il progetto si sostiene esclusivamente grazie ai banner pubblicitari presenti nell'app.</p>
                     </div>
                 </div>
 
@@ -803,7 +880,7 @@
                     <i data-feather="download"></i>
                     <span>Scarica Ora su Google Play (Gratis)</span>
                 </a>
-                <p class="cta-note">Compatibile con smartphone e tablet Android &bull; Lingue: IT / EN / ES</p>
+                <p class="cta-note">Compatibile con smartphone e tablet Android &bull; Gratis per sempre (supportata da annunci) &bull; Lingue: IT / EN / ES</p>
             </div>
         </div>
     </section>
@@ -813,7 +890,11 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="index.html" class="brand-link">
-                    <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                    <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44" loading="lazy">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38" loading="lazy">
+                    </picture>
                     <div class="brand-text">
                         <span class="brand-name">EDIL CALC</span>
                         <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -829,6 +910,7 @@
                     <li><a href="#calcolatori">I 20 Calcolatori</a></li>
                     <li><a href="#how-it-works">Come Funziona</a></li>
                     <li><a href="#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="#boomer">Boomer, il Capocantiere</a></li>
                     <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
                 </ul>
             </div>
@@ -848,6 +930,10 @@
                         <i data-feather="file-text"></i>
                         <span>Termini di Servizio</span>
                     </a>
+                    <a href="#gestisci-cookie" data-open-cookie-settings class="contact-link">
+                        <i data-feather="sliders"></i>
+                        <span>Gestisci cookie</span>
+                    </a>
                     <a href="mailto:support@edilcalc.com" class="contact-link">
                         <i data-feather="life-buoy"></i>
                         <span>support@edilcalc.com</span>
@@ -862,7 +948,11 @@
 
         <div class="container footer-bottom">
             <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
-            <p>ID Pacchetto Android: <code>com.daniele.edilcalc</code></p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <button type="button" class="footer-cookie-btn" data-open-cookie-settings>Gestisci cookie</button>
+            </div>
         </div>
     </footer>
 

@@ -6,11 +6,9 @@
     <meta name="description" content="Informativa sulla Privacy (Privacy Policy) dell'applicazione mobile Edil Calc per Android.">
     <link rel="icon" href="assets/logo.png" type="image/png">
     <title>Privacy Policy | Edil Calc</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/consent.js" defer></script>
 </head>
 <body>
 
@@ -18,7 +16,11 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
-                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38">
+                </picture>
                 <div class="brand-text">
                     <span class="brand-name">EDIL CALC</span>
                     <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -50,7 +52,7 @@
         <div class="container">
             <span class="eyebrow"><i data-feather="shield"></i> Tutela Dati &amp; GDPR</span>
             <h1 class="page-hero-title">Privacy <span class="text-primary">Policy</span></h1>
-            <p class="section-subtitle">Informativa sul trattamento dei dati per l'app <strong>Edil Calc</strong> (<code>com.daniele.edilcalc</code>).<br>Ultimo aggiornamento: Novembre 2026</p>
+            <p class="section-subtitle">Informativa sul trattamento dei dati per l'app <strong>Edil Calc</strong>.<br>Ultimo aggiornamento: 16 Novembre 2026</p>
         </div>
     </header>
 
@@ -106,15 +108,47 @@
                 <h2>6. Privacy dei Minori</h2>
                 <p>Edil Calc è uno strumento professionale pensato per operatori del settore edile e adulti. L'Applicazione non è destinata a minori di 13 anni (o dell'età minima prevista dalla legislazione locale) e non raccoglie consapevolmente dati personali relativi a minori.</p>
 
-                <h2>7. English Summary (For International Users &amp; Store Reviewers)</h2>
-                <p><strong>Edil Calc</strong> (package <code>com.daniele.edilcalc</code>) is an offline-first construction calculator and quoting app. All user-entered data (projects, rooms, calculations, client details, material prices, and company profile/logo) is stored <strong>100% locally</strong> on the user's device using local storage (Hive and SharedPreferences) and is never uploaded to any developer server. The app uses the native Android Photo Picker to select a company logo without requiring broad media permissions. To keep the app free, Edil Calc integrates <strong>Google AdMob (Google Mobile Ads SDK)</strong>, which may collect device identifiers (Advertising ID), coarse IP-based location, ad interaction metrics, and crash/diagnostic logs over encrypted HTTPS connections. Users in the EEA/UK can manage or withdraw their GDPR consent at any time via <em>Settings &rarr; Privacy &amp; Ad Consent</em>.</p>
-
-                <h2>8. Modifiche e Contatti</h2>
-                <p>Eventuali aggiornamenti alla presente Privacy Policy saranno pubblicati su questa pagina con indicazione della data di revisione. Per qualsiasi domanda, richiesta di assistenza o informazione relativa alla privacy, puoi contattare lo sviluppatore ai seguenti indirizzi email ufficiali:</p>
+                <h2 id="cookie-policy">7. Cookie e tecnologie simili (Sito Web)</h2>
+                <p>Il presente sito web informativo (<em>Edil Calc Web</em>) rispetta il Regolamento UE 2016/679 (GDPR) e la Direttiva 2002/58/CE (ePrivacy). Il sito <strong>non utilizza cookie di profilazione, cookie pubblicitari né strumenti di analisi statistica o tracciamento (Analytics)</strong>.</p>
+                <p>Di seguito sono elencati in modo trasparente tutti gli strumenti tecnici e i servizi opzionali impiegati dal sito web:</p>
                 <ul>
-                    <li><strong>Informazioni generali e Privacy:</strong> <a href="mailto:info@edilcalc.com">info@edilcalc.com</a></li>
+                    <li>
+                        <strong>Archiviazione locale delle preferenze di consenso (Necessari / Sempre attivi):</strong>
+                        <ul>
+                            <li><strong>Strumento e chiave:</strong> Archiviazione web locale del browser (<code>window.localStorage</code>), chiave <code>edilcalc_consent_v1</code>.</li>
+                            <li><strong>Finalità:</strong> Memorizzare la scelta espressa dall'utente nel banner di consenso (categorie accettate o rifiutate, data/ora e versione dell'informativa) per evitare di riproporre il banner a ogni cambio pagina.</li>
+                            <li><strong>Base giuridica:</strong> Necessità tecnica ed esecuzione di un obbligo di legge (documentazione del consenso / rifiuto). I dati restano esclusivamente nel browser dell'utente e non vengono mai trasmessi a server esterni.</li>
+                            <li><strong>Durata:</strong> Persistente nel browser locale finché l'utente non cancella i dati di navigazione del browser o finché non cambia la versione dello schema di consenso.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Risorse statiche e icone locali (Necessari / Sempre attivi):</strong>
+                        <ul>
+                            <li><strong>Strumento:</strong> Fogli di stile (<code>css/style.css</code>), script funzionali (<code>js/main.js</code>, <code>js/consent.js</code>) e libreria di icone vettoriali (<code>js/feather.min.js</code>) sono ospitati e serviti direttamente in locale dal sito, senza connessioni verso reti CDN di terze parti.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Servizi esterni e Font di terze parti — Google Fonts (Opzionali / Disattivati di default):</strong>
+                        <ul>
+                            <li><strong>Strumento e fornitore:</strong> Caratteri tipografici web (<em>Outfit</em>, <em>Inter</em>, <em>JetBrains Mono</em>) erogati da <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code> e <code>fonts.gstatic.com</code>), servizio gestito da Google Ireland Limited / Google LLC.</li>
+                            <li><strong>Finalità:</strong> Migliorare la resa visiva e tipografica delle pagine del sito.</li>
+                            <li><strong>Blocco preventivo e consenso:</strong> Al primo accesso e in caso di rifiuto ("Rifiuta tutti"), i collegamenti a Google Fonts sono <strong>bloccati preventivamente</strong> e il sito utilizza i font di sistema preinstallati sul dispositivo dell'utente, senza inviare alcuna richiesta ai server di Google. Solo se l'utente presta il consenso esplicito ("Accetta tutti" o attivazione della categoria "Servizi esterni e Font di terze parti" nel pannello "Personalizza"), il browser scarica i file dei caratteri dai server di Google, comportando la trasmissione tecnica dell'indirizzo IP e degli header HTTP standard a Google.</li>
+                            <li><strong>Durata:</strong> La preferenza resta valida fino a revoca dell'utente; i file dei font eventualmente scaricati seguono la normale cache HTTP del browser.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Come modificare o revocare il consenso:</strong> Puoi modificare o revocare la tua scelta in qualsiasi momento con un solo clic tramite il link persistente <strong>"Gestisci cookie"</strong> presente nel piè di pagina (footer) di ogni pagina del sito (oppure <a href="#gestisci-cookie" data-open-cookie-settings>cliccando direttamente qui per aprire il pannello preferenze</a>). In caso di revoca, i collegamenti a Google Fonts vengono immediatamente rimossi dalla pagina e la nuova scelta viene salvata in <code>localStorage</code>.</p>
+
+                <h2>8. English Summary (For International Users &amp; Store Reviewers)</h2>
+                <p><strong>Edil Calc</strong> is an offline-first construction calculator and quoting app. All user-entered data (projects, rooms, calculations, client details, material prices, and company profile/logo) is stored <strong>100% locally</strong> on the user's device using local storage (Hive and SharedPreferences) and is never uploaded to any developer server. The app uses the native Android Photo Picker to select a company logo without requiring broad media permissions. To keep the app free, Edil Calc integrates <strong>Google AdMob (Google Mobile Ads SDK)</strong>, which may collect device identifiers (Advertising ID), coarse IP-based location, ad interaction metrics, and crash/diagnostic logs over encrypted HTTPS connections. Users in the EEA/UK can manage or withdraw their GDPR consent at any time via <em>Settings &rarr; Privacy &amp; Ad Consent</em>.</p>
+
+                <h2>9. Titolare del Trattamento, Modifiche e Contatti</h2>
+                <p>Ai sensi dell'art. 13, par. 1, lett. a) del Regolamento UE 2016/679 (GDPR), il Titolare del trattamento per il presente sito web e per l'applicazione <strong>Edil Calc</strong> (limitatamente alla gestione delle preferenze di consenso e all'integrazione dei servizi di terze parti sopra indicati, non avvenendo alcuna raccolta di dati lavorativi degli utenti su server del Titolare) è <strong>Daniele Neri</strong> (sviluppatore di Edil Calc), contattabile per l'esercizio dei diritti previsti dagli artt. 15–22 del GDPR e per qualsiasi richiesta di informazioni o assistenza ai seguenti recapiti ufficiali:</p>
+                <ul>
+                    <li><strong>Informazioni generali e Privacy (Titolare del trattamento):</strong> <a href="mailto:info@edilcalc.com">info@edilcalc.com</a></li>
                     <li><strong>Supporto tecnico e Assistenza:</strong> <a href="mailto:support@edilcalc.com">support@edilcalc.com</a></li>
                 </ul>
+                <p>Eventuali aggiornamenti alla presente Privacy Policy saranno pubblicati su questa pagina con indicazione della data di revisione.</p>
             </div>
         </div>
     </section>
@@ -124,7 +158,11 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="index.html" class="brand-link">
-                    <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                    <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44" loading="lazy">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38" loading="lazy">
+                    </picture>
                     <div class="brand-text">
                         <span class="brand-name">EDIL CALC</span>
                         <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -140,6 +178,7 @@
                     <li><a href="index.html#calcolatori">I 20 Calcolatori</a></li>
                     <li><a href="index.html#how-it-works">Come Funziona</a></li>
                     <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="index.html#boomer">Boomer, il Capocantiere</a></li>
                     <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
                 </ul>
             </div>
@@ -159,6 +198,10 @@
                         <i data-feather="file-text"></i>
                         <span>Termini di Servizio</span>
                     </a>
+                    <a href="#gestisci-cookie" data-open-cookie-settings class="contact-link">
+                        <i data-feather="sliders"></i>
+                        <span>Gestisci cookie</span>
+                    </a>
                     <a href="mailto:support@edilcalc.com" class="contact-link">
                         <i data-feather="life-buoy"></i>
                         <span>support@edilcalc.com</span>
@@ -173,7 +216,11 @@
 
         <div class="container footer-bottom">
             <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
-            <p>ID Pacchetto Android: <code>com.daniele.edilcalc</code></p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <button type="button" class="footer-cookie-btn" data-open-cookie-settings>Gestisci cookie</button>
+            </div>
         </div>
     </footer>
 

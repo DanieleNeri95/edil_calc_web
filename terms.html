@@ -6,11 +6,9 @@
     <meta name="description" content="Termini e Condizioni di Servizio dell'applicazione Edil Calc.">
     <link rel="icon" href="assets/logo.png" type="image/png">
     <title>Termini di Servizio | Edil Calc</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/consent.js" defer></script>
 </head>
 <body>
 
@@ -18,7 +16,11 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="brand-link">
-                <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38">
+                </picture>
                 <div class="brand-text">
                     <span class="brand-name">EDIL CALC</span>
                     <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -64,8 +66,9 @@
                 <p><strong>IMPORTANTE – Esclusione di Responsabilità Tecnica:</strong> Tutti i risultati forniti dai calcolatori dell'Applicazione (inclusi, a titolo esemplificativo ma non esaustivo, i calcoli per cemento, muratura, cartongesso, intonaci, piastrelle, impermeabilizzazioni, scavi, ponteggi, sviluppo scale, dimensionamento cavi elettrici, tubazioni idrauliche e carichi termici HVAC) costituiscono <strong>stime indicative di massima</strong> e <strong>non sostituiscono in alcun modo il progetto esecutivo, il computo metrico ufficiale o la verifica di un tecnico abilitato</strong> (ingegnere, architetto, geometra o installatore certificato ai sensi del D.M. 37/08 e normative vigenti).</p>
                 <p>L'utente è tenuto a verificare sempre in autonomia le quantità, le rese effettive indicate nelle schede tecniche dei produttori, le normative di sicurezza (es. D.Lgs. 81/2008 e redazione del Pi.M.U.S. per i ponteggi) e i prezzi prima di procedere all'acquisto dei materiali o all'esecuzione dei lavori.</p>
 
-                <h2>2. Limitazione di Responsabilità</h2>
-                <p>L'Applicazione viene fornita "così com'è" (<em>as is</em>), gratuitamente e senza garanzie di alcun tipo. Lo sviluppatore non potrà essere ritenuto responsabile per eventuali danni diretti o indiretti, errori di approvvigionamento materiali, perdite economiche, differenze di preventivo o contestazioni tra l'utente e i propri clienti derivanti dall'uso dell'Applicazione.</p>
+                <h2>2. Gratuità del Servizio, Pubblicità e Limitazione di Responsabilità</h2>
+                <p>L'Applicazione è fornita gratuitamente agli utenti (senza abbonamenti né funzionalità a pagamento) e si sostiene esclusivamente tramite l'erogazione di annunci pubblicitari in-app (Google AdMob), come descritto nella <a href="privacy.html">Privacy Policy</a>.</p>
+                <p>L'Applicazione viene fornita "così com'è" (<em>as is</em>), senza garanzie di alcun tipo. Lo sviluppatore non potrà essere ritenuto responsabile per eventuali danni diretti o indiretti, errori di approvvigionamento materiali, perdite economiche, differenze di preventivo o contestazioni tra l'utente e i propri clienti derivanti dall'uso dell'Applicazione.</p>
 
                 <h2>3. Salvataggio Dati e Backup</h2>
                 <p>Poiché tutti i dati sono salvati localmente sul dispositivo dell'utente, è responsabilità esclusiva dell'utente effettuare periodicamente copie di sicurezza tramite la funzione <em>Impostazioni &rarr; Esporta Dati (Backup JSON)</em>. Lo sviluppatore non può recuperare dati persi a seguito di smarrimento, rottura del telefono, formattazione o disinstallazione dell'Applicazione.</p>
@@ -88,7 +91,11 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="index.html" class="brand-link">
-                    <img src="assets/logo.png" alt="Edil Calc Logo" class="nav-logo">
+                    <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44" loading="lazy">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38" loading="lazy">
+                    </picture>
                     <div class="brand-text">
                         <span class="brand-name">EDIL CALC</span>
                         <span class="brand-tag">Cantiere &amp; Preventivi</span>
@@ -104,6 +111,7 @@
                     <li><a href="index.html#calcolatori">I 20 Calcolatori</a></li>
                     <li><a href="index.html#how-it-works">Come Funziona</a></li>
                     <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="index.html#boomer">Boomer, il Capocantiere</a></li>
                     <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
                 </ul>
             </div>
@@ -123,6 +131,10 @@
                         <i data-feather="file-text"></i>
                         <span>Termini di Servizio</span>
                     </a>
+                    <a href="#gestisci-cookie" data-open-cookie-settings class="contact-link">
+                        <i data-feather="sliders"></i>
+                        <span>Gestisci cookie</span>
+                    </a>
                     <a href="mailto:support@edilcalc.com" class="contact-link">
                         <i data-feather="life-buoy"></i>
                         <span>support@edilcalc.com</span>
@@ -137,7 +149,11 @@
 
         <div class="container footer-bottom">
             <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
-            <p>ID Pacchetto Android: <code>com.daniele.edilcalc</code></p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <button type="button" class="footer-cookie-btn" data-open-cookie-settings>Gestisci cookie</button>
+            </div>
         </div>
     </footer>
 
