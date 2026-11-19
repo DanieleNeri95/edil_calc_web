@@ -4,13 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Edil Calc - L'app professionale gratuita per calcoli edili, stima materiali con sfrido, gestione cantieri e preventivi in PDF ed Excel.">
+    <link rel="canonical" href="https://www.edilcalc.com/">
 
     <!-- OpenGraph & Meta Tags -->
-    <meta property="og:title" content="Edil Calc | Calcoli Edili e Preventivi PDF in Cantiere">
+    <meta property="og:title" content="Edil Calc | App Gratuita Calcoli Edili e Preventivi PDF">
     <meta property="og:description" content="20 calcolatori edili specializzati, gestione cantieri multi-stanza ed esportazione preventivi in PDF ed Excel col tuo logo. 100% gratis e offline.">
-    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:url" content="https://www.edilcalc.com/">
+    <meta property="og:site_name" content="Edil Calc">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:image" content="https://www.edilcalc.com/assets/logo.png">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Edil Calc | Calcoli Edili e Preventivi PDF in Cantiere">
+    <meta name="twitter:description" content="20 calcolatori edili, calcolo materiali con sfrido e preventivi PDF/Excel firmati col tuo logo. 100% gratis su Google Play.">
+    <meta name="twitter:image" content="https://www.edilcalc.com/assets/logo.png">
+
+    <!-- Schema.org JSON-LD: MobileApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Edil Calc: Calcoli Edili e PDF",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Construction & Estimating",
+      "inLanguage": ["it", "en", "es"],
+      "url": "https://www.edilcalc.com/",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.daniele.edilcalc",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.daniele.edilcalc",
+      "image": "https://www.edilcalc.com/assets/logo.png",
+      "screenshot": [
+        "https://www.edilcalc.com/assets/home.png",
+        "https://www.edilcalc.com/assets/calcolo.png",
+        "https://www.edilcalc.com/assets/risultato.png",
+        "https://www.edilcalc.com/assets/cantiere.png",
+        "https://www.edilcalc.com/assets/azienda.png",
+        "https://www.edilcalc.com/assets/preventivo.png"
+      ],
+      "description": "App professionale gratuita per calcoli edili, stima fabbisogno materiali con sfrido, gestione cantieri multi-stanza ed esportazione preventivi in PDF A4 ed Excel (.xlsx) con logo aziendale.",
+      "softwareVersion": "1.0.9",
+      "author": {
+        "@type": "Person",
+        "name": "Daniele Neri",
+        "url": "https://www.edilcalc.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      "featureList": [
+        "20 calcolatori edili specializzati (Pittura, Cartongesso, Piastrelle, Cemento, Muratura, Intonaci, Scale, Guaine, Scavi, Impianti Elettrici, Idraulica, HVAC, Ponteggi)",
+        "Esportazione preventivi in PDF A4 ed Excel (.xlsx) con logo aziendale, Partita IVA e IBAN",
+        "Gestione cantieri multi-stanza e rubrica clienti",
+        "Calcolo materiali con percentuale di sfrido e sottrazione porte/finestre",
+        "Funzionamento 100% offline con backup e ripristino JSON"
+      ]
+    }
+    </script>
 
     <link rel="icon" href="assets/logo.png" type="image/png">
     <title>Edil Calc | Calcoli Edili, Cantieri e Preventivi PDF</title>
@@ -66,7 +118,7 @@
                     <span>100% Gratis &bull; Funziona anche Offline in Cantiere</span>
                 </div>
                 <h1 class="hero-title">
-                    Porta il Cantiere<br>sul tuo <span class="text-gradient">Smartphone.</span>
+                    Il Cantiere sul tuo Smartphone:<br><span class="text-gradient">Calcoli Edili e Preventivi PDF.</span>
                 </h1>
                 <p class="hero-subtitle">
                     Dimentica carta, penna e fogli sparsi sul furgone. Inserisci le misure, calcola i materiali esatti comprensivi di sfrido, aggiungi la manodopera e invia subito al cliente un preventivo in <strong>PDF o Excel</strong> firmato col tuo logo aziendale.
@@ -94,6 +146,17 @@
                         <i data-feather="grid"></i>
                         <span>Esplora i 20 Calcolatori</span>
                     </a>
+                </div>
+
+                <!-- Desktop-to-Mobile QR Code Badge (>992px) -->
+                <div class="hero-qr-desktop">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="hero-qr-box" aria-label="Scarica Edil Calc su Google Play">
+                        <img src="assets/qr-playstore.svg" alt="QR Code per scaricare l'app Edil Calc su Google Play" width="68" height="68" class="hero-qr-img">
+                    </a>
+                    <div class="hero-qr-text">
+                        <span class="hero-qr-tag"><i data-feather="camera"></i> Navighi da PC?</span>
+                        <p>Inquadra il QR Code col telefono per installare subito <strong>Edil Calc</strong> da Google Play.</p>
+                    </div>
                 </div>
 
                 <div class="hero-metrics">
@@ -274,6 +337,7 @@
                             </div>
                         </div>
                         <p class="calc-item-desc" style="margin-top: 12px;">Calcola i litri esatti di vernice in base a superficie, resa (mq/L), numero di mani e metodo (rullo, pennello o spruzzo).</p>
+                        <a href="calcolo-pittura.html" class="calc-guide-link"><i data-feather="book-open"></i><span>Guida &amp; formula calcolo pittura &rarr;</span></a>
                     </div>
                     <div class="calc-item-outputs">
                         <span class="output-badge">Litri Vernice</span>
@@ -292,6 +356,7 @@
                             </div>
                         </div>
                         <p class="calc-item-desc" style="margin-top: 12px;">Per pareti divisorie (2 lati) o contropareti (1 lato): calcola lastre, montanti, guide, scatole da 1000 viti, nastro e stucco.</p>
+                        <a href="calcolo-cartongesso.html" class="calc-guide-link"><i data-feather="book-open"></i><span>Guida &amp; formula cartongesso &rarr;</span></a>
                     </div>
                     <div class="calc-item-outputs">
                         <span class="output-badge">Lastre &amp; Profili</span>
@@ -328,6 +393,7 @@
                             </div>
                         </div>
                         <p class="calc-item-desc" style="margin-top: 12px;">Calcola numero di piastrelle, scatole intere da ordinare, kg di colla e stucco per fughe in base al formato e alla larghezza fuga.</p>
+                        <a href="calcolo-piastrelle.html" class="calc-guide-link"><i data-feather="book-open"></i><span>Guida &amp; formula piastrelle e colla &rarr;</span></a>
                     </div>
                     <div class="calc-item-outputs">
                         <span class="output-badge">Scatole &amp; Pezzi</span>
@@ -365,6 +431,7 @@
                             </div>
                         </div>
                         <p class="calc-item-desc" style="margin-top: 12px;">Supporta sia sacchi di premiscelato pronto sia impasto tradizionale (solo cemento + sabbia sfusa) calcolando volume in m³ e sacchi da 25 kg.</p>
+                        <a href="calcolo-massetto-cemento.html" class="calc-guide-link"><i data-feather="book-open"></i><span>Guida &amp; formula sacchi massetto &rarr;</span></a>
                     </div>
                     <div class="calc-item-outputs">
                         <span class="output-badge">Volume m³</span>
@@ -419,6 +486,7 @@
                             </div>
                         </div>
                         <p class="calc-item-desc" style="margin-top: 12px;">Calcola numero di gradini, alzata, pedata, angolo d'inclinazione (Formula di Blondel 2A+P) e volume di calcestruzzo della rampa.</p>
+                        <a href="calcolo-scale-blondel.html" class="calc-guide-link"><i data-feather="book-open"></i><span>Guida &amp; formula di Blondel scale &rarr;</span></a>
                     </div>
                     <div class="calc-item-outputs">
                         <span class="output-badge">Legge di Blondel</span>
@@ -901,6 +969,16 @@
                     </div>
                 </a>
                 <p>La suite gratuita per calcoli edili, gestione cantieri multi-stanza e preventivi professionali in PDF ed Excel.</p>
+                <div class="footer-guides-box">
+                    <span class="footer-guides-title">Guide Tecniche di Calcolo Edile:</span>
+                    <div class="footer-guides-links">
+                        <a href="calcolo-cartongesso.html">Calcolo Cartongesso al mq</a>
+                        <a href="calcolo-massetto-cemento.html">Calcolo Sacchi Massetto</a>
+                        <a href="calcolo-piastrelle.html">Calcolo Piastrelle e Colla</a>
+                        <a href="calcolo-pittura.html">Calcolo Litri Pittura</a>
+                        <a href="calcolo-scale-blondel.html">Calcolo Scale (Blondel)</a>
+                    </div>
+                </div>
             </div>
 
             <div class="footer-links">
@@ -955,6 +1033,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- MOBILE STICKY DOWNLOAD CTA BAR -->
+    <div id="mobile-sticky-cta" class="mobile-sticky-cta" aria-label="Barra download rapido app">
+        <div class="mobile-sticky-info">
+            <img src="assets/logo.png" alt="Edil Calc" width="36" height="36" class="mobile-sticky-logo" loading="lazy">
+            <div class="mobile-sticky-text">
+                <strong>Edil Calc</strong>
+                <span>100% Gratis su Google Play</span>
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc" target="_blank" rel="noopener" class="btn btn-primary mobile-sticky-btn">
+            <i data-feather="download"></i>
+            <span>Scarica Ora</span>
+        </a>
+    </div>
 
     <script>
       feather.replace();

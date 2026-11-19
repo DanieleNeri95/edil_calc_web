@@ -148,4 +148,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 8. Mobile Sticky CTA Bar (appears after scrolling past Hero, hides when Cookie Banner is open)
+    const stickyCta = document.getElementById('mobile-sticky-cta');
+    if (stickyCta) {
+        const updateStickyCta = () => {
+            const cookieBanner = document.getElementById('edilcalc-cookie-banner');
+            const isCookieOpen = cookieBanner && !cookieBanner.hasAttribute('hidden');
+            if (window.scrollY > 520 && !isCookieOpen) {
+                stickyCta.classList.add('is-visible');
+            } else {
+                stickyCta.classList.remove('is-visible');
+            }
+        };
+        window.addEventListener('scroll', updateStickyCta, { passive: true });
+        document.addEventListener('click', () => setTimeout(updateStickyCta, 60));
+        updateStickyCta();
+    }
 });

@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.daniele.edilcalc",
+    "sha256_cert_fingerprints": [
+      "INSERISCI_QUI_LO_SHA256_DALLA_PLAY_CONSOLE"
+    ]
+  }
+}]

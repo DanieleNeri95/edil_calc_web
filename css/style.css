@@ -1273,9 +1273,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
-.legal-content a {
+.legal-content a:not(.btn) {
     color: var(--color-primary);
     text-decoration: underline;
+}
+
+.legal-content a.btn-primary {
+    color: #fff;
+    text-decoration: none;
 }
 
 .legal-content code {
@@ -2068,3 +2073,307 @@ footer {
         height: 32px;
     }
 }
+
+/* ==========================================================================
+   DESKTOP QR CODE BADGE, MOBILE STICKY CTA & SEO GUIDE PAGES
+   ========================================================================== */
+
+/* Desktop-to-Mobile QR Code Badge (visible on Desktop > 992px) */
+.hero-qr-desktop {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    margin-bottom: 32px;
+    background: rgba(20, 20, 26, 0.85);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    max-width: 480px;
+    transition: var(--transition-fast);
+}
+
+.hero-qr-desktop:hover {
+    border-color: var(--color-primary-border);
+    background: rgba(24, 24, 32, 0.95);
+}
+
+.hero-qr-box {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    padding: 3px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.hero-qr-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 7px;
+}
+
+.hero-qr-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+}
+
+.hero-qr-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-cyan);
+}
+
+.hero-qr-tag svg {
+    width: 14px;
+    height: 14px;
+}
+
+.hero-qr-text p {
+    font-size: 0.86rem;
+    color: var(--color-text-white-dim);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.hero-qr-text strong {
+    color: var(--color-text-white);
+}
+
+@media (max-width: 992px) {
+    .hero-qr-desktop {
+        display: none;
+    }
+}
+
+/* Mobile Sticky CTA Bar (visible on Mobile/Tablet <= 992px after scrolling past Hero) */
+.mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 990;
+    background: rgba(14, 14, 18, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--color-primary-border);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.65);
+    padding: 10px 16px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transform: translateY(110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.28s ease;
+}
+
+.mobile-sticky-cta.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-sticky-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.mobile-sticky-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    border: 1px solid var(--color-primary-border);
+    flex-shrink: 0;
+}
+
+.mobile-sticky-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    min-width: 0;
+}
+
+.mobile-sticky-text strong {
+    font-family: var(--font-heading);
+    font-size: 0.94rem;
+    color: var(--color-text-white);
+}
+
+.mobile-sticky-text span {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mobile-sticky-btn {
+    padding: 9px 15px;
+    font-size: 0.85rem;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .mobile-sticky-cta {
+        display: flex;
+    }
+    footer {
+        padding-bottom: 64px;
+    }
+}
+
+/* Calculator Card Guide Link & Footer Guides Box */
+.calc-guide-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: var(--transition-fast);
+}
+
+.calc-guide-link svg {
+    width: 14px;
+    height: 14px;
+}
+
+.calc-guide-link:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+.footer-guides-box {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--color-border-dark);
+}
+
+.footer-guides-title {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.footer-guides-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+}
+
+.footer-guides-links a {
+    font-size: 0.82rem;
+    color: var(--color-text-white-dim);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: var(--transition-fast);
+}
+
+.footer-guides-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Technical Guide Pages Styling */
+.guide-formula-box {
+    background: rgba(255, 90, 38, 0.08);
+    border: 1px solid var(--color-primary-border);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin: 22px 0;
+}
+
+.guide-formula-box h4 {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.guide-formula-code {
+    font-family: var(--font-mono);
+    font-size: 1.04rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+    display: block;
+    line-height: 1.5;
+}
+
+.guide-table-wrap {
+    overflow-x: auto;
+    margin: 22px 0;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-strong);
+}
+
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.92rem;
+}
+
+.guide-table th,
+.guide-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.guide-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.guide-table td {
+    color: var(--color-text-white-dim);
+}
+
+.guide-inline-cta {
+    margin: 32px 0;
+    padding: 28px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(255, 90, 38, 0.14) 0%, rgba(0, 229, 255, 0.08) 100%);
+    border: 1px solid var(--color-primary-border);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.guide-inline-cta h3 {
+    margin: 0 !important;
+    font-size: 1.3rem !important;
+}
+
+.guide-inline-cta p {
+    margin: 0 !important;
+}
+
