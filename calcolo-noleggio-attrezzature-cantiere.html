@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcola il costo di noleggio per mini-escavatore, piattaforma PLE, gru o generatore (con trasporto A/R e gasolio) e gestisci il cantiere senza costi nascosti.">
+    <meta name="keywords" content="calcolo noleggio mini escavatore cantiere, costo noleggio piattaforma aerea ple, preventivo noleggio attrezzature edili, conviene comprare o noleggiare attrezzi cantiere">
+    <link rel="canonical" href="https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html">
+
+    <meta property="og:title" content="Calcolo Noleggio Escavatori, PLE e Attrezzature Online | Edil Calc">
+    <meta property="og:description" content="Simulatore gratuito di costi noleggio macchinari edili con trasporto andata/ritorno, carburante/operatore, voci extra e manodopera + guida operativa.">
+    <meta property="og:url" content="https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html">
+    <meta property="og:site_name" content="Edil Calc">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:image" content="https://www.edilcalc.com/assets/logo.png">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calcolo Noleggio Escavatori, PLE e Attrezzature Online | Edil Calc">
+    <meta name="twitter:description" content="Simulatore gratuito di costi noleggio macchinari edili con trasporto andata/ritorno, carburante/operatore, voci extra e manodopera + guida operativa.">
+    <meta name="twitter:image" content="https://www.edilcalc.com/assets/logo.png">
+
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Calcolo Noleggio Mezzi e Attrezzature Cantiere + Guida Preventivo | Edil Calc</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <script src="js/feather.min.js"></script>
+    <script src="js/consent.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#app",
+      "name": "Calcolatore Noleggio Flotta e Attrezzature Online Gratis",
+      "description": "Calcola il costo di noleggio per mini-escavatore, piattaforma PLE, gru o generatore (con trasporto A/R e gasolio) e gestisci il cantiere senza costi nascosti.",
+      "url": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser, Android",
+      "inLanguage": "it-IT",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Edil Calc",
+        "url": "https://www.edilcalc.com",
+        "logo": "https://www.edilcalc.com/assets/logo.png"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#article",
+      "headline": "Calcolo Noleggio Mezzi e Attrezzature Cantiere: Preventivo Completo",
+      "description": "Calcola il costo di noleggio per mini-escavatore, piattaforma PLE, gru o generatore (con trasporto A/R e gasolio) e gestisci il cantiere senza costi nascosti.",
+      "inLanguage": "it-IT",
+      "dateModified": "2026-11-23",
+      "datePublished": "2026-11-23",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Edil Calc"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Edil Calc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.edilcalc.com/assets/logo.png"
+        }
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#howto",
+      "name": "Come calcolare e gestire il noleggio mezzi di cantiere senza sorprese",
+      "description": "Per preventivare in modo corretto il noleggio di un macchinario edile (mini-escavatore, piattaforma aerea PLE, gru o furgone) non bisogna moltiplicare soltanto la tariffa giornaliera per i giorni di lavoro: occorre aggiungere sempre il trasporto andata e ritorno con bilico/carroattrezzi, il consumo giornaliero di gasolio o elettricità, l'eventuale operatore/manovratore e il costo assicurativo di franchigia danni.",
+      "inLanguage": "it-IT",
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Contratto di noleggio scritto con tariffa giornaliera/settimanale, costi di consegna/ritiro e regole sui giorni di fermo pioggia o weekend"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Patentino di abilitazione in corso di validità per chi guida la macchina (escavatori, pale, PLE con o senza stabilizzatori, carrelli elevatori, gru)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Check-list di consegna con foto dello stato mezzo (cingoli, vetri, bracci, livello gasolio e contaore) al ritiro e alla riconsegna"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Piastre ripartitrici di carico sotto gli stabilizzatori (per gru e piattaforme aeree ragno su pavimentazioni delicate)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "DPI specifici d'uso: imbracatura e cordino corto di trattenuta obbligatori in cesta PLE, caschetto, scarpe S3 e gilet alta visibilità"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "1. Calcola l'incidenza totale reale prima di chiudere il preventivo",
+          "text": "Usa il calcolatore qui sopra sommando tariffa giornaliera, eventuali costi giornalieri di gasolio o operatore e il costo fisso del trasporto A/R: spesso su noleggi brevi di 1–2 giorni il trasporto pesa quanto metà dell'intero noleggio.",
+          "url": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#come-calcolare-noleggio-attrezzature-step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "2. Negozia fasce settimanali o mensili per lavori più lunghi",
+          "text": "Molti noleggiatori applicano sconti importanti dal 3° o 5° giorno consecutivo (tariffa settimanale o mensile): se il lavoro dura 4 giorni, confronta sempre il preventivo a giorni singoli con la settimana intera.",
+          "url": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#come-calcolare-noleggio-attrezzature-step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "3. Verifica il patentino dell'operatore e i DPI richiesti",
+          "text": "Per legge (Accordo Stato-Regioni 22/02/2012 in attuazione del D.Lgs. 81/2008) macchine movimento terra, piattaforme aeree (PLE), carrelli elevatori e gru possono essere manovrati esclusivamente da operatori in possesso di specifica abilitazione in corso di validità; in cesta PLE l'uso di imbracatura agganciata al punto certificato del cestello è sempre obbligatorio.",
+          "url": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#come-calcolare-noleggio-attrezzature-step-3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "4. Documenta il mezzo al momento dello scarico",
+          "text": "Quando arriva il mezzo fai subito 4–5 foto con lo smartphone a contaore, indicatore livello carburante, carrozzeria e gomme/cingoli prima di firmare la bolla di consegna.",
+          "url": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#come-calcolare-noleggio-attrezzature-step-4"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "5. Pianifica l'utilizzo a pieno regime nei giorni noleggiati",
+          "text": "Concentra scavi, movimentazioni pesanti o lavorazioni in quota in giorni consecutivi evitando tempi morti; se hai bisogno di più attrezzature contemporaneamente verifica l'abbinamento sul medesimo trasporto per risparmiare un viaggio di carroattrezzi.",
+          "url": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#come-calcolare-noleggio-attrezzature-step-5"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "6. Chiedi lo stop noleggio formale e documenta il rientro",
+          "text": "Appena termini i lavori invia subito comunicazione scritta (email/WhatsApp) di 'fine noleggio / richiesta ritiro' al fornitore come prova della chiusura giornaliera, rifai il pieno di carburante se richiesto ed esegui le foto finali al ritiro.",
+          "url": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#come-calcolare-noleggio-attrezzature-step-6"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Conviene comprare o noleggiare un attrezzo o un mini-escavatore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In genere conviene noleggiare finché l'attrezzatura viene usata saltuariamente o per pochi giorni/settimane l'anno: oltre ai costi d'acquisto, possedere un mezzo comporta manutenzione, assicurazione, revisioni periodiche obbligatorie (INAIL/ASL), spazio di rimessaggio e trasporto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa è sempre escluso dal prezzo base giornaliero di un noleggio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La tariffa giornaliera base esclude quasi sempre il trasporto di consegna e ritiro dal cantiere, il carburante consumato, l'eventuale manovratore specializzato, l'IVA e spesso l'assicurazione per danni/furto o pulizia straordinaria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Serve il patentino anche se noleggio un mini-escavatore o una PLE per uso lavorativo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì: per qualsiasi utilizzo in ambito lavorativo di escavatori sopra i 60 q.li (e pale/terne/PLE di qualsiasi dimensione, compresi gli operatori autonomi ai sensi dell'art. 21 e 73 del D.Lgs. 81/2008) è obbligatorio il patentino di abilitazione specifico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come calcolo quanti giorni di noleggio inserire nel preventivo del cliente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stima i giorni operativi effettivi includendo almeno mezzo giorno o un giorno cuscinetto per imprevisti di scavo o meteo, e aggiungi sempre la voce di trasporto A/R così il cliente vede un preventivo chiaro e tu proteggi il tuo margine."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.edilcalc.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calcolatori Online",
+          "item": "https://www.edilcalc.com/calcolatori.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Noleggio Flotta e Attrezzature",
+          "item": "https://www.edilcalc.com/calcolo-noleggio-attrezzature-cantiere.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38">
+                </picture>
+                <div class="brand-text">
+                    <span class="brand-name">EDIL CALC</span>
+                    <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#features">Vantaggi</a></li>
+                <li><a href="calcolatori.html" class="active">Calcolatori Online</a></li>
+                <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                <li><a href="index.html#azienda">Preventivi PDF</a></li>
+                <li><a href="index.html#boomer">Boomer</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dnavbar_cta%26utm_campaign%3Dcalcolo-noleggio-attrezzature-cantiere" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i data-feather="download"></i>
+                    <span>Scarica Gratis</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="calc-page-main">
+        <div class="container">
+            <nav class="calc-breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="crumb-sep">&rsaquo;</span>
+                <a href="calcolatori.html">Calcolatori Online</a>
+                <span class="crumb-sep">&rsaquo;</span>
+                <span class="crumb-current">Noleggio Flotta e Attrezzature</span>
+            </nav>
+
+            <header class="calc-hero-compact">
+                <div class="calc-hero-text">
+                    <div class="calc-eyebrow-row">
+                        <span class="calc-eyebrow-pill">
+                            <i data-feather="settings"></i>
+                            <span>Calcolatore Online &amp; Guida Operativa</span>
+                        </span>
+                        <span class="calc-hero-badge">100% Gratis • Nessuna Registrazione • Calcolo Incidenza Costi</span>
+                    </div>
+                    <h1>Calcolo Noleggio Mezzi e Attrezzature Cantiere: Preventivo Completo</h1>
+                    <p class="calc-hero-subtitle">Scegli il mezzo (Gru, Mini-Escavatore, Furgone, Piattaforma Aerea PLE, Generatore o altro), imposta tariffa giornaliera, giorni, trasporto A/R e carburante/operatore per calcolare l&#39;incidenza reale sul cantiere.</p>
+                </div>
+                <div class="calc-hero-actions">
+                    <a href="#come-calcolare-noleggio-attrezzature" class="calc-jump-guide-btn">
+                        <i data-feather="book-open"></i>
+                        <span>Come gestire il noleggio mezzi</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="calc-workspace">
+                
+        <section id="calc-app" class="calc-glass-card" data-logic-key="equipment" data-utm-campaign="calcolo-noleggio-attrezzature-cantiere" data-safety-disclaimer="true">
+            <div class="calc-card-header">
+                <div class="calc-card-header-left">
+                    <div class="calc-card-icon-badge">
+                        <i data-feather="settings"></i>
+                    </div>
+                    <div>
+                        <h2>Calcolatore Noleggio Flotta e Attrezzature Online Gratis</h2>
+                        <p class="calc-card-intro">Seleziona il macchinario, inserisci tariffa giornaliera pattuita e durata in giorni, aggiungi il costo fisso di consegna/ritiro (Trasporto A/R) ed eventuali spese giornaliere di gasolio o operatore.</p>
+                    </div>
+                </div>
+                <span class="calc-session-pill" title="Nessun dato salvato su cookie o memoria">
+                    <i data-feather="lock"></i>
+                    <span>Calcolo rapido • Senza salvataggio</span>
+                </span>
+            </div>
+
+            <form id="calc-form" novalidate>
+                <div class="calc-form-grid">
+                    
+            <div class="calc-field calc-field-full">
+                <label class="calc-label" for="field-equipmentType">Tipologia mezzo o attrezzatura</label>
+                <select id="field-equipmentType" name="equipmentType" class="calc-select">
+                    <option value="excavator">Miniescavatore</option><option value="scissor">Piattaforma Aerea / Trabattello Elettrico</option><option value="crane">Gru / Autogrù</option><option value="van">Furgone / Autocarro Ribaltabile</option><option value="generator">Gruppo Elettrogeno</option><option value="other">Altra attrezzatura (personalizzata)</option>
+                </select>
+            </div>
+        <div class="calc-field calc-field-full" data-show-when="equipmentType=other">
+            <label class="calc-label" for="field-customName">
+                <span>Nome attrezzatura personalizzata</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-customName" name="customName" class="calc-input" placeholder="es. Martello demolitore 30kg">
+                
+            </div>
+        </div>
+        <div class="calc-field">
+            <label class="calc-label" for="field-days">
+                <span>Giorni di noleggio</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-days" name="days" class="calc-input has-unit" inputmode="decimal" placeholder="1" value="1" data-required="true">
+                <span class="calc-input-unit">gg</span>
+            </div>
+        </div>
+        <div class="calc-field">
+            <label class="calc-label" for="field-dailyRate">
+                <span>Tariffa giornaliera</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-dailyRate" name="dailyRate" class="calc-input has-unit" inputmode="decimal" placeholder="es. 140,00" data-required="true">
+                <span class="calc-input-unit">€/gg</span>
+            </div>
+        </div>
+                </div>
+
+                <div class="calc-accordions">
+                    
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-costs">
+                <span class="calc-accordion-title">
+                    <i data-feather="dollar-sign"></i>
+                    <span>Costi Materiali / Accessori (€)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-costs" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-costs" class="calc-accordion-panel">
+                <div class="calc-form-grid">
+                    
+        <div class="calc-field">
+            <label class="calc-label" for="field-transport">
+                <span>Trasporto consegna + ritiro (A/R)</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-transport" name="transport" class="calc-input has-unit" inputmode="decimal" placeholder="es. 120,00">
+                <span class="calc-input-unit">€</span>
+            </div>
+        </div>
+        <div class="calc-field">
+            <label class="calc-label" for="field-fuelOp">
+                <span>Carburante e/o Operatore forfait</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-fuelOp" name="fuelOp" class="calc-input has-unit" inputmode="decimal" placeholder="es. 85,00">
+                <span class="calc-input-unit">€</span>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-extras">
+                <span class="calc-accordion-title">
+                    <i data-feather="plus"></i>
+                    <span>Voci Extra Cantiere (Trasporto, Primer, Teli...)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-extras" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-extras" class="calc-accordion-panel">
+                <div class="calc-extra-builder">
+                    <div class="calc-field calc-field-desc">
+                        <label class="calc-label" for="extra-desc">Descrizione voce</label>
+                        <input type="text" id="extra-desc" name="extra_desc" class="calc-input" placeholder="es. Telo protettivo / Smaltimento">
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-qty">Q.tà</label>
+                        <input type="text" id="extra-qty" name="extra_qty" inputmode="decimal" class="calc-input" placeholder="1">
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-unit">U.M.</label>
+                        <select id="extra-unit" name="extra_unit" class="calc-select">
+                            <option value="pz">pz</option>
+                            <option value="mq">mq</option>
+                            <option value="ml">ml</option>
+                            <option value="kg">kg</option>
+                            <option value="mc">mc</option>
+                            <option value="L">L</option>
+                            <option value="corpo">corpo</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-price">Prezzo (€)</label>
+                        <input type="text" id="extra-price" name="extra_price" inputmode="decimal" class="calc-input" placeholder="18,00">
+                    </div>
+                    <button type="button" id="extra-add-btn" class="calc-extra-add-btn">
+                        <i data-feather="plus"></i>
+                        <span>Aggiungi</span>
+                    </button>
+                </div>
+                <div id="calc-extra-list" class="calc-extra-list"></div>
+                <p class="calc-extra-note">Le voci extra valgono solo per il calcolo corrente e non vengono salvate. Nell'app Android le selezioni in un tap dal tuo listino personale.</p>
+            </div>
+        </div>
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-labor">
+                <span class="calc-accordion-title">
+                    <i data-feather="tool"></i>
+                    <span>Manodopera Stimata (Ore o A Corpo)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-labor" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-labor" class="calc-accordion-panel">
+                <div class="calc-form-grid">
+                    <div class="calc-field calc-field-full">
+                        <span class="calc-label">Modalità calcolo manodopera</span>
+                        <input type="hidden" name="laborMode" value="hourly">
+                        <div class="calc-segmented" role="radiogroup" aria-label="Modalità manodopera" data-seg-name="laborMode">
+                            <button type="button" class="calc-seg-btn active" role="radio" aria-checked="true" data-value="hourly" data-default="true">A Ore (€/h)</button>
+                            <button type="button" class="calc-seg-btn" role="radio" aria-checked="false" data-value="flat">A Corpo (Forfait €)</button>
+                        </div>
+                    </div>
+                    <div class="calc-field" data-show-when="laborMode=hourly">
+                        <label class="calc-label" for="field-laborHours">Ore di lavoro previste</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborHours" name="laborHours" inputmode="decimal" class="calc-input has-unit" placeholder="es. 8">
+                            <span class="calc-input-unit">h</span>
+                        </div>
+                    </div>
+                    <div class="calc-field" data-show-when="laborMode=hourly">
+                        <label class="calc-label" for="field-laborHourlyRate">Tariffa oraria</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborHourlyRate" name="laborHourlyRate" inputmode="decimal" class="calc-input has-unit" placeholder="es. 30,00">
+                            <span class="calc-input-unit">€/h</span>
+                        </div>
+                    </div>
+                    <div class="calc-field calc-field-full" data-show-when="laborMode=flat">
+                        <label class="calc-label" for="field-laborFlatRate">Importo manodopera a corpo</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborFlatRate" name="laborFlatRate" inputmode="decimal" class="calc-input has-unit" placeholder="es. 450,00">
+                            <span class="calc-input-unit">€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+
+                <div id="calc-error-banner" class="calc-error-banner" role="alert">
+                    <i data-feather="alert-triangle"></i>
+                    <span id="calc-error-text"></span>
+                </div>
+
+                <div class="calc-submit-row">
+                    <button type="submit" class="calc-submit-btn">
+                        <i data-feather="zap"></i>
+                        <span>Calcola Fabbisogno e Costi</span>
+                    </button>
+                    <button type="button" id="calc-reset-btn" class="calc-reset-btn">
+                        <i data-feather="refresh-cw"></i>
+                        <span>Azzera</span>
+                    </button>
+                </div>
+
+                <p class="calc-zero-persistence-note">
+                    <i data-feather="info"></i>
+                    <span>Calcolo istantaneo gratuito: nessun dato viene memorizzato o inviato. Ricaricando la pagina i campi tornano vuoti.</span>
+                </p>
+            </form>
+        </section>
+                
+        <aside class="calc-sidebar">
+            <div class="calc-side-card">
+                <h3><i data-feather="list"></i><span>Indice Rapido Pagina</span></h3>
+                <ul class="calc-toc-list">
+                    <li><a href="#calc-app"><i data-feather="sliders"></i><span>Vai al Calcolatore Interattivo</span></a></li>
+                    <li><a href="#come-calcolare-noleggio-attrezzature"><i data-feather="book-open"></i><span>Come gestire il noleggio mezzi</span></a></li>
+                    <li><a href="#specifiche-tecniche"><i data-feather="database"></i><span>Formule, Tabella &amp; Esempio</span></a></li>
+                    <li><a href="#domande-frequenti"><i data-feather="info"></i><span>Domande Frequenti (FAQ)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="calc-side-card">
+                <h3><i data-feather="check"></i><span>Parametri di Riferimento</span></h3>
+                <div class="calc-specs-list">
+                    
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Abilitazioni obbligatorie</span>
+            <span class="calc-spec-val">Accordo Stato-Regioni 22/02/2012 (D.Lgs. 81/08 art. 73)</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Voci fisse tipiche</span>
+            <span class="calc-spec-val">Trasporto A/R + eventuale assicurazione/pulizia</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Soglia convenienza noleggio</span>
+            <span class="calc-spec-val">Noleggio conveniente se uso &lt; 30–40% giornate/anno</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Giorni lavorati</span>
+            <span class="calc-spec-val">Verifica calendario weekend / maltempo nel contratto</span>
+        </div>
+                </div>
+            </div>
+
+            <div class="calc-side-card calc-sidebar-app-card">
+                <h3><i data-feather="download"></i><span>Salva e Stampa in PDF</span></h3>
+                <p>I calcoli eseguiti online non vengono salvati. Con l'app Android gratuita organizzi ogni progetto per cantiere e stanza ed esporti preventivi PDF A4 ed Excel col tuo logo.</p>
+                <div class="calc-qr-inline">
+                    <img src="assets/qr-playstore.svg" alt="QR Code Download Edil Calc Google Play" width="68" height="68">
+                    <span>Inquadra con la fotocamera Android per scaricare Edil Calc gratis.</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dsidebar_qr%26utm_campaign%3Dcalcolo-noleggio-attrezzature-cantiere" target="_blank" rel="noopener" class="calc-modal-play-btn" style="width:100%;">
+                    <i data-feather="download"></i>
+                    <span>App Android Gratuita</span>
+                </a>
+            </div>
+        </aside>
+            </div>
+
+            <article class="calc-guide-article">
+                
+        <section id="come-calcolare-noleggio-attrezzature" class="calc-guide-block">
+            <h2>Come calcolare e gestire il noleggio mezzi di cantiere senza sorprese</h2>
+            <div class="calc-direct-answer">
+                Per preventivare in modo corretto il noleggio di un macchinario edile (mini-escavatore, piattaforma aerea PLE, gru o furgone) non bisogna moltiplicare soltanto la tariffa giornaliera per i giorni di lavoro: occorre aggiungere sempre il trasporto andata e ritorno con bilico/carroattrezzi, il consumo giornaliero di gasolio o elettricità, l&#39;eventuale operatore/manovratore e il costo assicurativo di franchigia danni.
+            </div>
+
+            <h3>Attrezzi, Materiali e DPI Consigliati</h3>
+            <ul class="calc-tools-grid">
+                <li>Contratto di noleggio scritto con tariffa giornaliera/settimanale, costi di consegna/ritiro e regole sui giorni di fermo pioggia o weekend</li><li>Patentino di abilitazione in corso di validità per chi guida la macchina (escavatori, pale, PLE con o senza stabilizzatori, carrelli elevatori, gru)</li><li>Check-list di consegna con foto dello stato mezzo (cingoli, vetri, bracci, livello gasolio e contaore) al ritiro e alla riconsegna</li><li>Piastre ripartitrici di carico sotto gli stabilizzatori (per gru e piattaforme aeree ragno su pavimentazioni delicate)</li><li>DPI specifici d&#39;uso: imbracatura e cordino corto di trattenuta obbligatori in cesta PLE, caschetto, scarpe S3 e gilet alta visibilità</li>
+            </ul>
+
+            <h3>Preparazione Prima di Iniziare</h3>
+            <ol class="calc-prep-list">
+                <li>Completa tutti i lavori preparatori manuali (tracciamenti, rimozione ostacoli, permessi passo carraio, arrivo materiali) prima della consegna del mezzo così da non sprecare giorni di noleggio a vuoto.</li><li>Misura con precisione la larghezza minima di cancelli, androni o viali d&#39;accesso e verifica portata della pavimentazione/solaio rispetto al peso operativo della macchina.</li><li>Chiedi al noleggiatore se la tariffa include l&#39;assicurazione danni accidentali (CDW) e se il mezzo va riconsegnato con il pieno di gasolio e pulito dal fango.</li>
+            </ol>
+
+            <h3>Procedura Operativa Passo Passo</h3>
+            <div class="calc-steps-list">
+                
+        <div id="come-calcolare-noleggio-attrezzature-step-1" class="calc-step-card">
+            <div class="calc-step-num">1</div>
+            <div class="calc-step-body">
+                <h4>1. Calcola l&#39;incidenza totale reale prima di chiudere il preventivo</h4>
+                <p>Usa il calcolatore qui sopra sommando tariffa giornaliera, eventuali costi giornalieri di gasolio o operatore e il costo fisso del trasporto A/R: spesso su noleggi brevi di 1–2 giorni il trasporto pesa quanto metà dell&#39;intero noleggio.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-noleggio-attrezzature-step-2" class="calc-step-card">
+            <div class="calc-step-num">2</div>
+            <div class="calc-step-body">
+                <h4>2. Negozia fasce settimanali o mensili per lavori più lunghi</h4>
+                <p>Molti noleggiatori applicano sconti importanti dal 3° o 5° giorno consecutivo (tariffa settimanale o mensile): se il lavoro dura 4 giorni, confronta sempre il preventivo a giorni singoli con la settimana intera.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-noleggio-attrezzature-step-3" class="calc-step-card">
+            <div class="calc-step-num">3</div>
+            <div class="calc-step-body">
+                <h4>3. Verifica il patentino dell&#39;operatore e i DPI richiesti</h4>
+                <p>Per legge (Accordo Stato-Regioni 22/02/2012 in attuazione del D.Lgs. 81/2008) macchine movimento terra, piattaforme aeree (PLE), carrelli elevatori e gru possono essere manovrati esclusivamente da operatori in possesso di specifica abilitazione in corso di validità; in cesta PLE l&#39;uso di imbracatura agganciata al punto certificato del cestello è sempre obbligatorio.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-noleggio-attrezzature-step-4" class="calc-step-card">
+            <div class="calc-step-num">4</div>
+            <div class="calc-step-body">
+                <h4>4. Documenta il mezzo al momento dello scarico</h4>
+                <p>Quando arriva il mezzo fai subito 4–5 foto con lo smartphone a contaore, indicatore livello carburante, carrozzeria e gomme/cingoli prima di firmare la bolla di consegna.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-noleggio-attrezzature-step-5" class="calc-step-card">
+            <div class="calc-step-num">5</div>
+            <div class="calc-step-body">
+                <h4>5. Pianifica l&#39;utilizzo a pieno regime nei giorni noleggiati</h4>
+                <p>Concentra scavi, movimentazioni pesanti o lavorazioni in quota in giorni consecutivi evitando tempi morti; se hai bisogno di più attrezzature contemporaneamente verifica l&#39;abbinamento sul medesimo trasporto per risparmiare un viaggio di carroattrezzi.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-noleggio-attrezzature-step-6" class="calc-step-card">
+            <div class="calc-step-num">6</div>
+            <div class="calc-step-body">
+                <h4>6. Chiedi lo stop noleggio formale e documenta il rientro</h4>
+                <p>Appena termini i lavori invia subito comunicazione scritta (email/WhatsApp) di &#39;fine noleggio / richiesta ritiro&#39; al fornitore come prova della chiusura giornaliera, rifai il pieno di carburante se richiesto ed esegui le foto finali al ritiro.</p>
+            </div>
+        </div>
+            </div>
+
+            <div class="calc-bridge-box">
+                <p>Vuoi verificare quanto incide esattamente il noleggio di un escavatore, di una PLE o di una gru sul totale del tuo lavoro? Inserisci giorni, tariffe e trasporto nel calcolatore in cima alla pagina.</p>
+                <a href="#calc-app" class="calc-bridge-link">Torna al Calcolatore &uarr;</a>
+            </div>
+
+            <h3>Errori Comuni da Evitare</h3>
+            <div class="calc-mistakes-grid">
+                
+        <div class="calc-mistake-card">
+            <h4>Dimenticare il costo di trasporto andata e ritorno dal computo</h4>
+            <p>Un viaggio A/R con camion gru o carrellone può costare 120–250 € fissi: non inserirlo nel preventivo azzera il margine su un lavoro da un giorno.</p>
+        </div>
+        <div class="calc-mistake-card">
+            <h4>Far consegnare il mezzo prima di avere permessi o materiali pronti</h4>
+            <p>Tenere una piattaforma aerea o un mini-escavatore parcheggiato 2 giorni in attesa del materiale fa bruciare centinaia di euro inutilmente.</p>
+        </div>
+        <div class="calc-mistake-card">
+            <h4>Ignorare la regola sui fine settimana e sulla riconsegna col pieno</h4>
+            <p>Senza accordi chiari alcuni contratti conteggiano anche sabato e festivi se non comunichi lo stop, e addebitano il gasolio mancante a tariffa maggiorata.</p>
+        </div>
+            </div>
+
+            <div class="calc-boomer-box" style="margin-bottom:0;">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" width="46" height="46" loading="lazy">
+                </picture>
+                <div>
+                    <span class="calc-boomer-tag">Dritta di Boomer • Macchinari &amp; Noleggi</span>
+                    <p>Un carrello elevatore o un mini-escavatore ti salvano la schiena, ma svuotano il portafoglio se restano fermi a prendere polvere! Segna giorni, trasporto A/R e gasolio nel preventivo, e se lo usi meno di qualche settimana l&#39;anno noleggia sempre invece di comprare!</p>
+                </div>
+            </div>
+        </section>
+                
+        <section id="specifiche-tecniche" class="calc-guide-block">
+            <h2>Formule costo noleggio attrezzature e tabella riferimento macchinari</h2>
+
+            <div class="guide-formula-box">
+                <h3>Formule Costo Giornaliero, Subtotale Noleggio e Totale Reale</h3>
+                <code class="guide-formula-code">Costo Giornaliero Totale (€/g) = Tariffa Noleggio Giornaliera (€/g) + Carburante / Operatore (€/g)</code><code class="guide-formula-code">Subtotale Noleggio (€) = Costo Giornaliero Totale (€/g) × N° Giorni</code><code class="guide-formula-code">Totale Macchinario (€) = Subtotale Noleggio (€) + Costo Fisso Trasporto A/R (€)</code>
+                <p style="margin-top:0.75rem;margin-bottom:0;">Al totale macchinario possono essere aggiunte eventuali voci extra (es. punte demolitore, prolunghe, rampe, assicurazione integrativa) e l&#39;eventuale manodopera di cantiere per ottenere il Gran Totale del lavoro.</p>
+            </div>
+
+            <h3>Tipologie Comuni di Macchinari a Noleggio e Voci di Costo Tipiche</h3>
+            <div class="guide-table-wrap">
+                <table class="guide-table">
+                    <thead><tr><th>Tipologia Attrezzatura</th><th>Range Tariffa Giornaliera (Indicativa)</th><th>Trasporto A/R</th><th>Note Operative &amp; Abilitazioni</th></tr></thead>
+                    <tbody><tr><td>Mini-Escavatore (15–25 q.li)</td><td>90 – 150 €/giorno</td><td>Su carrello / camion</td><td>Richiede patentino macchine movimento terra</td></tr><tr><td>Piattaforma Aerea PLE (ragno o pantografo)</td><td>80 – 180 €/giorno</td><td>Su carrellone A/R</td><td>Patentino PLE + imbracatura anticaduta obbligatoria</td></tr><tr><td>Furgone ribaltabile / Autocarro patente B</td><td>80 – 130 €/giorno</td><td>Ritiro in sede / A/R</td><td>Attenzione a portata utile max (spesso ~9–12 q.li)</td></tr><tr><td>Gruppo elettrogeno / Compressore cantiere</td><td>35 – 90 €/giorno</td><td>Furgone / consegna</td><td>Considerare consumo carburante orario a pieno carico</td></tr></tbody>
+                </table>
+            </div>
+
+            <div class="calc-diagram-wrap">
+                <div class="calc-diagram-caption">
+                    <i data-feather="layers" style="width:15px;height:15px;"></i>
+                    <span>Schema Tecnico di Posa &amp; Dimensionamento</span>
+                </div>
+                <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema riepilogo costi noleggio attrezzature e mezzi di cantiere — Tariffa giornaliera per giorni piu trasporti e carburante">
+  <title>Schema riepilogo costi noleggio attrezzature e mezzi di cantiere</title>
+  <defs>
+    <pattern id="bpGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0, 229, 255, 0.08)" stroke-width="1"/>
+    </pattern>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#00E5FF"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#FF5A26"/>
+    </marker>
+  </defs>
+  <rect width="680" height="260" rx="10" fill="#070B12"/>
+  <rect width="680" height="260" rx="10" fill="url(#bpGrid)"/>
+  
+      <rect x="65" y="65" width="160" height="130" rx="10" fill="rgba(255,90,38,0.13)" stroke="#FF5A26" stroke-width="2"/>
+      <text x="145" y="112" fill="#FF5A26" font-size="12" font-family="monospace" font-weight="bold" text-anchor="middle">NOLEGGIO BASE</text>
+      <text x="145" y="142" fill="#F1F5F9" font-size="13" font-family="monospace" text-anchor="middle">€/gg × Giorni</text>
+      <text x="250" y="136" fill="#00E5FF" font-size="22" font-family="monospace" text-anchor="middle">+</text>
+      <rect x="275" y="65" width="160" height="130" rx="10" fill="rgba(0,229,255,0.09)" stroke="#00E5FF" stroke-width="2"/>
+      <text x="355" y="112" fill="#00E5FF" font-size="12" font-family="monospace" font-weight="bold" text-anchor="middle">COSTI ACCESSORI</text>
+      <text x="355" y="140" fill="#F1F5F9" font-size="12" font-family="sans-serif" text-anchor="middle">Trasporto A/R</text>
+      <text x="355" y="162" fill="#F1F5F9" font-size="12" font-family="sans-serif" text-anchor="middle">+ Carburante / Op.</text>
+      <text x="465" y="105" fill="#00E5FF" font-size="12" font-family="monospace" font-weight="bold">TOTALE CANTIERE</text>
+      <text x="465" y="135" fill="#F1F5F9" font-size="12" font-family="sans-serif">= Mezzo + Accessori</text>
+      <text x="465" y="162" fill="#F1F5F9" font-size="12" font-family="sans-serif">+ Voci Extra</text>
+      <text x="465" y="189" fill="#FF5A26" font-size="12" font-family="monospace">+ Manodopera</text>
+    
+</svg>
+            </div>
+
+            <div class="calc-example-box">
+                <h3 style="margin-top:0;">Esempio pratico: mini-escavatore noleggiato per 4 giorni con trasporto e gasolio</h3>
+                <p>Calcoliamo l&#39;incidenza reale di un mini-escavatore da 120 €/g per 4 giorni, con 140 € di trasporto A/R e 25 €/g di gasolio/consumabili:</p>
+                <ul><li>Costo giornaliero effettivo (tariffa + gasolio): 120,00 + 25,00 = 145,00 €/giorno.</li><li>Subtotale noleggio per 4 giorni: 145,00 × 4 = 580,00 €.</li><li>Aggiunta trasporto A/R cantiere: 580,00 + 140,00 = 720,00 € totali (media reale 180 €/giorno tutto incluso).</li></ul>
+            </div>
+        </section>
+                
+        <section id="domande-frequenti" class="calc-guide-block">
+            <h2>Domande Frequenti (Noleggio Flotta e Attrezzature)</h2>
+            <div class="faq-list">
+                
+        <div class="faq-item active">
+            <div class="faq-question">
+                <h4>Conviene comprare o noleggiare un attrezzo o un mini-escavatore?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>In genere conviene noleggiare finché l&#39;attrezzatura viene usata saltuariamente o per pochi giorni/settimane l&#39;anno: oltre ai costi d&#39;acquisto, possedere un mezzo comporta manutenzione, assicurazione, revisioni periodiche obbligatorie (INAIL/ASL), spazio di rimessaggio e trasporto.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Cosa è sempre escluso dal prezzo base giornaliero di un noleggio?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>La tariffa giornaliera base esclude quasi sempre il trasporto di consegna e ritiro dal cantiere, il carburante consumato, l&#39;eventuale manovratore specializzato, l&#39;IVA e spesso l&#39;assicurazione per danni/furto o pulizia straordinaria.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Serve il patentino anche se noleggio un mini-escavatore o una PLE per uso lavorativo?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Sì: per qualsiasi utilizzo in ambito lavorativo di escavatori sopra i 60 q.li (e pale/terne/PLE di qualsiasi dimensione, compresi gli operatori autonomi ai sensi dell&#39;art. 21 e 73 del D.Lgs. 81/2008) è obbligatorio il patentino di abilitazione specifico.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Come calcolo quanti giorni di noleggio inserire nel preventivo del cliente?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Stima i giorni operativi effettivi includendo almeno mezzo giorno o un giorno cuscinetto per imprevisti di scavo o meteo, e aggiungi sempre la voce di trasporto A/R così il cliente vede un preventivo chiaro e tu proteggi il tuo margine.</p>
+            </div>
+        </div>
+            </div>
+        </section>
+                
+        <section class="guide-inline-cta" style="margin:0;">
+            <div>
+                <h3>Inserisci noleggi, scavi, materiali e manodopera in un unico PDF A4</h3>
+                <p>Scarica gratis Edil Calc per Android: associ il costo di noleggio di gru, PLE o escavatori alle altre lavorazioni del cantiere (scavi, getti, facciate, recinzioni) ed esporti subito un preventivo professionale firmato col tuo logo.</p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dinline_guide_cta%26utm_campaign%3Dcalcolo-noleggio-attrezzature-cantiere" target="_blank" rel="noopener" class="btn btn-primary">
+                <i data-feather="download"></i>
+                <span>Scarica Edil Calc Gratis su Google Play</span>
+            </a>
+        </section>
+                
+        <section class="calc-guide-block">
+            <h2>Calcolatori e Guide Correlate</h2>
+            <div class="calc-related-grid">
+                
+            <a href="calcolo-scavi-movimento-terra.html" class="calc-related-card">
+                <span class="calc-related-cat">Scavi &amp; Giardini</span>
+                <h4>Movimenti Terra e Scavi</h4>
+                <p>Calcola volume compatto in banco, volume smosso con coefficiente di rigonfiamento del terreno, viaggi camion e costi di scavo e smaltimento.</p>
+                <span class="calc-related-link">Calcolatore scavi &amp; guida: gestione movimento terra → &rarr;</span>
+            </a>
+            <a href="calcolo-ponteggio.html" class="calc-related-card">
+                <span class="calc-related-cat">Ponteggi &amp; Noleggi</span>
+                <h4>Ponteggi e Costi Occupazione</h4>
+                <p>Calcola la superficie del ponteggio in m² (con margini di sicurezza), costi fissi (montaggio, Pi.M.U.S., trasporto) e variabili (noleggio mensile e suolo pubblico).</p>
+                <span class="calc-related-link">Calcolatore ponteggio &amp; guida: preventivo e norme → &rarr;</span>
+            </a>
+            <a href="calcolo-ghiaia.html" class="calc-related-card">
+                <span class="calc-related-cat">Esterni &amp; Coperture</span>
+                <h4>Riempimento Ghiaia e Inerti</h4>
+                <p>Calcola volume in m³, peso in tonnellate e numero di sacchi da 25 kg di ghiaia, pietrisco o stabilizzato per vialetti, piazzali e drenaggi.</p>
+                <span class="calc-related-link">Calcolatore ghiaia &amp; guida: come posarla → &rarr;</span>
+            </a>
+            <a href="calcolo-massetto-cemento.html" class="calc-related-card">
+                <span class="calc-related-cat">Muratura &amp; Scale</span>
+                <h4>Cemento, Massetti e Gettate</h4>
+                <p>Calcola volume in m³ e sacchi da 25 kg per massetti o gettate, passando con un clic tra sacchi premiscelati e impasto tradizionale (cemento + sabbia).</p>
+                <span class="calc-related-link">Calcolatore massetto &amp; guida: come fare il massetto → &rarr;</span>
+            </a>
+            </div>
+        </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- RESULT MODAL (Read-Only + App Conversion) -->
+    <div id="calc-result-modal" class="calc-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="result-modal-title" aria-hidden="true">
+        <div class="calc-modal-dialog">
+            <div class="calc-modal-header">
+                <h3 id="result-modal-title">
+                    <i data-feather="check"></i>
+                    <span>Risultato del Calcolo</span>
+                </h3>
+                <button type="button" class="calc-modal-close" data-close-modal aria-label="Chiudi risultato e modifica dati">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+
+            <div id="modal-comfort-badge" class="calc-comfort-badge" style="display:none;"></div>
+
+            <div id="modal-safety-banner" class="calc-safety-banner" style="display:flex;">
+                <i data-feather="alert-triangle"></i>
+                <span>Avviso tecnico: stima indicativa di massima che non sostituisce il progetto esecutivo o la verifica di un tecnico/installatore abilitato (D.M. 37/08, D.Lgs. 81/2008 e norme CEI/UNI vigenti).</span>
+            </div>
+
+            <div class="calc-hero-result-box">
+                <div id="modal-hero-label" class="calc-hero-result-label">Fabbisogno stimato</div>
+                <div id="modal-hero-value" class="calc-hero-result-value">-</div>
+                <div id="modal-hero-sub" class="calc-hero-result-sub"></div>
+            </div>
+
+            <div id="modal-details-grid" class="calc-details-grid"></div>
+
+            <div id="modal-cost-summary" class="calc-cost-summary" style="display:none;"></div>
+
+            <div class="calc-conversion-panel">
+                <h4 class="calc-conversion-headline">Vuoi salvare questo calcolo o preparare il preventivo?</h4>
+                <p class="calc-conversion-sub">Questo risultato è una stima rapida non salvata. Scarica gratis l'app Android Edil Calc per archiviarlo nei tuoi cantieri e sbloccare tutte le funzioni:</p>
+
+                <div class="calc-locked-grid">
+                    
+        <button type="button" class="calc-locked-btn" data-feature-label="Salva in Cantiere / Stanza" data-feature-pitch="Organizza tutti i calcoli dentro singoli cantieri divisi per stanze (es. Bagno, Cucina, Facciata) per ritrovare ogni misura al volo anche offline.">
+            <span class="calc-locked-icon"><i data-feather="folder-plus"></i></span>
+            <span class="calc-locked-text">
+                <strong>Salva in Cantiere / Stanza</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Preventivo PDF A4 con Logo" data-feature-pitch="Genera in un tap un preventivo professionale in PDF A4 completo di logo aziendale, Partita IVA, IBAN, anagrafica cliente e Gran Totale pronto da inviare su WhatsApp.">
+            <span class="calc-locked-icon"><i data-feather="file-text"></i></span>
+            <span class="calc-locked-text">
+                <strong>Preventivo PDF A4 con Logo</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Esporta Excel (.xlsx)" data-feature-pitch="Scarica il computo completo di materiali, quantità, voci extra e manodopera in formato Excel strutturato per contabilità e ordini fornitore su PC.">
+            <span class="calc-locked-icon"><i data-feather="table"></i></span>
+            <span class="calc-locked-text">
+                <strong>Esporta Excel (.xlsx)</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Salva il tuo Listino Prezzi" data-feature-pitch="Imposta i prezzi d&#39;acquisto dei tuoi fornitori una sola volta nel Database Materiali dell&#39;app: tutti i 21 calcolatori li applicheranno in automatico.">
+            <span class="calc-locked-icon"><i data-feather="dollar-sign"></i></span>
+            <span class="calc-locked-text">
+                <strong>Salva il tuo Listino Prezzi</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+                </div>
+
+                <div id="calc-locked-feedback" class="calc-locked-feedback" role="status" aria-live="polite"></div>
+
+                <div class="calc-boomer-box">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" width="46" height="46" loading="lazy">
+                    </picture>
+                    <div>
+                        <span class="calc-boomer-tag">Boomer • Il Capocantiere</span>
+                        <p>Lasciare un escavatore fermo in cortile sotto la pioggia costa soldi tutti i giorni! Organizza i lavori a terra prima che arrivi il camion del noleggio e controlla sempre patente/abilitazioni PLE ed escavatori!</p>
+                    </div>
+                </div>
+
+                <div class="calc-modal-cta-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dmodal_result%26utm_campaign%3Dcalcolo-noleggio-attrezzature-cantiere" target="_blank" rel="noopener" class="calc-modal-play-btn">
+                        <i data-feather="download"></i>
+                        <span>Scarica Edil Calc Gratis (Google Play)</span>
+                    </a>
+                    <div class="calc-modal-qr">
+                        <img src="assets/qr-playstore.svg" alt="QR Code Download Edil Calc Google Play" width="48" height="48" loading="lazy">
+                        <span>Inquadra con Android</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-modal-footer-actions">
+                <button type="button" class="calc-modal-edit-btn" data-close-modal>
+                    &larr; Modifica dati e ricalcola
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44" loading="lazy">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38" loading="lazy">
+                    </picture>
+                    <div class="brand-text">
+                        <span class="brand-name">EDIL CALC</span>
+                        <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                    </div>
+                </a>
+                <p>La suite gratuita con 21 calcolatori edili, gestione cantieri multi-stanza offline e preventivi professionali PDF A4 ed Excel col tuo logo.</p>
+                <div class="footer-guides-box">
+                    <span class="footer-guides-title">Calcolatori Online e Guide Pratiche:</span>
+                    <div class="footer-guides-links">
+                        <a href="calcolatori.html">Tutti i 21 Calcolatori</a>
+                        <a href="calcolo-massetto-cemento.html">Calcolo Sacchi Massetto</a>
+                        <a href="calcolo-cartongesso.html">Calcolo Cartongesso al mq</a>
+                        <a href="calcolo-piastrelle.html">Calcolo Piastrelle e Colla</a>
+                        <a href="calcolo-pittura.html">Calcolo Litri Pittura</a>
+                        <a href="calcolo-scale-blondel.html">Calcolo Scale (Blondel)</a>
+                        <a href="calcolo-intonaco.html">Calcolo Intonaco</a>
+                        <a href="calcolo-sezione-cavi-elettrici.html">Sezione Cavi Elettrici</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigazione</h4>
+                <ul>
+                    <li><a href="calcolatori.html">Tutti i 21 Calcolatori Online</a></li>
+                    <li><a href="index.html#features">Vantaggi Principali</a></li>
+                    <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                    <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="index.html#boomer">Boomer, il Capocantiere</a></li>
+                    <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Informazioni Legali &amp; Store</h4>
+                <div class="contact-list">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dfooter_store%26utm_campaign%3Dcalcolo-noleggio-attrezzature-cantiere" target="_blank" rel="noopener" class="contact-link">
+                        <i data-feather="shopping-bag"></i>
+                        <span>Scheda Ufficiale Google Play</span>
+                    </a>
+                    <a href="privacy.html" class="contact-link">
+                        <i data-feather="shield"></i>
+                        <span>Privacy Policy (GDPR)</span>
+                    </a>
+                    <a href="terms.html" class="contact-link">
+                        <i data-feather="file-text"></i>
+                        <span>Termini di Servizio</span>
+                    </a>
+                    <a href="#gestisci-cookie" data-open-cookie-settings class="contact-link">
+                        <i data-feather="sliders"></i>
+                        <span>Gestisci cookie</span>
+                    </a>
+                    <a href="mailto:support@edilcalc.com" class="contact-link">
+                        <i data-feather="life-buoy"></i>
+                        <span>support@edilcalc.com</span>
+                    </a>
+                    <a href="mailto:info@edilcalc.com" class="contact-link">
+                        <i data-feather="mail"></i>
+                        <span>info@edilcalc.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
+            <div class="footer-bottom-links">
+                <a href="calcolatori.html">Calcolatori</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <button type="button" class="footer-cookie-btn" data-open-cookie-settings>Gestisci cookie</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY CTA BAR -->
+    <div id="mobile-sticky-cta" class="mobile-sticky-cta">
+        <div class="mobile-sticky-info">
+            <img src="assets/logo.png" alt="Edil Calc Logo" class="mobile-sticky-logo" width="36" height="36" loading="lazy">
+            <div class="mobile-sticky-text">
+                <strong>Edil Calc App</strong>
+                <span>Salva cantieri &amp; PDF gratis</span>
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dmobile_sticky%26utm_campaign%3Dcalcolo-noleggio-attrezzature-cantiere" target="_blank" rel="noopener" class="mobile-sticky-btn">Scarica App</a>
+    </div>
+    <script src="js/calculators-logic.js" defer></script>
+    <script src="js/calculator-ui.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.feather) { window.feather.replace(); }
+      });
+    </script>
+</body>
+</html>

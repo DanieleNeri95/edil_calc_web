@@ -63,28 +63,47 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => el.classList.add('is-visible'));
     }
 
-    // 5. Interactive Category Filter for the 20+ Calculators Showcase
+    // 5. Interactive Category Filter + Hub Search for Calculators Showcase
     const tabButtons = document.querySelectorAll('.calc-tab-btn');
     const calcCards = document.querySelectorAll('.calc-item-card');
+    const hubSearchInput = document.getElementById('hub-search-input');
+    const hubEmptyState = document.getElementById('hub-empty-state');
 
-    if (tabButtons.length > 0 && calcCards.length > 0) {
+    if (calcCards.length > 0 && (tabButtons.length > 0 || hubSearchInput)) {
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        const applyCalcFilters = () => {
+            let visibleCount = 0;
+            calcCards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                const catMatch = activeCategory === 'all' || cardCat === activeCategory;
+                const haystack = (card.getAttribute('data-search') || card.textContent || '').toLowerCase();
+                const searchMatch = !searchQuery || haystack.includes(searchQuery);
+                const visible = catMatch && searchMatch;
+                card.style.display = visible ? 'flex' : 'none';
+                if (visible) visibleCount++;
+            });
+            if (hubEmptyState) {
+                hubEmptyState.classList.toggle('is-visible', visibleCount === 0);
+            }
+        };
+
         tabButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const category = btn.getAttribute('data-category');
-
+                activeCategory = btn.getAttribute('data-category') || 'all';
                 tabButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-
-                calcCards.forEach(card => {
-                    const cardCat = card.getAttribute('data-category');
-                    if (category === 'all' || cardCat === category) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                applyCalcFilters();
             });
         });
+
+        if (hubSearchInput) {
+            hubSearchInput.addEventListener('input', (e) => {
+                searchQuery = (e.target.value || '').trim().toLowerCase();
+                applyCalcFilters();
+            });
+        }
     }
 
     // 6. Interactive Workflow Screen Switcher

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcola subito quanti BTU/h e kW servono per il condizionatore della tua stanza (in base a m³, isolamento, esposizione e finestre) e scopri come sceglierlo bene.">
+    <meta name="keywords" content="calcolo btu condizionatore mq, quanti btu servono per una stanza, come scegliere la potenza del condizionatore, conversione btu kw condizionatore">
+    <link rel="canonical" href="https://www.edilcalc.com/calcolo-btu-condizionatore.html">
+
+    <meta property="og:title" content="Calcolo BTU Condizionatore Online e Dimensionamento Clima | Edil Calc">
+    <meta property="og:description" content="Calcolatore gratuito di BTU/h e kW per condizionatori e pompe di calore con fattori isolamento, esposizione Sud e superfici vetrate + guida tecnica.">
+    <meta property="og:url" content="https://www.edilcalc.com/calcolo-btu-condizionatore.html">
+    <meta property="og:site_name" content="Edil Calc">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:image" content="https://www.edilcalc.com/assets/logo.png">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calcolo BTU Condizionatore Online e Dimensionamento Clima | Edil Calc">
+    <meta name="twitter:description" content="Calcolatore gratuito di BTU/h e kW per condizionatori e pompe di calore con fattori isolamento, esposizione Sud e superfici vetrate + guida tecnica.">
+    <meta name="twitter:image" content="https://www.edilcalc.com/assets/logo.png">
+
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Calcolo BTU Condizionatore al m² e m³ + Come Scegliere la Potenza | Edil Calc</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <script src="js/feather.min.js"></script>
+    <script src="js/consent.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#app",
+      "name": "Calcolatore BTU Condizionatore e Carico Termico Online Gratis",
+      "description": "Calcola subito quanti BTU/h e kW servono per il condizionatore della tua stanza (in base a m³, isolamento, esposizione e finestre) e scopri come sceglierlo bene.",
+      "url": "https://www.edilcalc.com/calcolo-btu-condizionatore.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser, Android",
+      "inLanguage": "it-IT",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Edil Calc",
+        "url": "https://www.edilcalc.com",
+        "logo": "https://www.edilcalc.com/assets/logo.png"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#article",
+      "headline": "Calcolo BTU Condizionatore e Guida: Come Scegliere la Potenza Giusta",
+      "description": "Calcola subito quanti BTU/h e kW servono per il condizionatore della tua stanza (in base a m³, isolamento, esposizione e finestre) e scopri come sceglierlo bene.",
+      "inLanguage": "it-IT",
+      "dateModified": "2026-11-23",
+      "datePublished": "2026-11-23",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.edilcalc.com/calcolo-btu-condizionatore.html"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Edil Calc"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Edil Calc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.edilcalc.com/assets/logo.png"
+        }
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#howto",
+      "name": "Come scegliere e installare la potenza giusta (BTU) del condizionatore",
+      "description": "Per scegliere i BTU giusti di un condizionatore non basta guardare solo i metri quadri del pavimento: si parte dal volume reale della stanza (m³) moltiplicato per un coefficiente termico K (da 20 W/m³ in classe energetica alta fino a 40 W/m³ in edifici poco isolati), aggiungendo un +10% per esposizione al sole (Sud/Ovest) e circa un +5% per ciascuna finestra. Il risultato in Watt si converte infine in BTU/h moltiplicando per 3,412.",
+      "inLanguage": "it-IT",
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Metro laser per rilevare lunghezza, larghezza e altezza soffitti reali (inclusi sottotetti o soppalchi)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Verifica disponibilità scarico condensa a caduta naturale (pendenza ≥ 1–2%) o pompa di rilancio silenziosa"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Linea elettrica dedicata dal quadro con interruttore magnetotermico adeguato e tubo scarico dedicato"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Per l'installazione fisica obbligatoria da tecnico F-Gas certificato: cartellatrice, tagliatubi rame, chiave dinamometrica, pompa del vuoto, gruppo manometrico e cercafughe"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "DPI installatore: guanti da lavoro, occhiali protettivi e sistemi anticaduta certificati per lavori in quota su unità esterne in facciata"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "1. Calcola il fabbisogno reale in BTU/h e kW per ogni stanza",
+          "text": "Usa il calcolatore qui sopra per ciascuna stanza da climatizzare separatamente: in un open space soggiorno + cucina ad esempio conta sempre l'intera metratura comunicante fino all'eventuale arco aperto.",
+          "url": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#come-calcolare-btu-condizionatore-step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "2. Arrotonda alla taglia commerciale inverter corretta",
+          "text": "I climatizzatori inverter moderni modulano la potenza: se il calcolo ti restituisce ad esempio 8.200 BTU/h scegli una macchina da 9.000 BTU/h (2,5 kW); se sei vicino a 11.000–13.000 BTU/h scegli una taglia da 12.000 BTU/h (3,5 kW). Evita di prendere un 9.000 BTU quando servono 12.000 BTU su un locale molto caldo.",
+          "url": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#come-calcolare-btu-condizionatore-step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "3. Valuta Mono-Split vs Multi-Split (Dual o Trial)",
+          "text": "Se devi climatizzare 2 o 3 camere adiacenti puoi usare un'unità esterna Dual/Trial-Split (occupa meno spazio sul balcone), verificando però che le macchine lavorino bene anche a basso carico quando tieni acceso un solo split di notte, oppure preferire due Mono-Split ad altissima efficienza SEER/SCOP se hai spazio esterno.",
+          "url": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#come-calcolare-btu-condizionatore-step-3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "4. Progetta il percorso di tubazioni frigorifere e scarico condensa",
+          "text": "Scegli una posizione per lo split interno che lanci il flusso d'aria lungo l'asse maggiore della stanza, lontano da tende spesse, mensole proprio sotto lo split (che deviano il getto e ingannano il sensore di temperatura) e senza puntare direttamente su cuscini o scrivanie.",
+          "url": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#come-calcolare-btu-condizionatore-step-4"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "5. Verifica la linea elettrica dedicata",
+          "text": "Verifica con l'installatore la linea elettrica di alimentazione: nei sistemi multi-split o sopra i 12.000–18.000 BTU serve spesso un cavo dedicato da 2,5 o 4 mm² dall'unità esterna al quadro con protezione magnetotermica adeguata.",
+          "url": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#come-calcolare-btu-condizionatore-step-5"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "6. Affida montaggio, vuoto e collaudo a un installatore certificato F-Gas",
+          "text": "In Italia l'installazione dei climatizzatori contenenti gas fluorurati (es. R32) è riservata per legge (D.P.R. 146/2018) a tecnici e aziende con patentino F-Gas, che effettuano prova di tenuta in azoto, vuoto spinto con pompa, rilascio certificato e registrazione sul portale Banca Dati F-Gas (indispensabile anche per garanzia e bonus fiscali).",
+          "url": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#come-calcolare-btu-condizionatore-step-6"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanti BTU servono per una stanza di 20 mq o di 30 mq?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In un appartamento standard alto 2,70 m con isolamento medio, una stanza da 20 m² (54 m³) richiede circa 7.000–9.000 BTU/h (9.000 BTU è ideale anche con esposizione al sole). Una stanza da 30 m² (81 m³) richiede invece circa 10.000–12.000 BTU/h (consigliato uno split da 12.000 BTU)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come si convertono i BTU in kW e viceversa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un chilowatt (kW) equivale esattamente a 3.412,14 BTU/h. Quindi 9.000 BTU/h equivalgono a circa 2,64 kW (taglie commerciali 2,5 kW), 12.000 BTU/h a circa 3,52 kW e 18.000 BTU/h a circa 5,28 kW. Nota: è la potenza termica resa, non il consumo elettrico assorbito dalla rete."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto consuma in elettricità un condizionatore da 12.000 BTU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un climatizzatore da 12.000 BTU/h (3,5 kW termici) in classe A++/A+++ assorbe mediamente tra 0,8 e 1,1 kW elettrici a pieno regime, scendendo poi a soli 0,25–0,45 kW elettrici in mantenimento grazie alla modulazione inverter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso installare il condizionatore da solo senza tecnico F-Gas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No: in Italia la normativa vigente (D.P.R. 146/2018, Regolamento UE F-Gas) vieta il montaggio e la manipolazione di climatizzatori con gas refrigeranti da parte di personale privo di certificazione F-Gas, prevedendo sanzioni sia per chi installa sia per chi acquista senza rispettare gli obblighi di dichiarazione."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.edilcalc.com/calcolo-btu-condizionatore.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.edilcalc.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calcolatori Online",
+          "item": "https://www.edilcalc.com/calcolatori.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bilancio Termico (BTU/h e kW)",
+          "item": "https://www.edilcalc.com/calcolo-btu-condizionatore.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38">
+                </picture>
+                <div class="brand-text">
+                    <span class="brand-name">EDIL CALC</span>
+                    <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#features">Vantaggi</a></li>
+                <li><a href="calcolatori.html" class="active">Calcolatori Online</a></li>
+                <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                <li><a href="index.html#azienda">Preventivi PDF</a></li>
+                <li><a href="index.html#boomer">Boomer</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dnavbar_cta%26utm_campaign%3Dcalcolo-btu-condizionatore" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i data-feather="download"></i>
+                    <span>Scarica Gratis</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="calc-page-main">
+        <div class="container">
+            <nav class="calc-breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="crumb-sep">&rsaquo;</span>
+                <a href="calcolatori.html">Calcolatori Online</a>
+                <span class="crumb-sep">&rsaquo;</span>
+                <span class="crumb-current">Bilancio Termico (BTU/h e kW)</span>
+            </nav>
+
+            <header class="calc-hero-compact">
+                <div class="calc-hero-text">
+                    <div class="calc-eyebrow-row">
+                        <span class="calc-eyebrow-pill">
+                            <i data-feather="thermometer"></i>
+                            <span>Calcolatore Online &amp; Guida Pratica</span>
+                        </span>
+                        <span class="calc-hero-badge">100% Gratis • Nessuna Registrazione • Stima Termica Rapida</span>
+                    </div>
+                    <h1>Calcolo BTU Condizionatore e Guida: Come Scegliere la Potenza Giusta</h1>
+                    <p class="calc-hero-subtitle">Inserisci larghezza, lunghezza, altezza della stanza, grado di isolamento, esposizione solare e numero di finestre per ottenere il fabbisogno esatto in BTU/h e kW e installare il climatizzatore senza errori.</p>
+                </div>
+                <div class="calc-hero-actions">
+                    <a href="#come-calcolare-btu-condizionatore" class="calc-jump-guide-btn">
+                        <i data-feather="book-open"></i>
+                        <span>Come scegliere i BTU giusti</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="calc-workspace">
+                
+        <section id="calc-app" class="calc-glass-card" data-logic-key="hvac" data-utm-campaign="calcolo-btu-condizionatore" data-safety-disclaimer="true">
+            <div class="calc-card-header">
+                <div class="calc-card-header-left">
+                    <div class="calc-card-icon-badge">
+                        <i data-feather="thermometer"></i>
+                    </div>
+                    <div>
+                        <h2>Calcolatore BTU Condizionatore e Carico Termico Online Gratis</h2>
+                        <p class="calc-card-intro">Indica le dimensioni nette della stanza in metri, classe di isolamento (Scarso, Medio o Ottimo), esposizione prevalente (Nord o Sud) e numero di finestre. Stima preliminare da validare con tecnico F-Gas / termotecnico.</p>
+                    </div>
+                </div>
+                <span class="calc-session-pill" title="Nessun dato salvato su cookie o memoria">
+                    <i data-feather="lock"></i>
+                    <span>Calcolo rapido • Senza salvataggio</span>
+                </span>
+            </div>
+
+            <form id="calc-form" novalidate>
+                <div class="calc-form-grid">
+                    
+        <div class="calc-field">
+            <label class="calc-label" for="field-length">
+                <span>Lunghezza stanza</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-length" name="length" class="calc-input has-unit" inputmode="decimal" placeholder="es. 5,0" data-required="true">
+                <span class="calc-input-unit">m</span>
+            </div>
+        </div>
+        <div class="calc-field">
+            <label class="calc-label" for="field-width">
+                <span>Larghezza stanza</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-width" name="width" class="calc-input has-unit" inputmode="decimal" placeholder="es. 4,0" data-required="true">
+                <span class="calc-input-unit">m</span>
+            </div>
+        </div>
+        <div class="calc-field">
+            <label class="calc-label" for="field-height">
+                <span>Altezza soffitto</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-height" name="height" class="calc-input has-unit" inputmode="decimal" placeholder="2,7" value="2,7" data-required="true">
+                <span class="calc-input-unit">m</span>
+            </div>
+        </div>
+        <div class="calc-field">
+            <label class="calc-label" for="field-windows">
+                <span>Numero finestre esposte</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-windows" name="windows" class="calc-input has-unit" inputmode="decimal" placeholder="1" value="1">
+                <span class="calc-input-unit">pz</span>
+            </div>
+        </div>
+            <div class="calc-field calc-field-full">
+                <label class="calc-label" for="field-insulation">Livello di isolamento dell&#39;immobile</label>
+                <select id="field-insulation" name="insulation" class="calc-select">
+                    <option value="avg">Medio (doppi vetri standard)</option><option value="poor">Scarso (edificio datato, vetri singoli, ultimo piano)</option><option value="exc">Ottimo (cappotto termico, infissi taglio termico)</option>
+                </select>
+            </div>
+            <div class="calc-field calc-field-full">
+                <span class="calc-label">Esposizione solare prevalente</span>
+                <input type="hidden" name="exposure" value="north">
+                <div class="calc-segmented" role="radiogroup" aria-label="Esposizione solare prevalente" data-seg-name="exposure">
+                    <button type="button" class="calc-seg-btn active" role="radio" aria-checked="true" data-value="north" data-default="true">Nord / Ombreggiato</button><button type="button" class="calc-seg-btn" role="radio" aria-checked="false" data-value="south">Sud-Ovest / Soleggiato (+15%)</button>
+                </div>
+            </div>
+                </div>
+
+                <div class="calc-accordions">
+                    
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-costs">
+                <span class="calc-accordion-title">
+                    <i data-feather="dollar-sign"></i>
+                    <span>Costi Materiali / Accessori (€)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-costs" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-costs" class="calc-accordion-panel">
+                <div class="calc-form-grid">
+                    
+        <div class="calc-field calc-field-full">
+            <label class="calc-label" for="field-priceKw">
+                <span>Costo stimato macchina per kW termico</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-priceKw" name="priceKw" class="calc-input has-unit" inputmode="decimal" placeholder="es. 260,00">
+                <span class="calc-input-unit">€/kW</span>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-extras">
+                <span class="calc-accordion-title">
+                    <i data-feather="plus"></i>
+                    <span>Voci Extra Cantiere (Trasporto, Primer, Teli...)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-extras" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-extras" class="calc-accordion-panel">
+                <div class="calc-extra-builder">
+                    <div class="calc-field calc-field-desc">
+                        <label class="calc-label" for="extra-desc">Descrizione voce</label>
+                        <input type="text" id="extra-desc" name="extra_desc" class="calc-input" placeholder="es. Telo protettivo / Smaltimento">
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-qty">Q.tà</label>
+                        <input type="text" id="extra-qty" name="extra_qty" inputmode="decimal" class="calc-input" placeholder="1">
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-unit">U.M.</label>
+                        <select id="extra-unit" name="extra_unit" class="calc-select">
+                            <option value="pz">pz</option>
+                            <option value="mq">mq</option>
+                            <option value="ml">ml</option>
+                            <option value="kg">kg</option>
+                            <option value="mc">mc</option>
+                            <option value="L">L</option>
+                            <option value="corpo">corpo</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-price">Prezzo (€)</label>
+                        <input type="text" id="extra-price" name="extra_price" inputmode="decimal" class="calc-input" placeholder="18,00">
+                    </div>
+                    <button type="button" id="extra-add-btn" class="calc-extra-add-btn">
+                        <i data-feather="plus"></i>
+                        <span>Aggiungi</span>
+                    </button>
+                </div>
+                <div id="calc-extra-list" class="calc-extra-list"></div>
+                <p class="calc-extra-note">Le voci extra valgono solo per il calcolo corrente e non vengono salvate. Nell'app Android le selezioni in un tap dal tuo listino personale.</p>
+            </div>
+        </div>
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-labor">
+                <span class="calc-accordion-title">
+                    <i data-feather="tool"></i>
+                    <span>Manodopera Stimata (Ore o A Corpo)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-labor" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-labor" class="calc-accordion-panel">
+                <div class="calc-form-grid">
+                    <div class="calc-field calc-field-full">
+                        <span class="calc-label">Modalità calcolo manodopera</span>
+                        <input type="hidden" name="laborMode" value="hourly">
+                        <div class="calc-segmented" role="radiogroup" aria-label="Modalità manodopera" data-seg-name="laborMode">
+                            <button type="button" class="calc-seg-btn active" role="radio" aria-checked="true" data-value="hourly" data-default="true">A Ore (€/h)</button>
+                            <button type="button" class="calc-seg-btn" role="radio" aria-checked="false" data-value="flat">A Corpo (Forfait €)</button>
+                        </div>
+                    </div>
+                    <div class="calc-field" data-show-when="laborMode=hourly">
+                        <label class="calc-label" for="field-laborHours">Ore di lavoro previste</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborHours" name="laborHours" inputmode="decimal" class="calc-input has-unit" placeholder="es. 8">
+                            <span class="calc-input-unit">h</span>
+                        </div>
+                    </div>
+                    <div class="calc-field" data-show-when="laborMode=hourly">
+                        <label class="calc-label" for="field-laborHourlyRate">Tariffa oraria</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborHourlyRate" name="laborHourlyRate" inputmode="decimal" class="calc-input has-unit" placeholder="es. 30,00">
+                            <span class="calc-input-unit">€/h</span>
+                        </div>
+                    </div>
+                    <div class="calc-field calc-field-full" data-show-when="laborMode=flat">
+                        <label class="calc-label" for="field-laborFlatRate">Importo manodopera a corpo</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborFlatRate" name="laborFlatRate" inputmode="decimal" class="calc-input has-unit" placeholder="es. 450,00">
+                            <span class="calc-input-unit">€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+
+                <div id="calc-error-banner" class="calc-error-banner" role="alert">
+                    <i data-feather="alert-triangle"></i>
+                    <span id="calc-error-text"></span>
+                </div>
+
+                <div class="calc-submit-row">
+                    <button type="submit" class="calc-submit-btn">
+                        <i data-feather="zap"></i>
+                        <span>Calcola Fabbisogno e Costi</span>
+                    </button>
+                    <button type="button" id="calc-reset-btn" class="calc-reset-btn">
+                        <i data-feather="refresh-cw"></i>
+                        <span>Azzera</span>
+                    </button>
+                </div>
+
+                <p class="calc-zero-persistence-note">
+                    <i data-feather="info"></i>
+                    <span>Calcolo istantaneo gratuito: nessun dato viene memorizzato o inviato. Ricaricando la pagina i campi tornano vuoti.</span>
+                </p>
+            </form>
+        </section>
+                
+        <aside class="calc-sidebar">
+            <div class="calc-side-card">
+                <h3><i data-feather="list"></i><span>Indice Rapido Pagina</span></h3>
+                <ul class="calc-toc-list">
+                    <li><a href="#calc-app"><i data-feather="sliders"></i><span>Vai al Calcolatore Interattivo</span></a></li>
+                    <li><a href="#come-calcolare-btu-condizionatore"><i data-feather="book-open"></i><span>Come scegliere i BTU giusti</span></a></li>
+                    <li><a href="#specifiche-tecniche"><i data-feather="database"></i><span>Formule, Tabella &amp; Esempio</span></a></li>
+                    <li><a href="#domande-frequenti"><i data-feather="info"></i><span>Domande Frequenti (FAQ)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="calc-side-card">
+                <h3><i data-feather="check"></i><span>Parametri di Riferimento</span></h3>
+                <div class="calc-specs-list">
+                    
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Difficoltà / Normativa</span>
+            <span class="calc-spec-val">Installazione riservata a tecnico F-Gas (D.P.R. 146/2018)</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Taglie commerciali split</span>
+            <span class="calc-spec-val">7.000 • 9.000 • 12.000 • 18.000 • 24.000 BTU/h</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Conversione esatta</span>
+            <span class="calc-spec-val">1 kW = 3.412 BTU/h (12.000 BTU ≈ 3,52 kW)</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Posizione ideale split</span>
+            <span class="calc-spec-val">A ~15 cm dal soffitto, non diretto su letti o divani</span>
+        </div>
+                </div>
+            </div>
+
+            <div class="calc-side-card calc-sidebar-app-card">
+                <h3><i data-feather="download"></i><span>Salva e Stampa in PDF</span></h3>
+                <p>I calcoli eseguiti online non vengono salvati. Con l'app Android gratuita organizzi ogni progetto per cantiere e stanza ed esporti preventivi PDF A4 ed Excel col tuo logo.</p>
+                <div class="calc-qr-inline">
+                    <img src="assets/qr-playstore.svg" alt="QR Code Download Edil Calc Google Play" width="68" height="68">
+                    <span>Inquadra con la fotocamera Android per scaricare Edil Calc gratis.</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dsidebar_qr%26utm_campaign%3Dcalcolo-btu-condizionatore" target="_blank" rel="noopener" class="calc-modal-play-btn" style="width:100%;">
+                    <i data-feather="download"></i>
+                    <span>App Android Gratuita</span>
+                </a>
+            </div>
+        </aside>
+            </div>
+
+            <article class="calc-guide-article">
+                
+        <section id="come-calcolare-btu-condizionatore" class="calc-guide-block">
+            <h2>Come scegliere e installare la potenza giusta (BTU) del condizionatore</h2>
+            <div class="calc-direct-answer">
+                Per scegliere i BTU giusti di un condizionatore non basta guardare solo i metri quadri del pavimento: si parte dal volume reale della stanza (m³) moltiplicato per un coefficiente termico K (da 20 W/m³ in classe energetica alta fino a 40 W/m³ in edifici poco isolati), aggiungendo un +10% per esposizione al sole (Sud/Ovest) e circa un +5% per ciascuna finestra. Il risultato in Watt si converte infine in BTU/h moltiplicando per 3,412.
+            </div>
+
+            <h3>Attrezzi, Materiali e DPI Consigliati</h3>
+            <ul class="calc-tools-grid">
+                <li>Metro laser per rilevare lunghezza, larghezza e altezza soffitti reali (inclusi sottotetti o soppalchi)</li><li>Verifica disponibilità scarico condensa a caduta naturale (pendenza ≥ 1–2%) o pompa di rilancio silenziosa</li><li>Linea elettrica dedicata dal quadro con interruttore magnetotermico adeguato e tubo scarico dedicato</li><li>Per l&#39;installazione fisica obbligatoria da tecnico F-Gas certificato: cartellatrice, tagliatubi rame, chiave dinamometrica, pompa del vuoto, gruppo manometrico e cercafughe</li><li>DPI installatore: guanti da lavoro, occhiali protettivi e sistemi anticaduta certificati per lavori in quota su unità esterne in facciata</li>
+            </ul>
+
+            <h3>Preparazione Prima di Iniziare</h3>
+            <ol class="calc-prep-list">
+                <li>Valuta con sincerità lo stato reale dell&#39;involucro: un ultimo piano esposto al sole o una mansarda possono richiedere il coefficiente &#39;Isolamento Scarso&#39; (o un +15–25% cautelativo) rispetto a un piano intermedio con cappotto termico.</li><li>Controlla se nella stanza sono presenti sorgenti interne costanti di calore (cucina a gas/forno, grandi vetrate a tutta parete o più computer/TV sempre accesi) che aumentano il carico estivo.</li><li>Verifica le condizioni di posizionamento dell&#39;unità esterna su balcone o facciata (spazio d&#39;aerazione libero, silenziosità verso i vicini ed eventuali regolamenti condominiali o vincoli comunali).</li>
+            </ol>
+
+            <h3>Procedura Operativa Passo Passo</h3>
+            <div class="calc-steps-list">
+                
+        <div id="come-calcolare-btu-condizionatore-step-1" class="calc-step-card">
+            <div class="calc-step-num">1</div>
+            <div class="calc-step-body">
+                <h4>1. Calcola il fabbisogno reale in BTU/h e kW per ogni stanza</h4>
+                <p>Usa il calcolatore qui sopra per ciascuna stanza da climatizzare separatamente: in un open space soggiorno + cucina ad esempio conta sempre l&#39;intera metratura comunicante fino all&#39;eventuale arco aperto.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-btu-condizionatore-step-2" class="calc-step-card">
+            <div class="calc-step-num">2</div>
+            <div class="calc-step-body">
+                <h4>2. Arrotonda alla taglia commerciale inverter corretta</h4>
+                <p>I climatizzatori inverter moderni modulano la potenza: se il calcolo ti restituisce ad esempio 8.200 BTU/h scegli una macchina da 9.000 BTU/h (2,5 kW); se sei vicino a 11.000–13.000 BTU/h scegli una taglia da 12.000 BTU/h (3,5 kW). Evita di prendere un 9.000 BTU quando servono 12.000 BTU su un locale molto caldo.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-btu-condizionatore-step-3" class="calc-step-card">
+            <div class="calc-step-num">3</div>
+            <div class="calc-step-body">
+                <h4>3. Valuta Mono-Split vs Multi-Split (Dual o Trial)</h4>
+                <p>Se devi climatizzare 2 o 3 camere adiacenti puoi usare un&#39;unità esterna Dual/Trial-Split (occupa meno spazio sul balcone), verificando però che le macchine lavorino bene anche a basso carico quando tieni acceso un solo split di notte, oppure preferire due Mono-Split ad altissima efficienza SEER/SCOP se hai spazio esterno.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-btu-condizionatore-step-4" class="calc-step-card">
+            <div class="calc-step-num">4</div>
+            <div class="calc-step-body">
+                <h4>4. Progetta il percorso di tubazioni frigorifere e scarico condensa</h4>
+                <p>Scegli una posizione per lo split interno che lanci il flusso d&#39;aria lungo l&#39;asse maggiore della stanza, lontano da tende spesse, mensole proprio sotto lo split (che deviano il getto e ingannano il sensore di temperatura) e senza puntare direttamente su cuscini o scrivanie.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-btu-condizionatore-step-5" class="calc-step-card">
+            <div class="calc-step-num">5</div>
+            <div class="calc-step-body">
+                <h4>5. Verifica la linea elettrica dedicata</h4>
+                <p>Verifica con l&#39;installatore la linea elettrica di alimentazione: nei sistemi multi-split o sopra i 12.000–18.000 BTU serve spesso un cavo dedicato da 2,5 o 4 mm² dall&#39;unità esterna al quadro con protezione magnetotermica adeguata.</p>
+            </div>
+        </div>
+        <div id="come-calcolare-btu-condizionatore-step-6" class="calc-step-card">
+            <div class="calc-step-num">6</div>
+            <div class="calc-step-body">
+                <h4>6. Affida montaggio, vuoto e collaudo a un installatore certificato F-Gas</h4>
+                <p>In Italia l&#39;installazione dei climatizzatori contenenti gas fluorurati (es. R32) è riservata per legge (D.P.R. 146/2018) a tecnici e aziende con patentino F-Gas, che effettuano prova di tenuta in azoto, vuoto spinto con pompa, rilascio certificato e registrazione sul portale Banca Dati F-Gas (indispensabile anche per garanzia e bonus fiscali).</p>
+            </div>
+        </div>
+            </div>
+
+            <div class="calc-bridge-box">
+                <p>Vuoi sapere in 5 secondi se alla tua stanza basta un 9.000 BTU o se serve un 12.000 o 18.000 BTU? Inserisci misure, isolamento ed esposizione nel calcolatore in cima alla pagina.</p>
+                <a href="#calc-app" class="calc-bridge-link">Torna al Calcolatore &uarr;</a>
+            </div>
+
+            <h3>Errori Comuni da Evitare</h3>
+            <div class="calc-mistakes-grid">
+                
+        <div class="calc-mistake-card">
+            <h4>Usare la vecchia regola fissa dei &#39;340 BTU al mq&#39; ignorando l&#39;altezza</h4>
+            <p>Una stanza di 20 m² con soffitto alto 3,60 m in casa d&#39;epoca ha lo stesso volume d&#39;aria di una stanza moderna da 27 m²: servono molti più BTU di quelli calcolati solo sui m².</p>
+        </div>
+        <div class="calc-mistake-card">
+            <h4>Sovradimensionare troppo credendo di raffreddare più in fretta</h4>
+            <p>Un climatizzatore esagerato raffredda l&#39;aria in pochi minuti prima di aver avuto il tempo di deumidificare l&#39;ambiente, lasciando una sgradevole sensazione di freddo umido.</p>
+        </div>
+        <div class="calc-mistake-card">
+            <h4>Trascurare l&#39;effetto serra di grandi vetrate o sottotetti non coibentati</h4>
+            <p>Una mansarda esposta a Sud-Ovest senza schermature esterne raddoppia spesso i carichi termici estivi rispetto a un piano intermedio isolato.</p>
+        </div>
+            </div>
+
+            <div class="calc-boomer-box" style="margin-bottom:0;">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" width="46" height="46" loading="lazy">
+                </picture>
+                <div>
+                    <span class="calc-boomer-tag">Dritta di Boomer • Climatizzazione &amp; HVAC</span>
+                    <p>Se la stanza è una mansarda col tetto esposto a Sud o una cucina piena di vetri al sole, non tenere il calcolo al pelo: metti l&#39;isolamento reale e sali alla taglia commerciale giusta, o d&#39;agosto senti solo aria tiepida!</p>
+                </div>
+            </div>
+        </section>
+                
+        <section id="specifiche-tecniche" class="calc-guide-block">
+            <h2>Formule calcolo BTU/h e kW volumetrici e tabella taglie commerciali</h2>
+
+            <div class="guide-formula-box">
+                <h3>Formule Bilancio Termico Volumetrico (W, kW e BTU/h)</h3>
+                <code class="guide-formula-code">Volume Ambiente (m³) = Larghezza (m) × Lunghezza (m) × Altezza (m)</code><code class="guide-formula-code">Potenza Base (W) = Volume (m³) × Coefficiente K (20 Ottimo • 30 Medio • 40 Scarso)</code><code class="guide-formula-code">Potenza Corretta (W) = Base × (1,10 se Sud) × (1 + 0,05 × N° Finestre)</code><code class="guide-formula-code">Potenza kW = Potenza (W) / 1000 • Fabbisogno BTU/h = Potenza (W) × 3,412142</code>
+                <p style="margin-top:0.75rem;margin-bottom:0;">Per situazioni estreme (sottotetti non isolati, ampie vetrate continue a Ovest, uso in pompa di calore invernale in zone climatiche fredde) un termotecnico esegue il calcolo analitico delle trasmittanze ai sensi della UNI EN 12831 / Carichi Estivi.</p>
+            </div>
+
+            <h3>Tabella Orientativa Taglie Commerciali Split in Base ai Metri Quadri (H = 2,70 m, Isolamento Medio)</h3>
+            <div class="guide-table-wrap">
+                <table class="guide-table">
+                    <thead><tr><th>Superficie Indicativa (H 2,7 m)</th><th>Volume (m³)</th><th>Taglia Commerciale Split</th><th>Potenza Equivalente (kW)</th></tr></thead>
+                    <tbody><tr><td>10 – 18 m² (cameretta / studio)</td><td>27 – 48 m³</td><td>7.000 – 9.000 BTU/h</td><td>2,0 – 2,5 kW</td></tr><tr><td>18 – 30 m² (camera / soggiorno medio)</td><td>49 – 81 m³</td><td>9.000 – 12.000 BTU/h</td><td>2,5 – 3,5 kW</td></tr><tr><td>30 – 45 m² (salone / open space)</td><td>81 – 121 m³</td><td>12.000 – 18.000 BTU/h</td><td>3,5 – 5,0 kW</td></tr><tr><td>45 – 70 m² (grande zona giorno / ufficio)</td><td>121 – 190 m³</td><td>18.000 – 24.000 BTU/h</td><td>5,0 – 7,0 kW</td></tr></tbody>
+                </table>
+            </div>
+
+            <div class="calc-diagram-wrap">
+                <div class="calc-diagram-caption">
+                    <i data-feather="layers" style="width:15px;height:15px;"></i>
+                    <span>Schema Tecnico di Posa &amp; Dimensionamento</span>
+                </div>
+                <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calcolo carico termico ambiente m cubi per dimensionamento climatizzatore BTU — Volume m3 per coefficiente k, esposizione e finestre">
+  <title>Calcolo carico termico ambiente m cubi per dimensionamento climatizzatore BTU</title>
+  <defs>
+    <pattern id="bpGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0, 229, 255, 0.08)" stroke-width="1"/>
+    </pattern>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#00E5FF"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#FF5A26"/>
+    </marker>
+  </defs>
+  <rect width="680" height="260" rx="10" fill="#070B12"/>
+  <rect width="680" height="260" rx="10" fill="url(#bpGrid)"/>
+  
+      <polygon points="75,90 250,90 295,60 120,60" fill="rgba(0,229,255,0.1)" stroke="#00E5FF" stroke-width="1.6"/>
+      <rect x="75" y="90" width="175" height="105" fill="rgba(0,229,255,0.06)" stroke="#00E5FF" stroke-width="1.8"/>
+      <polygon points="250,90 295,60 295,165 250,195" fill="rgba(255,90,38,0.12)" stroke="#FF5A26" stroke-width="1.8"/>
+      <text x="162" y="148" fill="#F1F5F9" font-size="12" font-family="monospace" text-anchor="middle">Volume = L × W × H</text>
+      <text x="335" y="75" fill="#00E5FF" font-size="12" font-family="monospace" font-weight="bold">DIMENSIONAMENTO BTU/h &amp; kW</text>
+      <text x="335" y="106" fill="#F1F5F9" font-size="12" font-family="sans-serif">• Base termica = Volume (m³) × k isolamento</text>
+      <text x="335" y="134" fill="#FF5A26" font-size="12" font-family="monospace">• Sud / Soleggiato: +15% sul fabbisogno</text>
+      <text x="335" y="162" fill="#F1F5F9" font-size="12" font-family="sans-serif">• +1.000 BTU per finestra esposta aggiuntiva</text>
+      <text x="335" y="190" fill="#94A3B8" font-size="12" font-family="sans-serif">• Classi standard: 9.000 • 12.000 • 18.000 • 24.000 BTU</text>
+    
+</svg>
+            </div>
+
+            <div class="calc-example-box">
+                <h3 style="margin-top:0;">Esempio pratico: soggiorno 5,00 × 6,00 m (H 2,80 m), isolamento medio, Sud, 2 finestre</h3>
+                <p>Calcoliamo Watt, kW e BTU/h richiesti passo dopo passo:</p>
+                <ul><li>Volume stanza: 5,00 × 6,00 × 2,80 = 84,0 m³.</li><li>Carico base con isolamento medio (K = 30 W/m³): 84,0 × 30 = 2.520 W.</li><li>Maggiorazione esposizione Sud (+10%): 2.520 × 1,10 = 2.772 W.</li><li>Maggiorazione 2 finestre (+5% cad. = +10%): 2.772 × 1,10 = 3.049 W = 3,05 kW → 3.049 × 3,412 = 10.404 BTU/h (consigliato split da 12.000 BTU/h).</li></ul>
+            </div>
+        </section>
+                
+        <section id="domande-frequenti" class="calc-guide-block">
+            <h2>Domande Frequenti (Bilancio Termico (BTU/h e kW))</h2>
+            <div class="faq-list">
+                
+        <div class="faq-item active">
+            <div class="faq-question">
+                <h4>Quanti BTU servono per una stanza di 20 mq o di 30 mq?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>In un appartamento standard alto 2,70 m con isolamento medio, una stanza da 20 m² (54 m³) richiede circa 7.000–9.000 BTU/h (9.000 BTU è ideale anche con esposizione al sole). Una stanza da 30 m² (81 m³) richiede invece circa 10.000–12.000 BTU/h (consigliato uno split da 12.000 BTU).</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Come si convertono i BTU in kW e viceversa?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Un chilowatt (kW) equivale esattamente a 3.412,14 BTU/h. Quindi 9.000 BTU/h equivalgono a circa 2,64 kW (taglie commerciali 2,5 kW), 12.000 BTU/h a circa 3,52 kW e 18.000 BTU/h a circa 5,28 kW. Nota: è la potenza termica resa, non il consumo elettrico assorbito dalla rete.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Quanto consuma in elettricità un condizionatore da 12.000 BTU?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Un climatizzatore da 12.000 BTU/h (3,5 kW termici) in classe A++/A+++ assorbe mediamente tra 0,8 e 1,1 kW elettrici a pieno regime, scendendo poi a soli 0,25–0,45 kW elettrici in mantenimento grazie alla modulazione inverter.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Posso installare il condizionatore da solo senza tecnico F-Gas?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>No: in Italia la normativa vigente (D.P.R. 146/2018, Regolamento UE F-Gas) vieta il montaggio e la manipolazione di climatizzatori con gas refrigeranti da parte di personale privo di certificazione F-Gas, prevedendo sanzioni sia per chi installa sia per chi acquista senza rispettare gli obblighi di dichiarazione.</p>
+            </div>
+        </div>
+            </div>
+        </section>
+                
+        <section class="guide-inline-cta" style="margin:0;">
+            <div>
+                <h3>Salva il calcolo BTU di ogni stanza, la linea elettrica e il preventivo PDF</h3>
+                <p>Scarica gratis Edil Calc per Android: calcoli i BTU stanza per stanza dell&#39;abitazione, aggiungi linea elettrica, staffe, canaline e manodopera ed esporti subito un preventivo PDF A4 col tuo logo aziendale.</p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dinline_guide_cta%26utm_campaign%3Dcalcolo-btu-condizionatore" target="_blank" rel="noopener" class="btn btn-primary">
+                <i data-feather="download"></i>
+                <span>Scarica Edil Calc Gratis su Google Play</span>
+            </a>
+        </section>
+                
+        <section class="calc-guide-block">
+            <h2>Calcolatori e Guide Correlate</h2>
+            <div class="calc-related-grid">
+                
+            <a href="calcolo-sezione-cavi-elettrici.html" class="calc-related-card">
+                <span class="calc-related-cat">Elettrico &amp; Termo-Idraulico</span>
+                <h4>Dimensionamento Cavi e Linee</h4>
+                <p>Calcola corrente d&#39;impiego (Ib), sezione minima in mm² per portata e caduta di tensione (4%) e taglia dell&#39;interruttore magnetotermico (230V / 400V).</p>
+                <span class="calc-related-link">Calcolatore sezione cavi &amp; guida impianti → &rarr;</span>
+            </a>
+            <a href="calcolo-diametro-tubi-idraulica.html" class="calc-related-card">
+                <span class="calc-related-cat">Elettrico &amp; Termo-Idraulico</span>
+                <h4>Dimensionamento Tubazioni</h4>
+                <p>Calcola diametro interno consigliato in mm, perdita di carico (Bar) con formula Hazen-Williams e velocità dell&#39;acqua (m/s) per Rame, Multistrato, PEX o Acciaio.</p>
+                <span class="calc-related-link">Calcolatore diametro tubi &amp; guida idraulica → &rarr;</span>
+            </a>
+            <a href="calcolo-cartongesso.html" class="calc-related-card">
+                <span class="calc-related-cat">Pareti &amp; Soffitti</span>
+                <h4>Struttura Cartongesso</h4>
+                <p>Calcola lastre, guide a U, montanti a C, scatole di viti, nastro e stucco per pareti divisorie (2 lati) o contropareti (1 lato).</p>
+                <span class="calc-related-link">Calcolatore cartongesso &amp; guida: come fare la parete → &rarr;</span>
+            </a>
+            <a href="calcolo-pittura.html" class="calc-related-card">
+                <span class="calc-related-cat">Pareti &amp; Soffitti</span>
+                <h4>Pittura Interni / Esterni</h4>
+                <p>Calcola i litri esatti di idropittura o quarzo per pareti e soffitti con resa, numero di mani, metodo di posa e sottrazione di porte e finestre.</p>
+                <span class="calc-related-link">Calcolatore pittura &amp; guida: come imbiancare → &rarr;</span>
+            </a>
+            </div>
+        </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- RESULT MODAL (Read-Only + App Conversion) -->
+    <div id="calc-result-modal" class="calc-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="result-modal-title" aria-hidden="true">
+        <div class="calc-modal-dialog">
+            <div class="calc-modal-header">
+                <h3 id="result-modal-title">
+                    <i data-feather="check"></i>
+                    <span>Risultato del Calcolo</span>
+                </h3>
+                <button type="button" class="calc-modal-close" data-close-modal aria-label="Chiudi risultato e modifica dati">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+
+            <div id="modal-comfort-badge" class="calc-comfort-badge" style="display:none;"></div>
+
+            <div id="modal-safety-banner" class="calc-safety-banner" style="display:flex;">
+                <i data-feather="alert-triangle"></i>
+                <span>Avviso tecnico: stima indicativa di massima che non sostituisce il progetto esecutivo o la verifica di un tecnico/installatore abilitato (D.M. 37/08, D.Lgs. 81/2008 e norme CEI/UNI vigenti).</span>
+            </div>
+
+            <div class="calc-hero-result-box">
+                <div id="modal-hero-label" class="calc-hero-result-label">Fabbisogno stimato</div>
+                <div id="modal-hero-value" class="calc-hero-result-value">-</div>
+                <div id="modal-hero-sub" class="calc-hero-result-sub"></div>
+            </div>
+
+            <div id="modal-details-grid" class="calc-details-grid"></div>
+
+            <div id="modal-cost-summary" class="calc-cost-summary" style="display:none;"></div>
+
+            <div class="calc-conversion-panel">
+                <h4 class="calc-conversion-headline">Vuoi salvare questo calcolo o preparare il preventivo?</h4>
+                <p class="calc-conversion-sub">Questo risultato è una stima rapida non salvata. Scarica gratis l'app Android Edil Calc per archiviarlo nei tuoi cantieri e sbloccare tutte le funzioni:</p>
+
+                <div class="calc-locked-grid">
+                    
+        <button type="button" class="calc-locked-btn" data-feature-label="Salva in Cantiere / Stanza" data-feature-pitch="Organizza tutti i calcoli dentro singoli cantieri divisi per stanze (es. Bagno, Cucina, Facciata) per ritrovare ogni misura al volo anche offline.">
+            <span class="calc-locked-icon"><i data-feather="folder-plus"></i></span>
+            <span class="calc-locked-text">
+                <strong>Salva in Cantiere / Stanza</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Preventivo PDF A4 con Logo" data-feature-pitch="Genera in un tap un preventivo professionale in PDF A4 completo di logo aziendale, Partita IVA, IBAN, anagrafica cliente e Gran Totale pronto da inviare su WhatsApp.">
+            <span class="calc-locked-icon"><i data-feather="file-text"></i></span>
+            <span class="calc-locked-text">
+                <strong>Preventivo PDF A4 con Logo</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Esporta Excel (.xlsx)" data-feature-pitch="Scarica il computo completo di materiali, quantità, voci extra e manodopera in formato Excel strutturato per contabilità e ordini fornitore su PC.">
+            <span class="calc-locked-icon"><i data-feather="table"></i></span>
+            <span class="calc-locked-text">
+                <strong>Esporta Excel (.xlsx)</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Salva il tuo Listino Prezzi" data-feature-pitch="Imposta i prezzi d&#39;acquisto dei tuoi fornitori una sola volta nel Database Materiali dell&#39;app: tutti i 21 calcolatori li applicheranno in automatico.">
+            <span class="calc-locked-icon"><i data-feather="dollar-sign"></i></span>
+            <span class="calc-locked-text">
+                <strong>Salva il tuo Listino Prezzi</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+                </div>
+
+                <div id="calc-locked-feedback" class="calc-locked-feedback" role="status" aria-live="polite"></div>
+
+                <div class="calc-boomer-box">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" width="46" height="46" loading="lazy">
+                    </picture>
+                    <div>
+                        <span class="calc-boomer-tag">Boomer • Il Capocantiere</span>
+                        <p>Un clima troppo piccolo gira sempre a palla e consuma corrente senza rinfrescare; uno gigante attacca e stacca di continuo lasciando l&#39;umidità addosso!</p>
+                    </div>
+                </div>
+
+                <div class="calc-modal-cta-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dmodal_result%26utm_campaign%3Dcalcolo-btu-condizionatore" target="_blank" rel="noopener" class="calc-modal-play-btn">
+                        <i data-feather="download"></i>
+                        <span>Scarica Edil Calc Gratis (Google Play)</span>
+                    </a>
+                    <div class="calc-modal-qr">
+                        <img src="assets/qr-playstore.svg" alt="QR Code Download Edil Calc Google Play" width="48" height="48" loading="lazy">
+                        <span>Inquadra con Android</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-modal-footer-actions">
+                <button type="button" class="calc-modal-edit-btn" data-close-modal>
+                    &larr; Modifica dati e ricalcola
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44" loading="lazy">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38" loading="lazy">
+                    </picture>
+                    <div class="brand-text">
+                        <span class="brand-name">EDIL CALC</span>
+                        <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                    </div>
+                </a>
+                <p>La suite gratuita con 21 calcolatori edili, gestione cantieri multi-stanza offline e preventivi professionali PDF A4 ed Excel col tuo logo.</p>
+                <div class="footer-guides-box">
+                    <span class="footer-guides-title">Calcolatori Online e Guide Pratiche:</span>
+                    <div class="footer-guides-links">
+                        <a href="calcolatori.html">Tutti i 21 Calcolatori</a>
+                        <a href="calcolo-massetto-cemento.html">Calcolo Sacchi Massetto</a>
+                        <a href="calcolo-cartongesso.html">Calcolo Cartongesso al mq</a>
+                        <a href="calcolo-piastrelle.html">Calcolo Piastrelle e Colla</a>
+                        <a href="calcolo-pittura.html">Calcolo Litri Pittura</a>
+                        <a href="calcolo-scale-blondel.html">Calcolo Scale (Blondel)</a>
+                        <a href="calcolo-intonaco.html">Calcolo Intonaco</a>
+                        <a href="calcolo-sezione-cavi-elettrici.html">Sezione Cavi Elettrici</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigazione</h4>
+                <ul>
+                    <li><a href="calcolatori.html">Tutti i 21 Calcolatori Online</a></li>
+                    <li><a href="index.html#features">Vantaggi Principali</a></li>
+                    <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                    <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="index.html#boomer">Boomer, il Capocantiere</a></li>
+                    <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Informazioni Legali &amp; Store</h4>
+                <div class="contact-list">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dfooter_store%26utm_campaign%3Dcalcolo-btu-condizionatore" target="_blank" rel="noopener" class="contact-link">
+                        <i data-feather="shopping-bag"></i>
+                        <span>Scheda Ufficiale Google Play</span>
+                    </a>
+                    <a href="privacy.html" class="contact-link">
+                        <i data-feather="shield"></i>
+                        <span>Privacy Policy (GDPR)</span>
+                    </a>
+                    <a href="terms.html" class="contact-link">
+                        <i data-feather="file-text"></i>
+                        <span>Termini di Servizio</span>
+                    </a>
+                    <a href="#gestisci-cookie" data-open-cookie-settings class="contact-link">
+                        <i data-feather="sliders"></i>
+                        <span>Gestisci cookie</span>
+                    </a>
+                    <a href="mailto:support@edilcalc.com" class="contact-link">
+                        <i data-feather="life-buoy"></i>
+                        <span>support@edilcalc.com</span>
+                    </a>
+                    <a href="mailto:info@edilcalc.com" class="contact-link">
+                        <i data-feather="mail"></i>
+                        <span>info@edilcalc.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
+            <div class="footer-bottom-links">
+                <a href="calcolatori.html">Calcolatori</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <button type="button" class="footer-cookie-btn" data-open-cookie-settings>Gestisci cookie</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY CTA BAR -->
+    <div id="mobile-sticky-cta" class="mobile-sticky-cta">
+        <div class="mobile-sticky-info">
+            <img src="assets/logo.png" alt="Edil Calc Logo" class="mobile-sticky-logo" width="36" height="36" loading="lazy">
+            <div class="mobile-sticky-text">
+                <strong>Edil Calc App</strong>
+                <span>Salva cantieri &amp; PDF gratis</span>
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dmobile_sticky%26utm_campaign%3Dcalcolo-btu-condizionatore" target="_blank" rel="noopener" class="mobile-sticky-btn">Scarica App</a>
+    </div>
+    <script src="js/calculators-logic.js" defer></script>
+    <script src="js/calculator-ui.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.feather) { window.feather.replace(); }
+      });
+    </script>
+</body>
+</html>

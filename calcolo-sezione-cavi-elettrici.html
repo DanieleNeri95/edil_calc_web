@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcola subito la sezione del cavo elettrico in mm², corrente Ib e taglia magnetotermico per caduta di tensione e portata (230V/400V) con guida pratica CEI 64-8.">
+    <meta name="keywords" content="calcolo sezione cavo elettrico mm2, calcolo caduta di tensione cavo, dimensionamento interruttore magnetotermico, come dimensionare linea elettrica casa">
+    <link rel="canonical" href="https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html">
+
+    <meta property="og:title" content="Calcolo Sezione Cavi Elettrici Online e Dimensionamento Linee | Edil Calc">
+    <meta property="og:description" content="Calcolatore gratuito di sezione cavo elettrico, corrente d&#39;impiego e magnetotermico per monofase 230V e trifase 400V + guida normativa.">
+    <meta property="og:url" content="https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html">
+    <meta property="og:site_name" content="Edil Calc">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:image" content="https://www.edilcalc.com/assets/logo.png">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calcolo Sezione Cavi Elettrici Online e Dimensionamento Linee | Edil Calc">
+    <meta name="twitter:description" content="Calcolatore gratuito di sezione cavo elettrico, corrente d&#39;impiego e magnetotermico per monofase 230V e trifase 400V + guida normativa.">
+    <meta name="twitter:image" content="https://www.edilcalc.com/assets/logo.png">
+
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <title>Calcolo Sezione Cavo Elettrico (mm²) e Magnetotermico + Guida | Edil Calc</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <script src="js/feather.min.js"></script>
+    <script src="js/consent.js" defer></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#app",
+      "name": "Calcolatore Sezione Cavi Elettrici Online Gratis (230V / 400V)",
+      "description": "Calcola subito la sezione del cavo elettrico in mm², corrente Ib e taglia magnetotermico per caduta di tensione e portata (230V/400V) con guida pratica CEI 64-8.",
+      "url": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web Browser, Android",
+      "inLanguage": "it-IT",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Edil Calc",
+        "url": "https://www.edilcalc.com",
+        "logo": "https://www.edilcalc.com/assets/logo.png"
+      }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#article",
+      "headline": "Calcolo Sezione Cavo Elettrico e Guida: Come Dimensionare una Linea",
+      "description": "Calcola subito la sezione del cavo elettrico in mm², corrente Ib e taglia magnetotermico per caduta di tensione e portata (230V/400V) con guida pratica CEI 64-8.",
+      "inLanguage": "it-IT",
+      "dateModified": "2026-11-23",
+      "datePublished": "2026-11-23",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Edil Calc"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Edil Calc",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.edilcalc.com/assets/logo.png"
+        }
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#howto",
+      "name": "Come dimensionare e posare una linea elettrica a regola d'arte",
+      "description": "Per dimensionare in sicurezza una linea elettrica in rame occorre prima calcolare la corrente d'impiego Ib in Ampere dalla potenza e tensione, poi scegliere la sezione commerciale (in mm²) che soddisfa sia la portata termica Iz del tipo di posa sia la caduta di tensione massima ammessa (≤ 4% secondo norma CEI 64-8), coordinando infine l'interruttore magnetotermico con Ib ≤ In ≤ Iz.",
+      "inLanguage": "it-IT",
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Multimetro digitale TRUE RMS e cercafase/rilevatore di tensione certificato CAT III/IV"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Pinza spelafili, pinza crimpatrice per puntalini/capicorda e forbici da elettricista isolate"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Sonda passacavi in nylon o fibra di vetro + gel lubrificante scorricavo per tubi corrugati"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Cacciaviti isolati a 1000V (norma IEC 60900) e morsetti a mantello o a leva omologati"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "DPI obbligatori: scarpe dielettriche/isolanti, guanti isolanti per lavori sotto rischio elettrico e occhiali di protezione; verifica sempre assenza tensione prima di operare"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "1. Calcola la corrente d'impiego Ib e la sezione minima in mm²",
+          "text": "Inserisci nel calcolatore qui sopra potenza (kW), lunghezza della tratta dal quadro al carico e tipo di posa: sulle linee corte comanda spesso la portata termica del cavo, mentre sopra i 25–30 metri (es. cancelli, pompe, garage o montanti) diventa determinante la caduta di tensione del 4%.",
+          "url": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#come-dimensionare-cavi-elettrici-step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "2. Coordina l'interruttore magnetotermico (Ib ≤ In ≤ Iz)",
+          "text": "La taglia nominale (In) del magnetotermico che protegge la linea deve essere maggiore o uguale alla corrente del carico (Ib), ma sempre inferiore o uguale alla portata massima ammissibile (Iz) della sezione di cavo posata. Ricorda ad esempio che un cavo da 1,5 mm² in tubo non va protetto da un 16A ma da un 10A.",
+          "url": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#come-dimensionare-cavi-elettrici-step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "3. Scegli la tipologia di cavo adatta all'ambiente di posa",
+          "text": "Per pose interne in tubazione usa cavi unipolari FS17 (CPR) senza guaina; per pose esterne, locali umidi, canala o interramento in cavidotto utilizza sempre cavi multipolari con doppia guaina tipo FG16OR16 adatti alla posa umida/interrata.",
+          "url": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#come-dimensionare-cavi-elettrici-step-3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "4. Infila i cavi nei corrugati senza stressarli",
+          "text": "Passa la sonda scorricavo dal punto di arrivo verso la cassetta, lega i conduttori nastrando la testa in modo affusolato (Fase, Neutro e Giallo/Verde) e stendi gel lubrificante specifico all'ingresso del tubo evitando curve strette o trazioni eccessive che possono rovinare l'isolante.",
+          "url": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#come-dimensionare-cavi-elettrici-step-4"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "5. Lascia abbondanza nelle scatole e realizza giunzioni sicure",
+          "text": "Lascia almeno 15–20 cm di cavo libero in ogni scatola 503 o cassetta di derivazione per agevolare cablaggi e manutenzione futura. Esegui le derivazioni esclusivamente dentro scatole accessibili utilizzando morsetti a cappuccio o a molla di sezione adeguata, mai nastro isolante da solo su giunti scoperti.",
+          "url": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#come-dimensionare-cavi-elettrici-step-5"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "6. Verifica strumentale e Dichiarazione di Conformità (D.M. 37/08)",
+          "text": "Ogni intervento di installazione o modifica sostanziale di un impianto elettrico in Italia deve essere eseguito e certificato con Dichiarazione di Conformità (DiCo) da un'impresa installatrice abilitata ai sensi del D.M. 37/08, completa di prove di continuità, isolamento e intervento del differenziale.",
+          "url": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#come-dimensionare-cavi-elettrici-step-6"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quale sezione di cavo serve per 3 kW o 6 kW a 230V?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per 3 kW monofase (Ib ≈ 14,5 A) su tratte brevi in tubo occorre almeno un cavo da 2,5 mm² (o 4 mm² oltre ~25–30 m per contenere la caduta di tensione); per un montante da 6 kW (Ib ≈ 29 A) serve invece almeno una sezione da 6 mm² (passando a 10 mm² se il contatore è lontano oltre 25–30 m)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanti kW regge un cavo da 2,5 mm² o da 4 mm²?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un cavo da 2,5 mm² in tubo corrugato (portata ~19,5 A, protetto da magnetotermico da 16 A) gestisce fino a circa 3,3–3,5 kW continuativi a 230V. Un cavo da 4 mm² (portata ~26 A, protetto da 20–25 A) gestisce circa 4,5–5,0 kW su tratte medio-brevi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Che magnetotermico mettere per un cavo da 4 mm² o da 6 mm²?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con posa standard in tubo corrugato, un cavo da 4 mm² (Iz ~26 A) si protegge tipicamente con un magnetotermico da 20 A o 25 A; un cavo da 6 mm² (Iz ~34 A) si protegge generalmente con un magnetotermico da 32 A (o 25 A)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come influisce la lunghezza del cavo sulla sezione da scegliere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All'aumentare della lunghezza cresce la resistenza del rame e quindi la caduta di tensione lungo la linea: raddoppiando i metri occorre spesso salire di una o due taglie di sezione per restare entro il limite del 4% previsto dalla CEI 64-8."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.edilcalc.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calcolatori Online",
+          "item": "https://www.edilcalc.com/calcolatori.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Dimensionamento Cavi e Linee",
+          "item": "https://www.edilcalc.com/calcolo-sezione-cavi-elettrici.html"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-link">
+                <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38">
+                </picture>
+                <div class="brand-text">
+                    <span class="brand-name">EDIL CALC</span>
+                    <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#features">Vantaggi</a></li>
+                <li><a href="calcolatori.html" class="active">Calcolatori Online</a></li>
+                <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                <li><a href="index.html#azienda">Preventivi PDF</a></li>
+                <li><a href="index.html#boomer">Boomer</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dnavbar_cta%26utm_campaign%3Dcalcolo-sezione-cavi-elettrici" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i data-feather="download"></i>
+                    <span>Scarica Gratis</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Apri menu" aria-expanded="false">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="calc-page-main">
+        <div class="container">
+            <nav class="calc-breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="crumb-sep">&rsaquo;</span>
+                <a href="calcolatori.html">Calcolatori Online</a>
+                <span class="crumb-sep">&rsaquo;</span>
+                <span class="crumb-current">Dimensionamento Cavi e Linee</span>
+            </nav>
+
+            <header class="calc-hero-compact">
+                <div class="calc-hero-text">
+                    <div class="calc-eyebrow-row">
+                        <span class="calc-eyebrow-pill">
+                            <i data-feather="zap"></i>
+                            <span>Calcolatore Online &amp; Guida Tecnica</span>
+                        </span>
+                        <span class="calc-hero-badge">100% Gratis • Nessuna Registrazione • Stima Tecnica Rapida</span>
+                    </div>
+                    <h1>Calcolo Sezione Cavo Elettrico e Guida: Come Dimensionare una Linea</h1>
+                    <p class="calc-hero-subtitle">Inserisci potenza in kW, lunghezza tratta, tensione (230V Monofase o 400V Trifase) e tipo di posa per stimare corrente Ib, sezione minima in mm² e magnetotermico coordinato.</p>
+                </div>
+                <div class="calc-hero-actions">
+                    <a href="#come-dimensionare-cavi-elettrici" class="calc-jump-guide-btn">
+                        <i data-feather="book-open"></i>
+                        <span>Come dimensionare una linea elettrica</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="calc-workspace">
+                
+        <section id="calc-app" class="calc-glass-card" data-logic-key="electrical" data-utm-campaign="calcolo-sezione-cavi-elettrici" data-safety-disclaimer="true">
+            <div class="calc-card-header">
+                <div class="calc-card-header-left">
+                    <div class="calc-card-icon-badge">
+                        <i data-feather="zap"></i>
+                    </div>
+                    <div>
+                        <h2>Calcolatore Sezione Cavi Elettrici Online Gratis (230V / 400V)</h2>
+                        <p class="calc-card-intro">Indica potenza attiva di progetto (kW), lunghezza della linea in metri, tensione e posa (Aria libera, In tubo corrugato o Interrato). Stima di massima soggetta a verifica di installatore abilitato D.M. 37/08.</p>
+                    </div>
+                </div>
+                <span class="calc-session-pill" title="Nessun dato salvato su cookie o memoria">
+                    <i data-feather="lock"></i>
+                    <span>Calcolo rapido • Senza salvataggio</span>
+                </span>
+            </div>
+
+            <form id="calc-form" novalidate>
+                <div class="calc-form-grid">
+                    
+        <div class="calc-field">
+            <label class="calc-label" for="field-powerKw">
+                <span>Potenza assorbita carico</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-powerKw" name="powerKw" class="calc-input has-unit" inputmode="decimal" placeholder="es. 4,5" data-required="true">
+                <span class="calc-input-unit">kW</span>
+            </div>
+        </div>
+        <div class="calc-field">
+            <label class="calc-label" for="field-length">
+                <span>Lunghezza tratta cavo (solo andata)</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-length" name="length" class="calc-input has-unit" inputmode="decimal" placeholder="es. 25" data-required="true">
+                <span class="calc-input-unit">m</span>
+            </div>
+        </div>
+            <div class="calc-field calc-field-full">
+                <span class="calc-label">Tensione di linea</span>
+                <input type="hidden" name="voltage" value="230">
+                <div class="calc-segmented" role="radiogroup" aria-label="Tensione di linea" data-seg-name="voltage">
+                    <button type="button" class="calc-seg-btn active" role="radio" aria-checked="true" data-value="230" data-default="true">230V Monofase</button><button type="button" class="calc-seg-btn" role="radio" aria-checked="false" data-value="400">400V Trifase</button>
+                </div>
+            </div>
+            <div class="calc-field calc-field-full">
+                <span class="calc-label">Tipologia di posa</span>
+                <input type="hidden" name="installType" value="tube">
+                <div class="calc-segmented" role="radiogroup" aria-label="Tipologia di posa" data-seg-name="installType">
+                    <button type="button" class="calc-seg-btn active" role="radio" aria-checked="true" data-value="tube" data-default="true">In Tubo / Canalina</button><button type="button" class="calc-seg-btn" role="radio" aria-checked="false" data-value="air">Aria Libera</button><button type="button" class="calc-seg-btn" role="radio" aria-checked="false" data-value="buried">Cavidotto Interrato</button>
+                </div>
+            </div>
+                </div>
+
+                <div class="calc-accordions">
+                    
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-costs">
+                <span class="calc-accordion-title">
+                    <i data-feather="dollar-sign"></i>
+                    <span>Costi Materiali / Accessori (€)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-costs" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-costs" class="calc-accordion-panel">
+                <div class="calc-form-grid">
+                    
+        <div class="calc-field calc-field-full">
+            <label class="calc-label" for="field-pricePerMeter">
+                <span>Costo stimato cavo al metro lineare</span>
+                
+            </label>
+            <div class="calc-input-wrap">
+                <input type="text" id="field-pricePerMeter" name="pricePerMeter" class="calc-input has-unit" inputmode="decimal" placeholder="es. 2,80">
+                <span class="calc-input-unit">€/m</span>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-extras">
+                <span class="calc-accordion-title">
+                    <i data-feather="plus"></i>
+                    <span>Voci Extra Cantiere (Trasporto, Primer, Teli...)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-extras" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-extras" class="calc-accordion-panel">
+                <div class="calc-extra-builder">
+                    <div class="calc-field calc-field-desc">
+                        <label class="calc-label" for="extra-desc">Descrizione voce</label>
+                        <input type="text" id="extra-desc" name="extra_desc" class="calc-input" placeholder="es. Telo protettivo / Smaltimento">
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-qty">Q.tà</label>
+                        <input type="text" id="extra-qty" name="extra_qty" inputmode="decimal" class="calc-input" placeholder="1">
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-unit">U.M.</label>
+                        <select id="extra-unit" name="extra_unit" class="calc-select">
+                            <option value="pz">pz</option>
+                            <option value="mq">mq</option>
+                            <option value="ml">ml</option>
+                            <option value="kg">kg</option>
+                            <option value="mc">mc</option>
+                            <option value="L">L</option>
+                            <option value="corpo">corpo</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label class="calc-label" for="extra-price">Prezzo (€)</label>
+                        <input type="text" id="extra-price" name="extra_price" inputmode="decimal" class="calc-input" placeholder="18,00">
+                    </div>
+                    <button type="button" id="extra-add-btn" class="calc-extra-add-btn">
+                        <i data-feather="plus"></i>
+                        <span>Aggiungi</span>
+                    </button>
+                </div>
+                <div id="calc-extra-list" class="calc-extra-list"></div>
+                <p class="calc-extra-note">Le voci extra valgono solo per il calcolo corrente e non vengono salvate. Nell'app Android le selezioni in un tap dal tuo listino personale.</p>
+            </div>
+        </div>
+                    
+        <div class="calc-accordion">
+            <button type="button" class="calc-accordion-trigger" aria-expanded="false" aria-controls="panel-labor">
+                <span class="calc-accordion-title">
+                    <i data-feather="tool"></i>
+                    <span>Manodopera Stimata (Ore o A Corpo)</span>
+                </span>
+                <span class="calc-accordion-right">
+                    <span id="badge-labor" class="calc-opt-badge">Opzionale</span>
+                    <i data-feather="chevron-down" class="calc-chevron"></i>
+                </span>
+            </button>
+            <div id="panel-labor" class="calc-accordion-panel">
+                <div class="calc-form-grid">
+                    <div class="calc-field calc-field-full">
+                        <span class="calc-label">Modalità calcolo manodopera</span>
+                        <input type="hidden" name="laborMode" value="hourly">
+                        <div class="calc-segmented" role="radiogroup" aria-label="Modalità manodopera" data-seg-name="laborMode">
+                            <button type="button" class="calc-seg-btn active" role="radio" aria-checked="true" data-value="hourly" data-default="true">A Ore (€/h)</button>
+                            <button type="button" class="calc-seg-btn" role="radio" aria-checked="false" data-value="flat">A Corpo (Forfait €)</button>
+                        </div>
+                    </div>
+                    <div class="calc-field" data-show-when="laborMode=hourly">
+                        <label class="calc-label" for="field-laborHours">Ore di lavoro previste</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborHours" name="laborHours" inputmode="decimal" class="calc-input has-unit" placeholder="es. 8">
+                            <span class="calc-input-unit">h</span>
+                        </div>
+                    </div>
+                    <div class="calc-field" data-show-when="laborMode=hourly">
+                        <label class="calc-label" for="field-laborHourlyRate">Tariffa oraria</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborHourlyRate" name="laborHourlyRate" inputmode="decimal" class="calc-input has-unit" placeholder="es. 30,00">
+                            <span class="calc-input-unit">€/h</span>
+                        </div>
+                    </div>
+                    <div class="calc-field calc-field-full" data-show-when="laborMode=flat">
+                        <label class="calc-label" for="field-laborFlatRate">Importo manodopera a corpo</label>
+                        <div class="calc-input-wrap">
+                            <input type="text" id="field-laborFlatRate" name="laborFlatRate" inputmode="decimal" class="calc-input has-unit" placeholder="es. 450,00">
+                            <span class="calc-input-unit">€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+
+                <div id="calc-error-banner" class="calc-error-banner" role="alert">
+                    <i data-feather="alert-triangle"></i>
+                    <span id="calc-error-text"></span>
+                </div>
+
+                <div class="calc-submit-row">
+                    <button type="submit" class="calc-submit-btn">
+                        <i data-feather="zap"></i>
+                        <span>Calcola Fabbisogno e Costi</span>
+                    </button>
+                    <button type="button" id="calc-reset-btn" class="calc-reset-btn">
+                        <i data-feather="refresh-cw"></i>
+                        <span>Azzera</span>
+                    </button>
+                </div>
+
+                <p class="calc-zero-persistence-note">
+                    <i data-feather="info"></i>
+                    <span>Calcolo istantaneo gratuito: nessun dato viene memorizzato o inviato. Ricaricando la pagina i campi tornano vuoti.</span>
+                </p>
+            </form>
+        </section>
+                
+        <aside class="calc-sidebar">
+            <div class="calc-side-card">
+                <h3><i data-feather="list"></i><span>Indice Rapido Pagina</span></h3>
+                <ul class="calc-toc-list">
+                    <li><a href="#calc-app"><i data-feather="sliders"></i><span>Vai al Calcolatore Interattivo</span></a></li>
+                    <li><a href="#come-dimensionare-cavi-elettrici"><i data-feather="book-open"></i><span>Come dimensionare una linea elettrica</span></a></li>
+                    <li><a href="#specifiche-tecniche"><i data-feather="database"></i><span>Formule, Tabella &amp; Esempio</span></a></li>
+                    <li><a href="#domande-frequenti"><i data-feather="info"></i><span>Domande Frequenti (FAQ)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="calc-side-card">
+                <h3><i data-feather="check"></i><span>Parametri di Riferimento</span></h3>
+                <div class="calc-specs-list">
+                    
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Difficoltà / Abilitazione</span>
+            <span class="calc-spec-val">Tecnica (impianti soggetti a D.M. 37/08)</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Caduta di tensione max</span>
+            <span class="calc-spec-val">4% dal punto di consegna (CEI 64-8)</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Sezioni civili standard</span>
+            <span class="calc-spec-val">1,5 mm² luci • 2,5 mm² prese • 4–6 mm² montanti/forno</span>
+        </div>
+        <div class="calc-spec-item">
+            <span class="calc-spec-label">Colori normativi cavi</span>
+            <span class="calc-spec-val">Blu (Neutro) • Giallo/Verde (Terra) • Marrone/Nero/Grigio (Fase)</span>
+        </div>
+                </div>
+            </div>
+
+            <div class="calc-side-card calc-sidebar-app-card">
+                <h3><i data-feather="download"></i><span>Salva e Stampa in PDF</span></h3>
+                <p>I calcoli eseguiti online non vengono salvati. Con l'app Android gratuita organizzi ogni progetto per cantiere e stanza ed esporti preventivi PDF A4 ed Excel col tuo logo.</p>
+                <div class="calc-qr-inline">
+                    <img src="assets/qr-playstore.svg" alt="QR Code Download Edil Calc Google Play" width="68" height="68">
+                    <span>Inquadra con la fotocamera Android per scaricare Edil Calc gratis.</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dsidebar_qr%26utm_campaign%3Dcalcolo-sezione-cavi-elettrici" target="_blank" rel="noopener" class="calc-modal-play-btn" style="width:100%;">
+                    <i data-feather="download"></i>
+                    <span>App Android Gratuita</span>
+                </a>
+            </div>
+        </aside>
+            </div>
+
+            <article class="calc-guide-article">
+                
+        <section id="come-dimensionare-cavi-elettrici" class="calc-guide-block">
+            <h2>Come dimensionare e posare una linea elettrica a regola d&#39;arte</h2>
+            <div class="calc-direct-answer">
+                Per dimensionare in sicurezza una linea elettrica in rame occorre prima calcolare la corrente d&#39;impiego Ib in Ampere dalla potenza e tensione, poi scegliere la sezione commerciale (in mm²) che soddisfa sia la portata termica Iz del tipo di posa sia la caduta di tensione massima ammessa (≤ 4% secondo norma CEI 64-8), coordinando infine l&#39;interruttore magnetotermico con Ib ≤ In ≤ Iz.
+            </div>
+
+            <h3>Attrezzi, Materiali e DPI Consigliati</h3>
+            <ul class="calc-tools-grid">
+                <li>Multimetro digitale TRUE RMS e cercafase/rilevatore di tensione certificato CAT III/IV</li><li>Pinza spelafili, pinza crimpatrice per puntalini/capicorda e forbici da elettricista isolate</li><li>Sonda passacavi in nylon o fibra di vetro + gel lubrificante scorricavo per tubi corrugati</li><li>Cacciaviti isolati a 1000V (norma IEC 60900) e morsetti a mantello o a leva omologati</li><li>DPI obbligatori: scarpe dielettriche/isolanti, guanti isolanti per lavori sotto rischio elettrico e occhiali di protezione; verifica sempre assenza tensione prima di operare</li>
+            </ul>
+
+            <h3>Preparazione Prima di Iniziare</h3>
+            <ol class="calc-prep-list">
+                <li>Disinserisci l&#39;interruttore generale e verifica strumentalmente l&#39;assenza di tensione prima di aprire qualsiasi quadro o cassetta di derivazione.</li><li>Scegli sempre tubi corrugati di diametro generoso (es. Ø 20–25 mm per derivazioni, Ø 32–40 mm per montanti) rispettando il coefficiente di riempimento per consentire sfilabilità futura e raffreddamento.</li><li>Definisci prima del cablaggio i circuiti separati (Luci, Prese 16A, Cucina/Induzione, Clima, Montante) con relativi differenziali (30 mA tipo A o F) come richiesto dal Capitolo 37 della CEI 64-8.</li>
+            </ol>
+
+            <h3>Procedura Operativa Passo Passo</h3>
+            <div class="calc-steps-list">
+                
+        <div id="come-dimensionare-cavi-elettrici-step-1" class="calc-step-card">
+            <div class="calc-step-num">1</div>
+            <div class="calc-step-body">
+                <h4>1. Calcola la corrente d&#39;impiego Ib e la sezione minima in mm²</h4>
+                <p>Inserisci nel calcolatore qui sopra potenza (kW), lunghezza della tratta dal quadro al carico e tipo di posa: sulle linee corte comanda spesso la portata termica del cavo, mentre sopra i 25–30 metri (es. cancelli, pompe, garage o montanti) diventa determinante la caduta di tensione del 4%.</p>
+            </div>
+        </div>
+        <div id="come-dimensionare-cavi-elettrici-step-2" class="calc-step-card">
+            <div class="calc-step-num">2</div>
+            <div class="calc-step-body">
+                <h4>2. Coordina l&#39;interruttore magnetotermico (Ib ≤ In ≤ Iz)</h4>
+                <p>La taglia nominale (In) del magnetotermico che protegge la linea deve essere maggiore o uguale alla corrente del carico (Ib), ma sempre inferiore o uguale alla portata massima ammissibile (Iz) della sezione di cavo posata. Ricorda ad esempio che un cavo da 1,5 mm² in tubo non va protetto da un 16A ma da un 10A.</p>
+            </div>
+        </div>
+        <div id="come-dimensionare-cavi-elettrici-step-3" class="calc-step-card">
+            <div class="calc-step-num">3</div>
+            <div class="calc-step-body">
+                <h4>3. Scegli la tipologia di cavo adatta all&#39;ambiente di posa</h4>
+                <p>Per pose interne in tubazione usa cavi unipolari FS17 (CPR) senza guaina; per pose esterne, locali umidi, canala o interramento in cavidotto utilizza sempre cavi multipolari con doppia guaina tipo FG16OR16 adatti alla posa umida/interrata.</p>
+            </div>
+        </div>
+        <div id="come-dimensionare-cavi-elettrici-step-4" class="calc-step-card">
+            <div class="calc-step-num">4</div>
+            <div class="calc-step-body">
+                <h4>4. Infila i cavi nei corrugati senza stressarli</h4>
+                <p>Passa la sonda scorricavo dal punto di arrivo verso la cassetta, lega i conduttori nastrando la testa in modo affusolato (Fase, Neutro e Giallo/Verde) e stendi gel lubrificante specifico all&#39;ingresso del tubo evitando curve strette o trazioni eccessive che possono rovinare l&#39;isolante.</p>
+            </div>
+        </div>
+        <div id="come-dimensionare-cavi-elettrici-step-5" class="calc-step-card">
+            <div class="calc-step-num">5</div>
+            <div class="calc-step-body">
+                <h4>5. Lascia abbondanza nelle scatole e realizza giunzioni sicure</h4>
+                <p>Lascia almeno 15–20 cm di cavo libero in ogni scatola 503 o cassetta di derivazione per agevolare cablaggi e manutenzione futura. Esegui le derivazioni esclusivamente dentro scatole accessibili utilizzando morsetti a cappuccio o a molla di sezione adeguata, mai nastro isolante da solo su giunti scoperti.</p>
+            </div>
+        </div>
+        <div id="come-dimensionare-cavi-elettrici-step-6" class="calc-step-card">
+            <div class="calc-step-num">6</div>
+            <div class="calc-step-body">
+                <h4>6. Verifica strumentale e Dichiarazione di Conformità (D.M. 37/08)</h4>
+                <p>Ogni intervento di installazione o modifica sostanziale di un impianto elettrico in Italia deve essere eseguito e certificato con Dichiarazione di Conformità (DiCo) da un&#39;impresa installatrice abilitata ai sensi del D.M. 37/08, completa di prove di continuità, isolamento e intervento del differenziale.</p>
+            </div>
+        </div>
+            </div>
+
+            <div class="calc-bridge-box">
+                <p>Devi stimare rapidamente sezione del cavo in mm² e magnetotermico per una nuova linea o per un piano a induzione? Usa il calcolatore in cima alla pagina.</p>
+                <a href="#calc-app" class="calc-bridge-link">Torna al Calcolatore &uarr;</a>
+            </div>
+
+            <h3>Errori Comuni da Evitare</h3>
+            <div class="calc-mistakes-grid">
+                
+        <div class="calc-mistake-card">
+            <h4>Ignorare la caduta di tensione sulle tratte lunghe in giardino o garage</h4>
+            <p>Un cavo da 2,5 mm² regge oltre 19 A in tubo ma su 80 metri di distanza subisce una caduta di tensione eccessiva che fa scaldare i motori o spegnere le schede elettroniche.</p>
+        </div>
+        <div class="calc-mistake-card">
+            <h4>Proteggere un cavo da 1,5 mm² con magnetotermico da 16A o 20A</h4>
+            <p>Poiché la portata in tubo di 1,5 mm² è ~14,5 A, un interruttore da 16A o 20A non scatta prima che l&#39;isolante del cavo si surriscaldi gravemente.</p>
+        </div>
+        <div class="calc-mistake-card">
+            <h4>Usare cavi FS17 da interno in tubazioni interrate esterne</h4>
+            <p>Nei pozzetti interrati l&#39;acqua e la condensa ristagnano sempre: senza cavo con guaina idonea (FG16OR16) l&#39;isolamento si degrada causando dispersioni e scatti del salvavita.</p>
+        </div>
+            </div>
+
+            <div class="calc-boomer-box" style="margin-bottom:0;">
+                <picture>
+                    <source srcset="assets/boomer.webp" type="image/webp">
+                    <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" width="46" height="46" loading="lazy">
+                </picture>
+                <div>
+                    <span class="calc-boomer-tag">Dritta di Boomer • Impianti Elettrici</span>
+                    <p>Lascia sempre 20 centimetri di ricchezza dentro le scatole di derivazione: lavorare con i fili tirati come corde di violino è il modo migliore per fare un falso contatto! E per la corrente: mai indovinare a occhio, chiama l&#39;elettricista abilitato!</p>
+                </div>
+            </div>
+        </section>
+                
+        <section id="specifiche-tecniche" class="calc-guide-block">
+            <h2>Formule corrente d&#39;impiego Ib, caduta di tensione e tabella portate</h2>
+
+            <div class="guide-formula-box">
+                <h3>Formule Dimensionamento Linee Elettriche (Rame, cosφ = 0,9)</h3>
+                <code class="guide-formula-code">Corrente Ib (Monofase 230V) = (Potenza_kW × 1000) / (230 × 0,9)</code><code class="guide-formula-code">Corrente Ib (Trifase 400V) = (Potenza_kW × 1000) / (400 × 1,732 × 0,9)</code><code class="guide-formula-code">Sezione min. per ΔV max 4% (mm²) = (K × Lunghezza_m × Ib × 0,0175) / (V × 0,04)</code><code class="guide-formula-code">Coordinamento protezione: Ib ≤ In (magnetotermico) ≤ Iz (portata cavo in quella posa)</code>
+                <p style="margin-top:0.75rem;margin-bottom:0;">Nei calcoli si assume conduttore in rame (ρ = 0,0175 Ω·mm²/m), cosφ = 0,9, fattore K = 2 per monofase e K = 1,732 per trifase, con portate di riferimento per posa in aria, in tubo corrugato o interrata. Il progettista verificherà poi eventuali fattori di correzione per temperatura o più circuiti nello stesso tubo.</p>
+            </div>
+
+            <h3>Portate Indicative in Ampere (Iz) e Magnetotermici Tipici per Sezione Cavo (Rame)</h3>
+            <div class="guide-table-wrap">
+                <table class="guide-table">
+                    <thead><tr><th>Sezione Cavo (mm²)</th><th>Posa in Tubo (Iz)</th><th>Posa Aria / Interrato</th><th>Magnetotermico Coordinato Tipico</th></tr></thead>
+                    <tbody><tr><td>1,5 mm²</td><td>~14,5 A</td><td>18 A (aria) • 22 A (interr.)</td><td>10 A (circuiti luce)</td></tr><tr><td>2,5 mm²</td><td>~19,5 A</td><td>24 A (aria) • 29 A (interr.)</td><td>16 A (prese / elettrodomestici)</td></tr><tr><td>4,0 mm²</td><td>~26,0 A</td><td>32 A (aria) • 37 A (interr.)</td><td>20 A – 25 A (linee dedicate / forno)</td></tr><tr><td>6,0 mm²</td><td>~34,0 A</td><td>41 A (aria) • 46 A (interr.)</td><td>25 A – 32 A (montanti 6 kW / induzione)</td></tr><tr><td>10,0 mm²</td><td>~46,0 A</td><td>57 A (aria) • 61 A (interr.)</td><td>40 A (montanti lunghi / wallbox)</td></tr></tbody>
+                </table>
+            </div>
+
+            <div class="calc-diagram-wrap">
+                <div class="calc-diagram-caption">
+                    <i data-feather="layers" style="width:15px;height:15px;"></i>
+                    <span>Schema Tecnico di Posa &amp; Dimensionamento</span>
+                </div>
+                <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema caduta di tensione linea elettrica 230V monofase o 400V trifase — Verifica portata amperometrica Iz e caduta delta V max 4 percento">
+  <title>Schema caduta di tensione linea elettrica 230V monofase o 400V trifase</title>
+  <defs>
+    <pattern id="bpGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0, 229, 255, 0.08)" stroke-width="1"/>
+    </pattern>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#00E5FF"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#FF5A26"/>
+    </marker>
+  </defs>
+  <rect width="680" height="260" rx="10" fill="#070B12"/>
+  <rect width="680" height="260" rx="10" fill="url(#bpGrid)"/>
+  
+      <rect x="65" y="85" width="75" height="90" rx="6" fill="rgba(0,229,255,0.12)" stroke="#00E5FF" stroke-width="2"/>
+      <text x="102" y="134" fill="#F1F5F9" font-size="11" font-family="monospace" text-anchor="middle">QUADRO</text>
+      <line x1="140" y1="130" x2="310" y2="130" stroke="#FF5A26" stroke-width="3"/>
+      <text x="225" y="118" fill="#FF5A26" font-size="11" font-family="monospace" text-anchor="middle">Tratta L (m) • Sezione mm²</text>
+      <rect x="310" y="85" width="80" height="90" rx="6" fill="rgba(255,90,38,0.14)" stroke="#FF5A26" stroke-width="2"/>
+      <text x="350" y="134" fill="#F1F5F9" font-size="11" font-family="monospace" text-anchor="middle">CARICO kW</text>
+      <text x="415" y="75" fill="#00E5FF" font-size="12" font-family="monospace" font-weight="bold">CRITERI NORMA CEI 64-8</text>
+      <text x="415" y="106" fill="#F1F5F9" font-size="12" font-family="sans-serif">1. Portata termica Iz ≥ Corrente Ib</text>
+      <text x="415" y="134" fill="#FF5A26" font-size="12" font-family="monospace">2. Caduta di tensione ΔV% ≤ 4,0%</text>
+      <text x="415" y="162" fill="#F1F5F9" font-size="12" font-family="sans-serif">3. Tipo posa (Tubo / Aria / Interrato)</text>
+      <text x="415" y="190" fill="#94A3B8" font-size="11" font-family="sans-serif">Richiede verifica di elettricista abilitato DM 37/08</text>
+    
+</svg>
+            </div>
+
+            <div class="calc-example-box">
+                <h3 style="margin-top:0;">Esempio pratico: linea dedicata piano a induzione da 4,5 kW lunga 22 m (230V, tubo)</h3>
+                <p>Verifichiamo corrente, caduta di tensione, sezione finale e taglia interruttore:</p>
+                <ul><li>Corrente d&#39;impiego Ib: (4,5 × 1000) / (230 × 0,9) = 21,74 A.</li><li>Sezione minima per portata in tubo (Iz ≥ 21,74 A): 4,0 mm² (porta 26,0 A).</li><li>Verifica caduta di tensione max 4% (ΔV = 9,2 V): (2 × 22 × 21,74 × 0,0175) / 9,2 = 1,82 mm² → domina la portata termica (4,0 mm²).</li><li>Magnetotermico coordinato (21,74 ≤ In ≤ 26 A): interruttore C25 (25 A) dedicato alla linea.</li></ul>
+            </div>
+        </section>
+                
+        <section id="domande-frequenti" class="calc-guide-block">
+            <h2>Domande Frequenti (Dimensionamento Cavi e Linee)</h2>
+            <div class="faq-list">
+                
+        <div class="faq-item active">
+            <div class="faq-question">
+                <h4>Quale sezione di cavo serve per 3 kW o 6 kW a 230V?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Per 3 kW monofase (Ib ≈ 14,5 A) su tratte brevi in tubo occorre almeno un cavo da 2,5 mm² (o 4 mm² oltre ~25–30 m per contenere la caduta di tensione); per un montante da 6 kW (Ib ≈ 29 A) serve invece almeno una sezione da 6 mm² (passando a 10 mm² se il contatore è lontano oltre 25–30 m).</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Quanti kW regge un cavo da 2,5 mm² o da 4 mm²?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Un cavo da 2,5 mm² in tubo corrugato (portata ~19,5 A, protetto da magnetotermico da 16 A) gestisce fino a circa 3,3–3,5 kW continuativi a 230V. Un cavo da 4 mm² (portata ~26 A, protetto da 20–25 A) gestisce circa 4,5–5,0 kW su tratte medio-brevi.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Che magnetotermico mettere per un cavo da 4 mm² o da 6 mm²?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Con posa standard in tubo corrugato, un cavo da 4 mm² (Iz ~26 A) si protegge tipicamente con un magnetotermico da 20 A o 25 A; un cavo da 6 mm² (Iz ~34 A) si protegge generalmente con un magnetotermico da 32 A (o 25 A).</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h4>Come influisce la lunghezza del cavo sulla sezione da scegliere?</h4>
+                <i data-feather="chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>All&#39;aumentare della lunghezza cresce la resistenza del rame e quindi la caduta di tensione lungo la linea: raddoppiando i metri occorre spesso salire di una o due taglie di sezione per restare entro il limite del 4% previsto dalla CEI 64-8.</p>
+            </div>
+        </div>
+            </div>
+        </section>
+                
+        <section class="guide-inline-cta" style="margin:0;">
+            <div>
+                <h3>Calcola cavi, corrugati, tracce murarie e manodopera nello stesso cantiere</h3>
+                <p>Scarica gratis Edil Calc per Android: salvi ogni linea elettrica e stanza dell&#39;appartamento nel tuo progetto, inserisci prese/frutti nelle voci extra, applichi il tuo prezzario e crei preventivi PDF A4 ed Excel pronti per il cliente.</p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dinline_guide_cta%26utm_campaign%3Dcalcolo-sezione-cavi-elettrici" target="_blank" rel="noopener" class="btn btn-primary">
+                <i data-feather="download"></i>
+                <span>Scarica Edil Calc Gratis su Google Play</span>
+            </a>
+        </section>
+                
+        <section class="calc-guide-block">
+            <h2>Calcolatori e Guide Correlate</h2>
+            <div class="calc-related-grid">
+                
+            <a href="calcolo-btu-condizionatore.html" class="calc-related-card">
+                <span class="calc-related-cat">Elettrico &amp; Termo-Idraulico</span>
+                <h4>Bilancio Termico (BTU/h e kW)</h4>
+                <p>Calcola i BTU/h, i kW e i Watt termici necessari per climatizzare o riscaldare una stanza in base a volume, isolamento, esposizione e numero finestre.</p>
+                <span class="calc-related-link">Calcolatore BTU condizionatore &amp; guida scelta → &rarr;</span>
+            </a>
+            <a href="calcolo-diametro-tubi-idraulica.html" class="calc-related-card">
+                <span class="calc-related-cat">Elettrico &amp; Termo-Idraulico</span>
+                <h4>Dimensionamento Tubazioni</h4>
+                <p>Calcola diametro interno consigliato in mm, perdita di carico (Bar) con formula Hazen-Williams e velocità dell&#39;acqua (m/s) per Rame, Multistrato, PEX o Acciaio.</p>
+                <span class="calc-related-link">Calcolatore diametro tubi &amp; guida idraulica → &rarr;</span>
+            </a>
+            <a href="calcolo-cartongesso.html" class="calc-related-card">
+                <span class="calc-related-cat">Pareti &amp; Soffitti</span>
+                <h4>Struttura Cartongesso</h4>
+                <p>Calcola lastre, guide a U, montanti a C, scatole di viti, nastro e stucco per pareti divisorie (2 lati) o contropareti (1 lato).</p>
+                <span class="calc-related-link">Calcolatore cartongesso &amp; guida: come fare la parete → &rarr;</span>
+            </a>
+            <a href="calcolo-intonaco.html" class="calc-related-card">
+                <span class="calc-related-cat">Muratura &amp; Scale</span>
+                <h4>Intonaci, Rasature e Stucchi</h4>
+                <p>Determina i sacchi di intonaco di fondo o rasante in base ai metri quadri netti, allo spessore medio in millimetri e alla resa dichiarata.</p>
+                <span class="calc-related-link">Calcolatore intonaco &amp; guida: come intonacare → &rarr;</span>
+            </a>
+            </div>
+        </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- RESULT MODAL (Read-Only + App Conversion) -->
+    <div id="calc-result-modal" class="calc-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="result-modal-title" aria-hidden="true">
+        <div class="calc-modal-dialog">
+            <div class="calc-modal-header">
+                <h3 id="result-modal-title">
+                    <i data-feather="check"></i>
+                    <span>Risultato del Calcolo</span>
+                </h3>
+                <button type="button" class="calc-modal-close" data-close-modal aria-label="Chiudi risultato e modifica dati">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+
+            <div id="modal-comfort-badge" class="calc-comfort-badge" style="display:none;"></div>
+
+            <div id="modal-safety-banner" class="calc-safety-banner" style="display:flex;">
+                <i data-feather="alert-triangle"></i>
+                <span>Avviso tecnico: stima indicativa di massima che non sostituisce il progetto esecutivo o la verifica di un tecnico/installatore abilitato (D.M. 37/08, D.Lgs. 81/2008 e norme CEI/UNI vigenti).</span>
+            </div>
+
+            <div class="calc-hero-result-box">
+                <div id="modal-hero-label" class="calc-hero-result-label">Fabbisogno stimato</div>
+                <div id="modal-hero-value" class="calc-hero-result-value">-</div>
+                <div id="modal-hero-sub" class="calc-hero-result-sub"></div>
+            </div>
+
+            <div id="modal-details-grid" class="calc-details-grid"></div>
+
+            <div id="modal-cost-summary" class="calc-cost-summary" style="display:none;"></div>
+
+            <div class="calc-conversion-panel">
+                <h4 class="calc-conversion-headline">Vuoi salvare questo calcolo o preparare il preventivo?</h4>
+                <p class="calc-conversion-sub">Questo risultato è una stima rapida non salvata. Scarica gratis l'app Android Edil Calc per archiviarlo nei tuoi cantieri e sbloccare tutte le funzioni:</p>
+
+                <div class="calc-locked-grid">
+                    
+        <button type="button" class="calc-locked-btn" data-feature-label="Salva in Cantiere / Stanza" data-feature-pitch="Organizza tutti i calcoli dentro singoli cantieri divisi per stanze (es. Bagno, Cucina, Facciata) per ritrovare ogni misura al volo anche offline.">
+            <span class="calc-locked-icon"><i data-feather="folder-plus"></i></span>
+            <span class="calc-locked-text">
+                <strong>Salva in Cantiere / Stanza</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Preventivo PDF A4 con Logo" data-feature-pitch="Genera in un tap un preventivo professionale in PDF A4 completo di logo aziendale, Partita IVA, IBAN, anagrafica cliente e Gran Totale pronto da inviare su WhatsApp.">
+            <span class="calc-locked-icon"><i data-feather="file-text"></i></span>
+            <span class="calc-locked-text">
+                <strong>Preventivo PDF A4 con Logo</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Esporta Excel (.xlsx)" data-feature-pitch="Scarica il computo completo di materiali, quantità, voci extra e manodopera in formato Excel strutturato per contabilità e ordini fornitore su PC.">
+            <span class="calc-locked-icon"><i data-feather="table"></i></span>
+            <span class="calc-locked-text">
+                <strong>Esporta Excel (.xlsx)</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+        <button type="button" class="calc-locked-btn" data-feature-label="Salva il tuo Listino Prezzi" data-feature-pitch="Imposta i prezzi d&#39;acquisto dei tuoi fornitori una sola volta nel Database Materiali dell&#39;app: tutti i 21 calcolatori li applicheranno in automatico.">
+            <span class="calc-locked-icon"><i data-feather="dollar-sign"></i></span>
+            <span class="calc-locked-text">
+                <strong>Salva il tuo Listino Prezzi</strong>
+                <span>Solo nell'app Android</span>
+            </span>
+        </button>
+                </div>
+
+                <div id="calc-locked-feedback" class="calc-locked-feedback" role="status" aria-live="polite"></div>
+
+                <div class="calc-boomer-box">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" width="46" height="46" loading="lazy">
+                    </picture>
+                    <div>
+                        <span class="calc-boomer-tag">Boomer • Il Capocantiere</span>
+                        <p>L&#39;elettricità non perdona, non è come l&#39;acqua che fa solo bagnato! Stacca sempre il generale, lascia 20 cm di ricchezza nelle scatole e sulle tratte lunghe controlla sempre la caduta di tensione!</p>
+                    </div>
+                </div>
+
+                <div class="calc-modal-cta-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dmodal_result%26utm_campaign%3Dcalcolo-sezione-cavi-elettrici" target="_blank" rel="noopener" class="calc-modal-play-btn">
+                        <i data-feather="download"></i>
+                        <span>Scarica Edil Calc Gratis (Google Play)</span>
+                    </a>
+                    <div class="calc-modal-qr">
+                        <img src="assets/qr-playstore.svg" alt="QR Code Download Edil Calc Google Play" width="48" height="48" loading="lazy">
+                        <span>Inquadra con Android</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-modal-footer-actions">
+                <button type="button" class="calc-modal-edit-btn" data-close-modal>
+                    &larr; Modifica dati e ricalcola
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/logo.png" alt="Logo Edil Calc" class="nav-logo" width="44" height="44" loading="lazy">
+                    <picture>
+                        <source srcset="assets/boomer.webp" type="image/webp">
+                        <img src="assets/boomer.jpg" alt="Boomer, il capocantiere mascotte di Edil Calc" class="nav-boomer-avatar" width="38" height="38" loading="lazy">
+                    </picture>
+                    <div class="brand-text">
+                        <span class="brand-name">EDIL CALC</span>
+                        <span class="brand-tag">Cantiere &amp; Preventivi</span>
+                    </div>
+                </a>
+                <p>La suite gratuita con 21 calcolatori edili, gestione cantieri multi-stanza offline e preventivi professionali PDF A4 ed Excel col tuo logo.</p>
+                <div class="footer-guides-box">
+                    <span class="footer-guides-title">Calcolatori Online e Guide Pratiche:</span>
+                    <div class="footer-guides-links">
+                        <a href="calcolatori.html">Tutti i 21 Calcolatori</a>
+                        <a href="calcolo-massetto-cemento.html">Calcolo Sacchi Massetto</a>
+                        <a href="calcolo-cartongesso.html">Calcolo Cartongesso al mq</a>
+                        <a href="calcolo-piastrelle.html">Calcolo Piastrelle e Colla</a>
+                        <a href="calcolo-pittura.html">Calcolo Litri Pittura</a>
+                        <a href="calcolo-scale-blondel.html">Calcolo Scale (Blondel)</a>
+                        <a href="calcolo-intonaco.html">Calcolo Intonaco</a>
+                        <a href="calcolo-sezione-cavi-elettrici.html">Sezione Cavi Elettrici</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigazione</h4>
+                <ul>
+                    <li><a href="calcolatori.html">Tutti i 21 Calcolatori Online</a></li>
+                    <li><a href="index.html#features">Vantaggi Principali</a></li>
+                    <li><a href="index.html#how-it-works">Come Funziona</a></li>
+                    <li><a href="index.html#azienda">Preventivi PDF &amp; Brand</a></li>
+                    <li><a href="index.html#boomer">Boomer, il Capocantiere</a></li>
+                    <li><a href="faq.html">Domande Frequenti (FAQ)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Informazioni Legali &amp; Store</h4>
+                <div class="contact-list">
+                    <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dfooter_store%26utm_campaign%3Dcalcolo-sezione-cavi-elettrici" target="_blank" rel="noopener" class="contact-link">
+                        <i data-feather="shopping-bag"></i>
+                        <span>Scheda Ufficiale Google Play</span>
+                    </a>
+                    <a href="privacy.html" class="contact-link">
+                        <i data-feather="shield"></i>
+                        <span>Privacy Policy (GDPR)</span>
+                    </a>
+                    <a href="terms.html" class="contact-link">
+                        <i data-feather="file-text"></i>
+                        <span>Termini di Servizio</span>
+                    </a>
+                    <a href="#gestisci-cookie" data-open-cookie-settings class="contact-link">
+                        <i data-feather="sliders"></i>
+                        <span>Gestisci cookie</span>
+                    </a>
+                    <a href="mailto:support@edilcalc.com" class="contact-link">
+                        <i data-feather="life-buoy"></i>
+                        <span>support@edilcalc.com</span>
+                    </a>
+                    <a href="mailto:info@edilcalc.com" class="contact-link">
+                        <i data-feather="mail"></i>
+                        <span>info@edilcalc.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Edil Calc. Tutti i diritti riservati.</p>
+            <div class="footer-bottom-links">
+                <a href="calcolatori.html">Calcolatori</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <button type="button" class="footer-cookie-btn" data-open-cookie-settings>Gestisci cookie</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY CTA BAR -->
+    <div id="mobile-sticky-cta" class="mobile-sticky-cta">
+        <div class="mobile-sticky-info">
+            <img src="assets/logo.png" alt="Edil Calc Logo" class="mobile-sticky-logo" width="36" height="36" loading="lazy">
+            <div class="mobile-sticky-text">
+                <strong>Edil Calc App</strong>
+                <span>Salva cantieri &amp; PDF gratis</span>
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.daniele.edilcalc&amp;referrer=utm_source%3Dedilcalc_web%26utm_medium%3Dmobile_sticky%26utm_campaign%3Dcalcolo-sezione-cavi-elettrici" target="_blank" rel="noopener" class="mobile-sticky-btn">Scarica App</a>
+    </div>
+    <script src="js/calculators-logic.js" defer></script>
+    <script src="js/calculator-ui.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.feather) { window.feather.replace(); }
+      });
+    </script>
+</body>
+</html>
